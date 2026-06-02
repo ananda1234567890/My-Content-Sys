@@ -1,0 +1,15 @@
+{
+  "name": "linkedin-engagement",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "LinkedIn engagement automation via Apify + Claude — Ananda",
+  "scripts": {
+    "fetch-posts": "node scripts/fetch-posts.js",
+    "write-comments": "node scripts/write-comments.js",
+    "generate-dashboard": "node scripts/generate-dashboard.js",
+    "serve-dashboard": "node scripts/serve-dashboard.js"
+  },
+  "dependencies": {
+    "dotenv": "latest"
+  }
+}

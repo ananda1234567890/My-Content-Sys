@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:x.com)",
+      "Bash(python3 scripts/scrape-instagram-ideas.py*)",
+      "Bash(python3 scripts/generate-infographic.py*)",
+      "Bash(python3 scripts/generate-carousel-kieai.py*)",
+      "Bash(python3 scripts/build-dashboard.py)",
+      "Bash(python3 scripts/test-video-analysis.py*)",
+      "Bash(python3 -c *)",
+      "Bash(pip3 install *)",
+      "Bash(open outputs/dashboard.html)",
+      "Bash(open outputs/*)",
+      "Bash(mkdir -p *)"
+    ],
+    "additionalDirectories": [
+      ".claude/skills"
+    ]
+  }
+}

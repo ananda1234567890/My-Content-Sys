@@ -1,0 +1,35 @@
+{
+  "title": "Drone B-Roll From One Photo",
+  "slides": [
+    {
+      "number": 1,
+      "heading": "Capture Your Source Shot",
+      "subtitle": "Any smartphone photo in an outdoor location. Environmental context is what makes the AI motion look real.",
+      "takeaway": "Shoot wider than you think. AI needs surrounding environment to move the camera convincingly.",
+      "visual": "A smartphone held horizontally capturing a wide outdoor scene, subject centered with landscape and sky visible around them, natural daylight. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 2,
+      "heading": "Upload to Higgsfield, Select Kling 2.6",
+      "subtitle": "Not the default model. Kling 2.6 handles camera movement more fluidly than earlier versions.",
+      "takeaway": "The model selection is the whole difference. Choose Kling 2.6 specifically.",
+      "visual": "A laptop screen showing the Higgsfield platform upload interface with a dropdown model selector open, highlighting Kling 2.6 as the selected option. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 3,
+      "heading": "Describe the Movement, Not the Vibe",
+      "subtitle": "Most people get this wrong. The prompt needs camera instructions, not mood words.",
+      "takeaway": "Name the camera path. Name the direction. Name what stays in frame.",
+      "visual": "A text editor on screen showing three prompt examples side by side labeled Weak, Better, Best. The Weak example reads 'make this cinematic', the Best example reads 'smooth aerial pullback from eye level, rising steadily, subject stays centered as the environment expands into frame'. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 4,
+      "heading": "What You Get",
+      "subtitle": "Cinematic drone b-roll from a phone photo. The same shot that costs $300 to $1,000 with an operator.",
+      "takeaway": "If budget was the reason you skipped aerial b-roll, that reason is gone.",
+      "visual": "A dramatic wide aerial drone-perspective shot over a landscape, a small subject visible at center frame as the environment expands outward in all directions, cinematic depth of field. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    }
+  ],
+  "cta_text": "Save this.",
+  "cta_subtitle": "Follow Ananda Paramanick for AI tools and video editing techniques."
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Make Any Two Shots Flow Into Each Other Using AI",
+  "slides": [
+    {
+      "number": 1,
+      "heading": "Two shots. One AI bridge.",
+      "subtitle": "Most editors think match cuts require precise in-camera choreography. Higgsfield with Kling 3.0 generates the connecting clip for you from just two screenshots.",
+      "takeaway": "Shoot your clips normally. AI handles the transition between them.",
+      "visual": "Two separate video frames side by side — one showing a product sitting still on a table, the other showing a hand mid-reach toward the same product — connected by a glowing purple arrow labeled 'AI bridge' in the center. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 2,
+      "heading": "Screenshot the connecting frames",
+      "subtitle": "Pause clip 1 on its final frame before the action. Screenshot it. Pause clip 2 on its first frame after the action. Screenshot that too. These two images are your start frame and end frame.",
+      "takeaway": "Two screenshots is all the input Kling 3.0 needs to interpolate the movement.",
+      "visual": "A smartphone screenshot gallery interface showing two cropped frames side by side — one labeled 'Start Frame' and one labeled 'End Frame' — with small timestamp indicators at the bottom. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 3,
+      "heading": "Load into Higgsfield, select Kling 3.0",
+      "subtitle": "In the image-to-video section, select Kling 3.0 as the model. Upload the first screenshot into the start frame slot and the second into the end frame slot.",
+      "takeaway": "Use Kling 3.0 specifically. Earlier models handle frame-to-frame interpolation less accurately.",
+      "visual": "A web interface panel showing an AI video generation tool with two upload boxes labeled 'Start Frame' and 'End Frame', a model selection dropdown showing 'Kling 3.0' selected, and a generate button below. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 4,
+      "heading": "Write the motion prompt",
+      "subtitle": "Describe what physically moves between the two frames. Keep it specific: what object moves, in which direction, at what speed. Generate and select the version that flows cleanest.",
+      "takeaway": "Describe movement, not mood. Physical specifics produce better interpolation than vague directions.",
+      "visual": "A text input field on a dark UI showing a typed prompt: 'Hand slides forward and grasps the product, smooth continuous motion from left frame toward right frame' — with the cursor blinking at the end of the sentence. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 5,
+      "heading": "Assemble the three clips",
+      "subtitle": "Drop clip 1 on the timeline, then the AI bridge clip, then clip 2. Trim the bridge clip to the exact frames you need. The cut is invisible.",
+      "takeaway": "Three clips on the timeline. One match cut that looks shot on set.",
+      "visual": "A video editing timeline showing three distinct clips lined up in sequence — the first clip, a shorter middle clip labeled 'AI Bridge' with a purple glow, and the third clip — with clean cut points between each one. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    }
+  ],
+  "cta_text": "Save this.",
+  "cta_subtitle": "Video editing techniques, AI tools, and workflow breakdowns."
+}

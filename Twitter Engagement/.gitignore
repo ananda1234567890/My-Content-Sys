@@ -1,0 +1,4 @@
+node_modules/
+.env
+data/tweets.json
+dashboard/index.html

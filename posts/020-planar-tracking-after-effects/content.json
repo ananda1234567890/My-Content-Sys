@@ -1,0 +1,35 @@
+{
+  "title": "Stop Keyframing Motion Graphics by Hand in After Effects",
+  "slides": [
+    {
+      "number": 1,
+      "heading": "Perspective Corner Pin: the shortcut",
+      "subtitle": "Open the Tracker panel in After Effects (Window > Tracker). Before anything else, set the track type to 'Perspective Corner Pin'. This setting is what locks the tracker to a flat surface across rotation, perspective changes, and full 3D movement.",
+      "takeaway": "Perspective Corner Pin is the option that makes planar tracking actually work. Select it first.",
+      "visual": "The After Effects Tracker panel interface showing the track type dropdown with 'Perspective Corner Pin' highlighted and selected, surrounded by the dark After Effects UI with timeline visible in the background. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 2,
+      "heading": "Draw the mask, hit Analyze Forward",
+      "subtitle": "Draw a mask around the surface you want to track — a phone screen, a wall, a hand holding an object. Hit 'Analyze Forward' and let After Effects read every frame of movement automatically.",
+      "takeaway": "The mask tells the tracker exactly which surface to follow. Tighter masks produce cleaner tracking data.",
+      "visual": "An After Effects composition showing raw video footage with a dashed green mask rectangle drawn around a phone screen being held in someone's hand, with the Tracker panel visible on the side showing analysis in progress. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 3,
+      "heading": "Edit Target, link the layer",
+      "subtitle": "Once analysis is done, click 'Edit Target' in the Tracker panel. Select the layer you want to pin to the tracked surface — your text layer, a graphic, a logo. Apply the tracking data.",
+      "takeaway": "Apply the track to your graphic layer. It now follows the surface movement exactly through every frame.",
+      "visual": "The After Effects 'Motion Target' dialog box showing a dropdown list of available composition layers with a text layer highlighted and selected, floating over the dark After Effects interface. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 4,
+      "heading": "Position, trim, and check",
+      "subtitle": "Place your text or element exactly where you want it on the tracked surface. Scrub through the clip at a few key points to confirm the track is holding. Trim to the frames you need.",
+      "takeaway": "Scrub to the middle and end of the clip to catch any tracking drift before the final export.",
+      "visual": "An After Effects composition preview showing video footage of a hand holding a phone, with a white text label cleanly pinned to the phone screen and visibly tracking with the movement — the After Effects timeline below showing the clip with position keyframes applied. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    }
+  ],
+  "cta_text": "Save this.",
+  "cta_subtitle": "Video editing techniques, AI tools, and workflow breakdowns."
+}

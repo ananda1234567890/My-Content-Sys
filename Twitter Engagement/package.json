@@ -1,0 +1,16 @@
+{
+  "name": "twitter-engagement",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Twitter engagement automation via Apify + Claude — Ananda",
+  "scripts": {
+    "fetch-tweets": "node scripts/fetch-tweets.js",
+    "write-comments": "node scripts/write-comments.js",
+    "generate-dashboard": "node scripts/generate-dashboard.js",
+    "serve-dashboard": "node scripts/serve-dashboard.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "dotenv": "latest"
+  }
+}

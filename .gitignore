@@ -1,0 +1,37 @@
+# Credentials
+.env
+*.env
+
+# OS
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+node_modules/
+package-lock.json
+
+# Generated / large outputs
+outputs/dashboard.html
+outputs/ideas-dashboard.html
+outputs/*.html
+data/tweets.json
+data/posts.json
+dashboard/index.html
+
+# Scraped data (re-fetchable)
+context/data/
+
+# Large image bases in posts (re-generatable)
+posts/*/image.png
+posts/*/carousel.pdf
+posts/*/carousel-slides/
+posts/*/original-image.*
+
+# Temp
+/tmp/
+.playwright-cli/
