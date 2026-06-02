@@ -71,8 +71,11 @@ async function main() {
     const commentText = hasComment ? escapeHtml(post.comment) : '';
     const copyLabel = hasComment ? 'Copy' : '—';
 
-    const imagesHtml = post.imageUrls && post.imageUrls.length > 0
-      ? `<div class="post-images">${post.imageUrls.map(url => `<img src="${escapeAttr(url)}" alt="post image" loading="lazy" />`).join('')}</div>`
+    const displayImages = (post.localImagePaths && post.localImagePaths.length > 0)
+      ? post.localImagePaths
+      : (post.imageUrls || []);
+    const imagesHtml = displayImages.length > 0
+      ? `<div class="post-images">${displayImages.map(url => `<img src="${escapeAttr(url)}" alt="post image" loading="lazy" />`).join('')}</div>`
       : '';
 
     const initials = (post.author.displayName || '?').split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();

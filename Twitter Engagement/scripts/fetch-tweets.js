@@ -97,7 +97,11 @@ async function main() {
     process.exit(1);
   }
 
-  const accounts = JSON.parse(readFileSync(ACCOUNTS_FILE, 'utf-8'));
+  const limitArg = process.argv.indexOf('--limit');
+  const limitN = limitArg !== -1 ? parseInt(process.argv[limitArg + 1], 10) : null;
+
+  let accounts = JSON.parse(readFileSync(ACCOUNTS_FILE, 'utf-8'));
+  if (limitN && limitN > 0) accounts = accounts.slice(0, limitN);
   const dates = getDates();
   let firstTweetLogged = false;
 

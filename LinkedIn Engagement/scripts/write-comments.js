@@ -7,7 +7,7 @@
  * Workflow each day:
  *   1. node scripts/fetch-posts.js       → pulls today's posts into data/posts.json
  *   2. Claude Code reads data/posts.json, then for every post that has images,
- *      downloads them to /tmp/linkedin-images/ and reads them visually before writing.
+ *      downloads them to dashboard/images/ and reads them visually before writing.
  *   3. Claude Code writes the COMMENTS map below with fresh post IDs + comments
  *      in Ananda's voice, following .claude/skills/comment-voice.md
  *   4. node scripts/write-comments.js    → stamps comments onto data/posts.json
@@ -25,8 +25,93 @@ const POSTS_FILE = 'data/posts.json';
 // Claude Code fills this in fresh each day — do not edit manually
 const COMMENTS = {
 
-  // Claude Code will add entries here each day like:
-  // 'urn:li:activity:1234567890': 'Your comment here\n\nSecond line here',
+  // BATCH 1
+
+  // Matt Doan — couple toasting wine on a boat, wife's job gone, going all-in together
+  'urn:li:activity:7467175157321613312': 'Two years building it part-time, then the universe just closes the door for you.\n\nThe photo says more than the post does.\n\nThat doesn\'t look like fear.',
+
+  // Anas Riad — cartoon meme: man asking AI "what is 3x4?", books labeled "Critical Thinking (Optional)", mug "Outsource my brain"
+  'urn:li:activity:7467307833890357248': 'The meme is the whole post in one image.\n\nMost people laugh at it and then ask ChatGPT to write their response.\n\nTip 1 before anything. Everything else is just mechanics.',
+
+  // Alex Hormozi — Jimmy Carr, work ethic and studying excellence
+  'urn:li:activity:7467243678474944512': 'Carr\'s work ethic gets talked about less than his material.\n\nThe guy does a hundred shows a year just to sharpen jokes that already work.\n\nWhat made you start studying how people operate rather than just watching what they make?',
+
+  // Matt Lakajev — $500k with 5k followers, unfollow personal branding niche
+  'urn:li:activity:7467432813940666369': 'Step 1 is where I\'d push back.\n\nUnfollowing people who know how to get attention because their client game is weak skips the point.\n\nYou can learn packaging from them. Just don\'t copy the positioning.',
+
+  // MacCoy Merkley — "Introducing The Bagalloon!" very short post
+  'urn:li:activity:7445218427171991553': 'That name is staying in my head.\n\nWhat gap were you filling when you built this and who did you build it for?',
+
+  // BATCH 2
+
+  // James Bonadies — cold outreach dies when prospects Google you and find nothing
+  'urn:li:activity:7467370786312392704': 'The piece most people skip even after they set up the website: making it say something specific.\n\nA page that exists but reads "we help businesses grow" hands prospects the same reason to pass as having nothing.',
+
+  // Riley Ghiles I. — thoughtful selfie with glasses, 5 startups 0 wins, same reason: distribution
+  'urn:li:activity:7465217326955675648': 'Five startups, zero wins, same reason every time.\n\nThat pattern takes a real kind of honesty to name out loud.\n\nAnd it\'s exactly that honesty that makes what you\'re doing now different.',
+
+  // Ursula Botha — 5 women at InspireHER event, soft power, unlearning shrinking
+  'urn:li:activity:7466828463514177536': 'The unlearning part is what most leadership programs skip.\n\nThey teach presence. Very few address what needs to be undone before presence is even possible.\n\nThe room in that photo looks like it got it.',
+
+  // Tina Parish — hand-drawn Hedgehog Concept notebook diagram, 3 circles: passion/capability/economic value
+  'urn:li:activity:7465357413320335361': 'The diagram makes it look clean. It isn\'t.\n\nThe capability circle is where people lie to themselves most.\n\nBeing honest about where you\'re genuinely average, not just not your best, is the hard part.',
+
+  // Suchitra Sivasankaran — "Inside & Out Journal" book cover, inner work and mental fitness
+  'urn:li:activity:7463130712590913537': 'The question "what am I carrying that no longer belongs to me" is the one I keep finding reasons to skip.\n\nJournaling specifically makes it harder to dodge. You can\'t scroll past a blank page.',
+
+  // BATCH 3
+
+  // Urwa Ejaz — portrait in olive green Eid outfit, freedom after quitting 9-5
+  'urn:li:activity:7467245402078044161': 'The 11 likes phase is real and nobody talks about it honestly.\n\nI\'ve sat there posting when every number said to stop.\n\nYou get through it by remembering you\'re writing for one specific person, not the feed.',
+
+  // Muhammad Abdullah — silent buyer, 5% ready vs 95% watching
+  'urn:li:activity:7467148516092575744': 'The 95% are not passive. They\'re deciding.\n\nSellers treat them like they\'re not ready when really they just haven\'t been convinced yet.\n\nStaying visible without pushing is the whole job.',
+
+  // Krittiya Clark — very short post, in-person networking
+  'urn:li:activity:7465838741467734016': 'One real conversation at an in-person event moves faster than weeks of back-and-forth online.\n\nSomething about being in the same room just shortcuts the trust building in a way screens haven\'t matched yet.',
+
+  // Yash Bansal — young man writing in journal at desk late at night, quietly preparing
+  'urn:li:activity:7467436089041993729': 'The photo says it all. Writing at the desk with no audience.\n\nThat kind of preparation hits different when nobody\'s watching.\n\nBuilding before announcing is how you know it\'s actually for you.',
+
+  // Katyayini Karnani — young woman at beach at night, CGPA dropped from 9 to 7.9 for real work
+  'urn:li:activity:7467434473005969408': 'The academic identity shift is something nobody prepares you for.\n\nIt\'s not just a number. You spent years building the part of yourself that scores 9s.\n\nTrading that away, even for something real, is an actual loss.',
+
+  // BATCH 4
+
+  // Maksym Zaletskyi — losing great hires in 7 days due to no onboarding structure
+  'urn:li:activity:7450150946443206656': 'The thing that makes week one chaos worse is that the new hire can\'t tell if it\'s a rough start or how it always runs.\n\nUncertainty about the pattern is what actually pushes them to leave.',
+
+  // Prerna Bhandari — selfie in Sanrio store, 3 things for LinkedIn growth in 2026
+  'urn:li:activity:7467422369830076417': 'Point 2 needs a caveat.\n\nFive tight pillars works after you\'ve seen what actually lands. Locking them in before you\'ve tested anything keeps you posting in a direction nobody\'s paying attention to.',
+
+  // Aastha Duggal — MacBook café photo, visibility vs growth on LinkedIn
+  'urn:li:activity:7467177338439528448': 'Engagement measures who reacted. Growth measures who remembered.\n\nHad a client hire me after six months of reading without once engaging publicly. Not one like. Just showed up when they were ready.',
+
+  // Chelsea Olsen — peaceful beach balcony photo, creator shared grief + business, audience triggered
+  'urn:li:activity:7466859838401306624': 'The audience reaction always says more about where they are than what the post actually did.\n\nPeople who use work as an anchor during loss get it immediately. People who can\'t separate the two see it as cold. Both reads are honest.',
+
+  // Brigitta Ruha — "How to use LinkedIn in 2026" infographic: warm signals, ICP, stack, message, metrics
+  'urn:li:activity:7467183381479419904': 'The stacking logic is what the infographic earns its keep on.\n\nOne signal means research, three means conversation. What\'s the actual conversion difference you see between single-signal and multi-threaded outreach?',
+
+  // BATCH 5
+
+  // Nick Palasz — Friends meme: "AI will replace SDRs but their AI can't book a dentist appointment"
+  'urn:li:activity:7467122808435744768': 'The meme lands because the gap between the claim and the reality is exactly that wide.\n\nThe teams pulling ahead aren\'t debating whether AI replaces reps. They\'re already using it and just doing more volume.',
+
+  // Lavanya Aggarwal — content plagiarism, credit matters
+  'urn:li:activity:7467251764816158721': 'Had my own work copy-pasted word for word once. No credit.\n\nThe frustrating part wasn\'t the stealing. It was watching that person get engagement on something I\'d actually spent time thinking through.',
+
+  // Rozana Petrovska — outbound burnout is a structure problem, decision fatigue
+  'urn:li:activity:7467341257254780928': 'Decision fatigue, not volume, is the killer.\n\nTeams that systematize don\'t work less. They just stop rebuilding the same decisions every morning.\n\nThat difference compounds faster than any volume increase does.',
+
+  // Muneeba Mehmood — "28 Green Flags of a Strong Personal Brand" infographic
+  'urn:li:activity:7467250820883931137': 'The flag about silent readers who message privately is the one most people don\'t even know is happening to them.\n\nOf the 28, which one shows up first in people you\'d call genuinely strong brands?',
+
+  // Riin Reinola — professional portrait, quit safe life 2 years ago, whose success are you building
+  'urn:li:activity:7467254866961260544': 'The question of whose success you\'re actually building is the one most people avoid until something forces it.\n\nFor me it took losing a client overnight to stop pretending the answer wasn\'t obvious.',
+
+  // Dmitry Pavlotsky — photo with +213.2% growth stats overlay, called "the linkedin guy" by 3 strangers
+  'urn:li:activity:7467214068928380929': 'Three strangers at the same event calling you the same thing without knowing each other is the clearest signal positioning is working.\n\nThat +213.2% in the photo isn\'t algorithm luck. That\'s what happens when people know exactly what you stand for.',
 
 };
 

@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import { readFileSync, writeFileSync } from 'fs';
-import { mkdir } from 'fs/promises';
+import { mkdir, writeFile } from 'fs/promises';
+import { extname } from 'path';
 
 const ACCOUNTS_FILE = 'accounts.json';
 const OUTPUT_FILE = 'data/posts.json';
@@ -33,8 +34,30 @@ function mapPost(raw) {
     commentCount: raw.numComments ?? 0,
     repostCount: raw.numShares ?? 0,
     imageUrls,
+    localImagePaths: [],
     comment: ''
   };
+}
+
+async function downloadImages(post) {
+  if (!post.imageUrls.length) return;
+  const slug = post.id.replace(/[^a-z0-9]/gi, '_').slice(-40);
+  const dir = `dashboard/images/${slug}`;
+  await mkdir(dir, { recursive: true });
+  const paths = [];
+  for (let i = 0; i < post.imageUrls.length; i++) {
+    const imgUrl = post.imageUrls[i];
+    try {
+      const res = await fetch(imgUrl, { headers: { 'Referer': 'https://www.linkedin.com/' } });
+      if (!res.ok) continue;
+      const buf = Buffer.from(await res.arrayBuffer());
+      const ext = extname(new URL(imgUrl).pathname) || '.jpg';
+      const localPath = `${dir}/image_${i}${ext}`;
+      await writeFile(localPath, buf);
+      paths.push(`/images/${slug}/image_${i}${ext}`);
+    } catch { /* skip failed images */ }
+  }
+  post.localImagePaths = paths;
 }
 
 async function fetchAccount(profileUrl) {
@@ -97,7 +120,9 @@ async function main() {
         console.log(`ERROR: ${posts[0].error}`);
         return null;
       }
-      console.log(`1 post found`);
+      await downloadImages(mapped);
+      const imgNote = mapped.localImagePaths.length ? ` (${mapped.localImagePaths.length} img)` : '';
+      console.log(`1 post found${imgNote}`);
       return mapped;
     } catch (err) {
       console.log(`ERROR: ${err.message}`);

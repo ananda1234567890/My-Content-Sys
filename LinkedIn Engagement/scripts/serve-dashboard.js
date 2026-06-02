@@ -1,5 +1,6 @@
 import { createServer } from 'http';
 import { readFileSync, writeFileSync } from 'fs';
+import { extname, join } from 'path';
 import { exec } from 'child_process';
 
 const PORT = 3001;
@@ -16,6 +17,22 @@ const server = createServer((req, res) => {
   if (req.method === 'OPTIONS') {
     res.writeHead(204, headers);
     res.end();
+    return;
+  }
+
+  // Serve local post images
+  if (req.method === 'GET' && req.url.startsWith('/images/')) {
+    try {
+      const filePath = join('dashboard', req.url);
+      const ext = extname(filePath).toLowerCase();
+      const mime = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.gif': 'image/gif' }[ext] || 'application/octet-stream';
+      const data = readFileSync(filePath);
+      res.writeHead(200, { ...headers, 'Content-Type': mime, 'Cache-Control': 'max-age=86400' });
+      res.end(data);
+    } catch {
+      res.writeHead(404, headers);
+      res.end('Image not found');
+    }
     return;
   }
 

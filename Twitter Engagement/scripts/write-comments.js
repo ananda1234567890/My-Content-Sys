@@ -25,6 +25,9 @@ const TWEETS_FILE = 'data/tweets.json';
 // Claude Code fills this in fresh each day — do not edit manually
 const COMMENTS = {
 
+  // 2026-06-02 batch — limit 5 run
+  '2061518662880694534': 'Same thing happens with over-edited videos\n\nMassive timelines, 40 effects, layers on layers\n\nViewer feels the bloat before they can name it\n\nLess almost always wins',
+
   // 2026-06-02 batch
   '2061661178498302015': 'Trade time for money when you have nothing\n\nThen buy it back once you can\n\nMost people never make it to step 2 tbh',
 
