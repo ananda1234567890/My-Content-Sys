@@ -54,8 +54,16 @@ async function downloadImages(post) {
 
 async function fetchAccount(profileUrl) {
   const input = {
-    profileUrls: [profileUrl],
-    resultsLimit: 3
+    targetUrls: [profileUrl],
+    maxPosts: 1,
+    includeQuotePosts: true,
+    includeReposts: false,
+    maxComments: 0,
+    maxReactions: 0,
+    postNestedComments: false,
+    postNestedReactions: false,
+    scrapeComments: false,
+    scrapeReactions: false
   };
 
   const url = `https://api.apify.com/v2/acts/${ACTOR_ID}/run-sync-get-dataset-items?token=${APIFY_TOKEN}`;
