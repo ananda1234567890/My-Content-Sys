@@ -100,7 +100,7 @@ async function main() {
   await mkdir('data', { recursive: true });
 
   let firstPostLogged = false;
-  const CONCURRENCY = 4;
+  const CONCURRENCY = 10;
   const results = [];
 
   async function processAccount(profileUrl, index) {
