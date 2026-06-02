@@ -94,7 +94,10 @@ async function main() {
       </a>
       <span class="post-time" title="${formatDate(post.createdAt)}">${timeAgo(post.createdAt)}</span>
     </div>
-    <div class="post-text">${escapeHtml(post.text)}</div>
+    ${(post.text.length > 280)
+      ? `<div class="post-text"><span class="text-short">${escapeHtml(post.text.slice(0, 280))}<span class="text-ellipsis">...</span></span><span class="text-full" style="display:none">${escapeHtml(post.text)}</span><button class="btn-read-more">Read more</button></div>`
+      : `<div class="post-text">${escapeHtml(post.text)}</div>`
+    }
     ${imagesHtml}
     <div class="post-meta">
       <span class="stat" title="Reactions">👍 ${formatCount(post.likeCount)}</span>
@@ -277,10 +280,25 @@ async function main() {
     }
 
     .post-images img {
-      max-width: 220px;
-      max-height: 220px;
+      max-width: 280px;
+      max-height: 280px;
       border-radius: 8px;
       object-fit: cover;
+    }
+
+    .btn-read-more {
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-size: 13px;
+      cursor: pointer;
+      padding: 2px 0 0;
+      font-family: inherit;
+      display: block;
+    }
+
+    .btn-read-more:hover {
+      text-decoration: underline;
     }
 
     .stat {
@@ -494,6 +512,18 @@ async function main() {
       let t;
       return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
     }
+
+    document.querySelectorAll('.btn-read-more').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const box = btn.closest('.post-text');
+        const short = box.querySelector('.text-short');
+        const full = box.querySelector('.text-full');
+        const collapsed = full.style.display === 'none';
+        short.style.display = collapsed ? 'none' : 'inline';
+        full.style.display = collapsed ? 'inline' : 'none';
+        btn.textContent = collapsed ? 'Show less' : 'Read more';
+      });
+    });
 
     document.querySelectorAll('.comment-box').forEach(ta => {
       const col = ta.closest('.comment-col');

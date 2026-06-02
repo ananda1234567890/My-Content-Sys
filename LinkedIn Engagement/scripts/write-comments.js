@@ -5,113 +5,81 @@
  * They are written by Claude Code as part of the daily workflow.
  *
  * Workflow each day:
- *   1. node scripts/fetch-posts.js       → pulls today's posts into data/posts.json
- *   2. Claude Code reads data/posts.json, then for every post that has images,
- *      downloads them to dashboard/images/ and reads them visually before writing.
- *   3. Claude Code writes the COMMENTS map below with fresh post IDs + comments
- *      in Ananda's voice, following .claude/skills/comment-voice.md
- *   4. node scripts/write-comments.js    → stamps comments onto data/posts.json
- *   5. node scripts/generate-dashboard.js → rebuilds the dashboard HTML
+ *   1. node scripts/fetch-posts.js       -> pulls today's posts into data/posts.json
+ *   2. Claude Code reads data/posts.json, downloads images, reads them visually
+ *   3. Claude Code writes the COMMENTS map below in Ananda's voice
+ *   4. node scripts/write-comments.js    -> stamps comments onto data/posts.json
+ *   5. node scripts/generate-dashboard.js -> rebuilds the dashboard HTML
  *
  * To regenerate: tell Claude Code "write comments".
- * Never hardcode IDs from a previous session — post IDs change every day.
  */
 
 import { readFileSync, writeFileSync } from 'fs';
 
 const POSTS_FILE = 'data/posts.json';
 
-// post id → comment written by Claude Code for today's batch
-// Claude Code fills this in fresh each day — do not edit manually
+// post id -> comment written by Claude Code for today's batch
 const COMMENTS = {
 
-  // BATCH 1
+  // Alex Hormozi -- Jimmy Carr, work ethic, studying excellence
+  '7467243678474944512': "Carr's like that one guy at the gym who's already in better shape than everyone but still shows up every morning at 5am.\n\nNo audience. No performance. Just obsession.",
 
-  // Matt Doan — couple toasting wine on a boat, wife's job gone, going all-in together
-  'urn:li:activity:7467175157321613312': 'Two years building it part-time, then the universe just closes the door for you.\n\nThe photo says more than the post does.\n\nThat doesn\'t look like fear.',
+  // Holly Isenberg (Greg Isenberg repost) -- NYC Food Policy 40 Under 40
+  '7335963757392670722': "40 Under 40 in food policy. That's a proper recognition, congrats!",
 
-  // Anas Riad — cartoon meme: man asking AI "what is 3x4?", books labeled "Critical Thinking (Optional)", mug "Outsource my brain"
-  'urn:li:activity:7467307833890357248': 'The meme is the whole post in one image.\n\nMost people laugh at it and then ask ChatGPT to write their response.\n\nTip 1 before anything. Everything else is just mechanics.',
+  // Tim Denning -- offices as adult daycares, woman automated her job
+  '7467304766017069056': "Saw this happen to a freelancer I know.\n\nFinished all his work by noon, client told him to look more active on Slack because it was making the team look bad.\n\nHe quit. Now runs his own thing. Makes double.",
 
-  // Alex Hormozi — Jimmy Carr, work ethic and studying excellence
-  'urn:li:activity:7467243678474944512': 'Carr\'s work ethic gets talked about less than his material.\n\nThe guy does a hundred shows a year just to sharpen jokes that already work.\n\nWhat made you start studying how people operate rather than just watching what they make?',
+  // Noam Nisand -- "no budget" objection handling
+  '7467160527249498112': "No budget right after a strong demo = 'I don't trust this yet'\n\nNothing else. Discounting won't fix that.",
 
-  // Matt Lakajev — $500k with 5k followers, unfollow personal branding niche
-  'urn:li:activity:7467432813940666369': 'Step 1 is where I\'d push back.\n\nUnfollowing people who know how to get attention because their client game is weak skips the point.\n\nYou can learn packaging from them. Just don\'t copy the positioning.',
+  // Beatrice Vladut -- 5 Perplexity workflows, 10 hours into 1
+  '7467142628460003328': "The sales prep one is the one I can't go back from\n\nUsed to spend 30 mins researching before every call. Embarrassingly slow.\n\nNow I paste the LinkedIn URL, get a sharp brief in 3 mins. Game over.",
 
-  // MacCoy Merkley — "Introducing The Bagalloon!" very short post
-  'urn:li:activity:7445218427171991553': 'That name is staying in my head.\n\nWhat gap were you filling when you built this and who did you build it for?',
+  // Charlie Hills -- CHEF framework, context engineering shift
+  '7467315186522013698': "Context engineering is the 2026 upgrade to all of this.\n\nWhat you set up before you even type the prompt matters more than the prompt itself. People are still sleeping on that shift.",
 
-  // BATCH 2
+  // Celeste Yamile -- AI for brand visuals, Nano Banana guide
+  '7467190757276168192': "Canva was for people who couldn't afford designers\n\nThis is for people who can't afford photographers\n\nSame story, different chapter",
 
-  // James Bonadies — cold outreach dies when prospects Google you and find nothing
-  'urn:li:activity:7467370786312392704': 'The piece most people skip even after they set up the website: making it say something specific.\n\nA page that exists but reads "we help businesses grow" hands prospects the same reason to pass as having nothing.',
+  // Pierre Herubel -- 3 years inbound only, missing 50% ROI
+  '7467219827871350786': "I made this same mistake for months.\n\nHad people follow my content, like everything, but never DM them once.\n\nOne DM. That's all it took. Some of them had been sitting there ready for months.",
 
-  // Riley Ghiles I. — thoughtful selfie with glasses, 5 startups 0 wins, same reason: distribution
-  'urn:li:activity:7465217326955675648': 'Five startups, zero wins, same reason every time.\n\nThat pattern takes a real kind of honesty to name out loud.\n\nAnd it\'s exactly that honesty that makes what you\'re doing now different.',
+  // Jacob Pegs -- $74.5k install offer, 16 customers
+  '7467451206748225536': "The all-existing-customers part is the thing.\n\nNot one cold acquisition. 16 people who already trusted him.\n\nThat's not a sale, that's just serving the people already in the room.",
 
-  // Ursula Botha — 5 women at InspireHER event, soft power, unlearning shrinking
-  'urn:li:activity:7466828463514177536': 'The unlearning part is what most leadership programs skip.\n\nThey teach presence. Very few address what needs to be undone before presence is even possible.\n\nThe room in that photo looks like it got it.',
+  // Giorgio Jannace -- hook workshop, LinkedIn live
+  '7467266180064546818': "The first line of any post is an ad for the rest of it\n\nIf people don't click 'see more' you've basically posted nothing\n\nThat's the whole hook game.",
 
-  // Tina Parish — hand-drawn Hedgehog Concept notebook diagram, 3 circles: passion/capability/economic value
-  'urn:li:activity:7465357413320335361': 'The diagram makes it look clean. It isn\'t.\n\nThe capability circle is where people lie to themselves most.\n\nBeing honest about where you\'re genuinely average, not just not your best, is the hard part.',
+  // Richard Moore -- asking for deal too early, sales story
+  '7467186071697686529': "Used to ask for the close at the end of every call.\n\nThen I started asking 'what have you already tried that didn't work?' in the first 5 minutes.\n\nThey convinced themselves. Barely had to say anything after that.",
 
-  // Suchitra Sivasankaran — "Inside & Out Journal" book cover, inner work and mental fitness
-  'urn:li:activity:7463130712590913537': 'The question "what am I carrying that no longer belongs to me" is the one I keep finding reasons to skip.\n\nJournaling specifically makes it harder to dodge. You can\'t scroll past a blank page.',
+  // Justin Welsh -- Kajabi Expert Agents, AI selling while you sleep
+  '7467422336279822336': "The logged inbox is the hidden product research tool in all of this.\n\nEvery question the AI gets = a gap in your content. That alone is worth the setup.",
 
-  // BATCH 3
+  // Hrabren Lindfors (marketingharry) -- 3000+ carousels
+  '7467108149573902336': "3000 is actually a real data set\n\nMy guess: it's always the first 2 slides that determine if the rest gets read or not\n\nWbu?",
 
-  // Urwa Ejaz — portrait in olive green Eid outfit, freedom after quitting 9-5
-  'urn:li:activity:7467245402078044161': 'The 11 likes phase is real and nobody talks about it honestly.\n\nI\'ve sat there posting when every number said to stop.\n\nYou get through it by remembering you\'re writing for one specific person, not the feed.',
+  // Chris Donnelly -- SEO is dead, 2004-2026
+  '7467182468685742081': "The 2022 row says everything.\n\nChatGPT launches, everyone declares SEO dead, and only 10% of strategies actually changed.\n\nPanic always outruns behavior. Always.",
 
-  // Muhammad Abdullah — silent buyer, 5% ready vs 95% watching
-  'urn:li:activity:7467148516092575744': 'The 95% are not passive. They\'re deciding.\n\nSellers treat them like they\'re not ready when really they just haven\'t been convinced yet.\n\nStaying visible without pushing is the whole job.',
+  // Marina Panova -- 500 applications, all sounding the same
+  '7467189287361536000': "Tbh I was the person sending the same 4-line pitch to 30 people when I was starting out.\n\nThe one that worked was the only one where I actually read their content first.\n\nThat difference is everything.",
 
-  // Krittiya Clark — very short post, in-person networking
-  'urn:li:activity:7465838741467734016': 'One real conversation at an in-person event moves faster than weeks of back-and-forth online.\n\nSomething about being in the same room just shortcuts the trust building in a way screens haven\'t matched yet.',
+  // Alexander Plank -- stutter at 12, wedding speech unrehearsed
+  '7467231597604384768': "Bro I felt this so much.\n\nGoing from blacking out in front of your class to delivering a wedding speech unrehearsed is not a small thing.\n\nThat gap doesn't close easy. keep freaking going man",
 
-  // Yash Bansal — young man writing in journal at desk late at night, quietly preparing
-  'urn:li:activity:7467436089041993729': 'The photo says it all. Writing at the desk with no audience.\n\nThat kind of preparation hits different when nobody\'s watching.\n\nBuilding before announcing is how you know it\'s actually for you.',
+  // Alex Colhoun -- offer stack, LinkedIn followers to clients
+  '7467204351762132992': "The entry point offer is the whole thing tbh.\n\nThe first step someone takes with you filters everyone after it. Get that wrong and the rest of the stack doesn't matter.",
 
-  // Katyayini Karnani — young woman at beach at night, CGPA dropped from 9 to 7.9 for real work
-  'urn:li:activity:7467434473005969408': 'The academic identity shift is something nobody prepares you for.\n\nIt\'s not just a number. You spent years building the part of yourself that scores 9s.\n\nTrading that away, even for something real, is an actual loss.',
+  // Anthony Carlton -- independence disappears through safe choices
+  '7467297568302063616': "Every choice was rational. That's the trap.\n\nYou can't point to the moment it went wrong because every individual decision made complete sense at the time.",
 
-  // BATCH 4
+  // Nat Berman -- wrong train, sunk cost
+  '7467270480773869568': "Sunk cost is not a compass.\n\nThat sentence alone is worth saving.",
 
-  // Maksym Zaletskyi — losing great hires in 7 days due to no onboarding structure
-  'urn:li:activity:7450150946443206656': 'The thing that makes week one chaos worse is that the new hire can\'t tell if it\'s a rough start or how it always runs.\n\nUncertainty about the pattern is what actually pushes them to leave.',
-
-  // Prerna Bhandari — selfie in Sanrio store, 3 things for LinkedIn growth in 2026
-  'urn:li:activity:7467422369830076417': 'Point 2 needs a caveat.\n\nFive tight pillars works after you\'ve seen what actually lands. Locking them in before you\'ve tested anything keeps you posting in a direction nobody\'s paying attention to.',
-
-  // Aastha Duggal — MacBook café photo, visibility vs growth on LinkedIn
-  'urn:li:activity:7467177338439528448': 'Engagement measures who reacted. Growth measures who remembered.\n\nHad a client hire me after six months of reading without once engaging publicly. Not one like. Just showed up when they were ready.',
-
-  // Chelsea Olsen — peaceful beach balcony photo, creator shared grief + business, audience triggered
-  'urn:li:activity:7466859838401306624': 'The audience reaction always says more about where they are than what the post actually did.\n\nPeople who use work as an anchor during loss get it immediately. People who can\'t separate the two see it as cold. Both reads are honest.',
-
-  // Brigitta Ruha — "How to use LinkedIn in 2026" infographic: warm signals, ICP, stack, message, metrics
-  'urn:li:activity:7467183381479419904': 'The stacking logic is what the infographic earns its keep on.\n\nOne signal means research, three means conversation. What\'s the actual conversion difference you see between single-signal and multi-threaded outreach?',
-
-  // BATCH 5
-
-  // Nick Palasz — Friends meme: "AI will replace SDRs but their AI can't book a dentist appointment"
-  'urn:li:activity:7467122808435744768': 'The meme lands because the gap between the claim and the reality is exactly that wide.\n\nThe teams pulling ahead aren\'t debating whether AI replaces reps. They\'re already using it and just doing more volume.',
-
-  // Lavanya Aggarwal — content plagiarism, credit matters
-  'urn:li:activity:7467251764816158721': 'Had my own work copy-pasted word for word once. No credit.\n\nThe frustrating part wasn\'t the stealing. It was watching that person get engagement on something I\'d actually spent time thinking through.',
-
-  // Rozana Petrovska — outbound burnout is a structure problem, decision fatigue
-  'urn:li:activity:7467341257254780928': 'Decision fatigue, not volume, is the killer.\n\nTeams that systematize don\'t work less. They just stop rebuilding the same decisions every morning.\n\nThat difference compounds faster than any volume increase does.',
-
-  // Muneeba Mehmood — "28 Green Flags of a Strong Personal Brand" infographic
-  'urn:li:activity:7467250820883931137': 'The flag about silent readers who message privately is the one most people don\'t even know is happening to them.\n\nOf the 28, which one shows up first in people you\'d call genuinely strong brands?',
-
-  // Riin Reinola — professional portrait, quit safe life 2 years ago, whose success are you building
-  'urn:li:activity:7467254866961260544': 'The question of whose success you\'re actually building is the one most people avoid until something forces it.\n\nFor me it took losing a client overnight to stop pretending the answer wasn\'t obvious.',
-
-  // Dmitry Pavlotsky — photo with +213.2% growth stats overlay, called "the linkedin guy" by 3 strangers
-  'urn:li:activity:7467214068928380929': 'Three strangers at the same event calling you the same thing without knowing each other is the clearest signal positioning is working.\n\nThat +213.2% in the photo isn\'t algorithm luck. That\'s what happens when people know exactly what you stand for.',
+  // Samrutha Mahesh -- faceless channel, 3350 subs, less than once a week
+  '7461384399159480320': "The less-posting thing only works if the niche was right to begin with.\n\nNgl I've seen tons of faceless channels die not from low frequency but from picking topics nobody was searching.\n\nFrequency can't save a bad niche.",
 
 };
 
@@ -125,7 +93,7 @@ async function main() {
       console.log(`✓ ${post.author.displayName}: ${COMMENTS[post.id].substring(0, 50)}...`);
     } else {
       post.comment = '';
-      console.log(`✗ ${post.author.displayName}: no comment — re-run "write comments" in Claude Code`);
+      console.log(`✗ ${post.author.displayName}: no comment -- re-run "write comments" in Claude Code`);
     }
   }
   writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));

@@ -6,6 +6,8 @@ const ACCOUNTS_FILE = 'accounts.json';
 const OUTPUT_FILE = 'data/tweets.json';
 const APIFY_TOKEN = process.env.APIFY_TOKEN;
 const ACTOR_ID = 'delicious_zebu~ultimate-x-twitter-advanced-search-scraper';
+const TIMEOUT_MS = 60_000;
+const POLL_INTERVAL_MS = 3_000;
 
 function getDates() {
   const fmt = d => {
@@ -72,23 +74,49 @@ function isReply(text) {
   return text.startsWith('RT @') || text.startsWith('@');
 }
 
-async function fetchAccount(username, dates) {
-  const input = buildApifyInput(username, dates);
-  const url = `https://api.apify.com/v2/acts/${ACTOR_ID}/run-sync-get-dataset-items?token=${APIFY_TOKEN}`;
-
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(input)
-  });
-
+async function startRun(username, dateRange) {
+  const input = buildApifyInput(username, dateRange);
+  const res = await fetch(
+    `https://api.apify.com/v2/acts/${ACTOR_ID}/runs?token=${APIFY_TOKEN}`,
+    { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(input) }
+  );
   if (!res.ok) {
     const text = await res.text();
     throw new Error(`Apify API error ${res.status}: ${text}`);
   }
+  const { data } = await res.json();
+  return data.id;
+}
 
-  const data = await res.json();
-  return Array.isArray(data) ? data : [];
+async function abortRun(runId) {
+  await fetch(`https://api.apify.com/v2/actor-runs/${runId}/abort?token=${APIFY_TOKEN}`, { method: 'POST' });
+}
+
+async function fetchWithTimeout(username, dateRange) {
+  const runId = await startRun(username, dateRange);
+  const start = Date.now();
+
+  while (true) {
+    if (Date.now() - start > TIMEOUT_MS) {
+      await abortRun(runId);
+      return { data: null, timedOut: true };
+    }
+
+    await new Promise(r => setTimeout(r, POLL_INTERVAL_MS));
+
+    const statusRes = await fetch(`https://api.apify.com/v2/actor-runs/${runId}?token=${APIFY_TOKEN}`);
+    const { data: run } = await statusRes.json();
+
+    if (run.status === 'SUCCEEDED') {
+      const itemsRes = await fetch(`https://api.apify.com/v2/actor-runs/${runId}/dataset/items?token=${APIFY_TOKEN}`);
+      const items = await itemsRes.json();
+      return { data: Array.isArray(items) ? items : [], timedOut: false };
+    }
+
+    if (['FAILED', 'ABORTED', 'TIMED-OUT'].includes(run.status)) {
+      throw new Error(`Run ended with status: ${run.status}`);
+    }
+  }
 }
 
 async function main() {
@@ -107,22 +135,33 @@ async function main() {
 
   await mkdir('data', { recursive: true });
 
-  const CONCURRENCY = 6;
+  const CONCURRENCY = 6; // always 6 — do not change
 
-  async function processAccount(username, index) {
-    process.stdout.write(`[${index + 1}/${accounts.length}] Fetching @${username}... `);
+  async function processAccount(username, index, total, isRetry = false) {
+    const label = isRetry ? `[RETRY ${index + 1}/${total}]` : `[${index + 1}/${total}]`;
+    process.stdout.write(`${label} Fetching @${username}... `);
     try {
-      let tweets = await fetchAccount(username, dates.today);
+      let { data: tweets, timedOut } = await fetchWithTimeout(username, dates.today);
       let source = 'today';
 
+      if (timedOut) {
+        console.log('TIMEOUT (>60s) — will retry');
+        return { tweet: null, timedOut: true, username };
+      }
+
       if (tweets.length === 0) {
-        tweets = await fetchAccount(username, dates.yesterday);
+        const result = await fetchWithTimeout(username, dates.yesterday);
+        if (result.timedOut) {
+          console.log('TIMEOUT (>60s) — will retry');
+          return { tweet: null, timedOut: true, username };
+        }
+        tweets = result.data;
         source = 'yesterday';
       }
 
       if (tweets.length === 0) {
         console.log('0 tweets (no posts in date range)');
-        return null;
+        return { tweet: null, timedOut: false };
       }
 
       if (!firstTweetLogged) {
@@ -137,36 +176,53 @@ async function main() {
         filtered.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         const mapped = mapTweet(filtered[0]);
         console.log(`1 tweet found (${source})`);
-        return mapped;
+        return { tweet: mapped, timedOut: false };
       } else {
-        console.log(`0 tweets (no non-reply posts)`);
-        return null;
+        console.log('0 tweets (no non-reply posts)');
+        return { tweet: null, timedOut: false };
       }
     } catch (err) {
       console.log(`ERROR: ${err.message}`);
-      return null;
+      return { tweet: null, timedOut: false };
     }
   }
 
-  const queue = accounts.map((username, i) => ({ username, i }));
-  const inFlight = new Set();
-  const results = [];
+  async function runQueue(items, total, isRetry = false) {
+    const queue = [...items];
+    const inFlight = new Set();
+    const results = [];
+    const timedOut = [];
 
-  await new Promise(resolve => {
-    function dispatch() {
-      while (inFlight.size < CONCURRENCY && queue.length > 0) {
-        const { username, i } = queue.shift();
-        const p = processAccount(username, i).then(result => {
-          if (result) results.push(result);
-          inFlight.delete(p);
-          if (queue.length === 0 && inFlight.size === 0) resolve();
-          else dispatch();
-        });
-        inFlight.add(p);
+    await new Promise(resolve => {
+      function dispatch() {
+        while (inFlight.size < CONCURRENCY && queue.length > 0) {
+          const { username, i } = queue.shift();
+          const p = processAccount(username, i, total, isRetry).then(result => {
+            if (result.timedOut) timedOut.push({ username, i });
+            else if (result.tweet) results.push(result.tweet);
+            inFlight.delete(p);
+            if (queue.length === 0 && inFlight.size === 0) resolve();
+            else dispatch();
+          });
+          inFlight.add(p);
+        }
       }
-    }
-    dispatch();
-  });
+      dispatch();
+    });
+
+    return { results, timedOut };
+  }
+
+  const allItems = accounts.map((username, i) => ({ username, i }));
+  const { results: firstResults, timedOut } = await runQueue(allItems, accounts.length);
+  const results = [...firstResults];
+
+  if (timedOut.length > 0) {
+    console.log(`\nRetrying ${timedOut.length} timed-out account(s)...`);
+    const retryItems = timedOut.map(({ username }, i) => ({ username, i }));
+    const { results: retryResults } = await runQueue(retryItems, timedOut.length, true);
+    results.push(...retryResults);
+  }
 
   results.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 

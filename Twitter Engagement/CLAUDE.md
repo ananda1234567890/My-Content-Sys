@@ -92,6 +92,12 @@ This is the list of Twitter accounts Claude monitors each day. Add or remove use
 
 ---
 
+## Hard Rules — Do Not Change
+
+**Concurrency is always 6.** The `CONCURRENCY` constant in `scripts/fetch-tweets.js` must stay at 6. Do not lower it for any reason, including Apify memory errors. If memory errors occur, that is an Apify account/plan issue — not a reason to reduce concurrency.
+
+---
+
 ## Troubleshooting
 
 **"APIFY_TOKEN not found"** — Make sure you created `.env` (not just `.env.example`) and put your token in it.

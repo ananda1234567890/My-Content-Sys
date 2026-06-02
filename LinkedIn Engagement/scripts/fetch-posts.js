@@ -6,34 +6,26 @@ import { extname } from 'path';
 const ACCOUNTS_FILE = 'accounts.json';
 const OUTPUT_FILE = 'data/posts.json';
 const APIFY_TOKEN = process.env.APIFY_TOKEN;
-const ACTOR_ID = 'supreme_coder~linkedin-post';
+const ACTOR_ID = 'harvestapi~linkedin-profile-posts';
 
 function mapPost(raw) {
-  if (raw.error) return null;
-
-  const text = raw.text || '';
-  const url = raw.url || '';
-  const authorName = raw.authorName || `${raw.author?.firstName || ''} ${raw.author?.lastName || ''}`.trim();
-  const authorProfileUrl = raw.authorProfileUrl || '';
-  const authorUsername = raw.authorProfileId || raw.author?.publicId || authorProfileUrl.match(/\/in\/([^/?]+)/)?.[1] || authorName;
-  const createdAt = raw.postedAtISO || (raw.postedAtTimestamp ? new Date(raw.postedAtTimestamp).toISOString() : new Date().toISOString());
-
-  const imageUrls = (raw.images || []).filter(Boolean);
+  const profileUrl = raw.author?.linkedinUrl?.split('?')[0].replace(/\/?$/, '/') || '';
+  const username = raw.author?.publicIdentifier || profileUrl.match(/\/in\/([^/?]+)/)?.[1] || '';
 
   return {
-    id: raw.urn || raw.shareUrn || url,
-    text,
-    url,
+    id: raw.id || raw.entityId || raw.linkedinUrl || '',
+    text: raw.content || '',
+    url: raw.linkedinUrl || raw.socialContent?.shareUrl || '',
     author: {
-      username: authorUsername,
-      displayName: authorName,
-      profileUrl: authorProfileUrl
+      username,
+      displayName: raw.author?.name || username,
+      profileUrl
     },
-    createdAt,
-    likeCount: raw.numLikes ?? 0,
-    commentCount: raw.numComments ?? 0,
-    repostCount: raw.numShares ?? 0,
-    imageUrls,
+    createdAt: raw.postedAt?.date || new Date().toISOString(),
+    likeCount: raw.engagement?.likes ?? 0,
+    commentCount: raw.engagement?.comments ?? 0,
+    repostCount: raw.engagement?.shares ?? 0,
+    imageUrls: (raw.postImages || []).map(img => img.url).filter(Boolean),
     localImagePaths: [],
     comment: ''
   };
@@ -62,8 +54,8 @@ async function downloadImages(post) {
 
 async function fetchAccount(profileUrl) {
   const input = {
-    urls: [profileUrl],
-    limitPerSource: 1
+    profileUrls: [profileUrl],
+    resultsLimit: 3
   };
 
   const url = `https://api.apify.com/v2/acts/${ACTOR_ID}/run-sync-get-dataset-items?token=${APIFY_TOKEN}`;
@@ -89,7 +81,14 @@ async function main() {
     process.exit(1);
   }
 
-  const accounts = JSON.parse(readFileSync(ACCOUNTS_FILE, 'utf-8'));
+  const limitArg = process.argv.indexOf('--limit');
+  const limit = limitArg !== -1 ? parseInt(process.argv[limitArg + 1], 10) : null;
+
+  let accounts = JSON.parse(readFileSync(ACCOUNTS_FILE, 'utf-8'));
+  if (limit && limit > 0) {
+    accounts = accounts.slice(0, limit);
+    console.log(`Test mode: limiting to first ${limit} accounts`);
+  }
   await mkdir('data', { recursive: true });
 
   let firstPostLogged = false;
