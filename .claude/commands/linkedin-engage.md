@@ -16,17 +16,15 @@ cd "LinkedIn Engagement" && node scripts/fetch-posts.js
 
 If it errors with "APIFY_TOKEN not found", check that `LinkedIn Engagement/.env` exists with `APIFY_TOKEN=<token>`.
 
-**IMPORTANT — Apify actor:** Always use `supreme_coder~linkedin-post` for LinkedIn scraping. Never switch to any other actor. The input is `{ urls: [profileUrl], limitPerSource: 1 }`. If this actor returns errors, report the exact error to the user — do not try alternative actors.
+**Apify actor:** `harvestapi~linkedin-profile-posts`. Input: `{ profileUrls: [profileUrl], resultsLimit: 3 }`. For quick testing, pass `--limit N` to only fetch the first N accounts: `node scripts/fetch-posts.js --limit 10`.
 
 **Step 2 — Write comments**
 
 1. Read `LinkedIn Engagement/data/posts.json` — note every post ID and the full post text
-2. For every post that has `imageUrls`:
-   - Run `mkdir -p /tmp/linkedin-images`
-   - Download each image: `curl -L -o /tmp/linkedin-images/<filename> <url>`
-   - View the image visually before writing the comment
+2. For every post that has `localImagePaths` (auto-downloaded by fetch-posts.js to `dashboard/images/`):
+   - Read each image at its local path visually before writing the comment
 3. Read `LinkedIn Engagement/.claude/skills/comment-voice.md` — this is the voice bible, follow it exactly
-4. Write a comment for every single post
+4. Write a comment for every single post (10–40 words, one thought per line)
 5. Edit `LinkedIn Engagement/scripts/write-comments.js` — fill the COMMENTS map with every post ID and its comment
 6. Run: `cd "LinkedIn Engagement" && node scripts/write-comments.js`
 

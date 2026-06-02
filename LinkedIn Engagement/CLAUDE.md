@@ -53,9 +53,8 @@ Then go through the dashboard, click "Open Post ↗" on each card (it auto-copie
 When told "write comments":
 
 1. Read `data/posts.json`
-2. For each post that has `imageUrls`:
-   - Download each image to `/tmp/linkedin-images/` using `curl -L -o /tmp/linkedin-images/<filename> <url>`
-   - Read the image visually before writing the comment
+2. For each post that has `localImagePaths` (images are auto-downloaded to `dashboard/images/` by fetch-posts.js):
+   - Read each image at its local path visually before writing the comment
 3. Read `.claude/skills/comment-voice.md` — this is the single source of truth for voice
 4. Write a comment for every post following the voice guide exactly
 5. Edit `scripts/write-comments.js` — fill the COMMENTS map with `{ postId: 'comment text' }` entries
@@ -74,8 +73,8 @@ Claude writes comments by following `.claude/skills/comment-voice.md`. This file
 Key principles from the voice guide:
 - Craft-first — brings everything back to video editing, YouTube retention, or creator work when it fits naturally
 - No em dashes, no hashtags, no validation openers
-- 15-60 words max per comment
-- One thought per line where it lands better
+- 10-40 words per comment (never go above 40)
+- One thought per line, no paragraphs
 - Picks ONE mode per comment (pushback, add what they missed, honest admit, etc.)
 
 ---
@@ -84,7 +83,7 @@ Key principles from the voice guide:
 
 This is the list of LinkedIn profile URLs Claude monitors each day. Add or remove freely — full profile URLs like `https://www.linkedin.com/in/username/`.
 
-The Apify actor used is `supreme_coder/linkedin-post`. It takes `profileUrls` as input and returns the most recent posts.
+The Apify actor used is `harvestapi~linkedin-profile-posts`. Input: `{ profileUrls: [url], resultsLimit: 3 }`. Pass `--limit N` to fetch only the first N accounts for quick testing.
 
 ---
 
