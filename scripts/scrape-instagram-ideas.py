@@ -14,6 +14,7 @@ Usage:
 """
 
 import os
+import sys
 import json
 import random
 import base64
@@ -23,6 +24,8 @@ import re
 import requests
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

@@ -21,167 +21,167 @@ const POSTS_FILE = 'data/posts.json';
 // post id -> comment written by Claude Code for today's batch
 const COMMENTS = {
 
-  // Alex Hormozi -- "I'd rather be a failure than a coward" tweet
-  '7467742093864738816': "spent years playing it safe and calling it smart.\nit wasn't.",
-
-  // Greg Isenberg -- AI agents $100B, MCP/tool layer
-  '7467657776874397696': "been watching this and the MCP/tool layer gap is genuinely scary for SaaS.\nif agents can't read your pricing and call your API in one shot, they skip you.",
-
-  // Tim Denning -- gym at 2pm Monday, freedom from banking job
-  '7467893946745176064': "I did the 5am gym thing for 2 years.\nfinished the workout thinking about email.\nit was just stress with barbells.",
-
-  // Noam Nisand -- 42 creators to follow
-  '7467885340033232896': "had to look up about half of these.\nwhich one would you say changed how you think about content the most?",
-
-  // Charlie Hills -- Claude + Apify for social media analysis
-  '7467877767066394626': "been running something similar.\nthe multi-modal angle is where it gets interesting, feeding thumbnails and retention patterns in one pass.\nGemini handled that better than I expected.",
-
-  // Beatrice Vladut -- activity vs asset based business
-  '7467881306132185088': "ran my freelance work as an activity business for the first 2 years.\nevery month started at zero, same prospecting, same pitching, nothing carried over.\nthe asset shift didn't happen until I started posting consistently.",
-
-  // Celeste Yamile -- content operating system giveaway
-  '7467915679111778304': "I ran like this for 8 months. random ideas, random timing, wondering why nothing stuck.\nthe system was half the fix. the other half was realizing I had no actual content pillars.",
+  // Greg Isenberg -- AI agents $100B, build for agents not humans
+  '7467657776874397696': "been watching AI video editing go from party trick to 80% of my actual pipeline in about 18 months.\nwhoever is building the infrastructure now is going to look very smart later",
 
   // Pierre Herubel -- 3 B2B content rules, can't map which content moves buyers
-  '7467849417958678528': "I've had clients reach out referencing a specific post from 4 months ago.\nno engagement, no follow. just read it quietly and came when they were ready.\nthe trigger was never the post I expected.",
+  '7467849417958678528': "spent a year pushing content for a client and the video that finally converted a real client was the one we almost didn't post.\ncan't model that.",
 
-  // Hrabren Lindfors -- LinkedIn has changed, 6 years daily posting
-  '7467871541893021696': "been thinking about this for a while.\n6 years of daily posting is a serious sample size.\nwhat changed the most, the algorithm or what audiences actually want to read?",
+  // Alex Hormozi -- how someone handles feedback
+  '7467968405594255362': "had a client come back six months later and say 'that harsh note on the cut was right.'\nhardest feedback to sit with is usually the accurate kind",
 
-  // Jacob Pegs -- gave up Wednesdays & Fridays, daughter's first steps
-  '7467813580986281986': "spent 2 years treating weekends like recovery time from work.\nthis is the reminder I needed.",
+  // Charlie Hills -- Claude + Apify for social media analysis
+  '7467877767066394626': "been running this exact setup for a few months.\nthe multimodal angle with video analysis is where it stops being just neat.\nrate limits will catch you on larger accounts though",
 
-  // Sherry Shinde -- hook review live rewrite series
-  '7467512916838244353': "I write hooks last now. wrote them first for years.\nthe shift happened when I realized you can't know what angle works until the post is done.",
+  // Tim Denning -- gym at 2pm Monday, freedom from banking job
+  '7467893946745176064': "had a client DM me at noon on a Friday asking if I was free for a call.\nI was at a tea stall.\nsaid yes anyway.\nthat felt like the whole post.",
+
+  // Noam Nisand -- 42 creators to follow
+  '7467885340033232896': "had to rebuild how I thought about content after finding Pierre Herubel way too late.\nsaved this list so I don't miss the next one",
 
   // Richard Moore -- sales pace, rushing through price
-  '7467892879709933568': "I did this in every client conversation in my first year.\npicked up editing clients by panicking through the price and moving to value add immediately.\nlost a few on the silence after I said the number.",
+  '7467892879709933568': "I sell editing packages and the moment I started slowing down before quoting price, close rate shifted.\nfeels unnatural for about 3 calls. then it's automatic.",
+
+  // Beatrice Vladut -- activity vs asset based business
+  '7467881306132185088': "been doing activity-mode stuff more than I realized until recently.\nthe clients who come through content consistently behave differently than the ones I chased.",
+
+  // Jacob Pegs -- simplicity in business model
+  '7468175958626422784': "had a version of this conversation with myself in 2022.\nkept adding offer tiers thinking complexity meant premium.\nthree offers, two packages, one confused pipeline.",
+
+  // Celeste Yamile -- content operating system giveaway
+  '7467915679111778304': "spent six months posting randomly and the blank screen problem was real every single time.\nthe daily structure piece is what changes that.",
+
+  // Hrabren Lindfors -- LinkedIn has changed, 6 years daily posting
+  '7467871541893021696': "I've been around long enough to watch everyone declare LinkedIn dead at least three times.\ncurious what's actually changed this time.",
 
   // Marina Panova -- LinkedIn infographics, structure vs aesthetics
-  '7467485248142979072': "I make infographics for clients and from what I've seen, the ones that save most are always the simplest.\none idea, clear hierarchy, nothing trying to be clever.",
-
-  // Justin Welsh -- walked away from $550k salary, meaning before money
-  '7467905019091156992': "I didn't leave my situation on purpose either.\nmy body basically made the choice before I did.",
-
-  // Chris Donnelly -- SEO vs AEO vs GEO, citation-worthy
-  '7467907343091994624': "been building for GEO without calling it that.\nthe citation-worthy level is the actual goal.\ncurious how you'd approach authority signals vs just schema markup.",
+  '7467485248142979072': "been obsessed with the 'looks good vs works' gap for years.\nsame problem shows up in video: a beautiful cut that loses the audience in 30 seconds is just expensive fluff.",
 
   // Alex Colhoun -- Wednesday community session, Zubia 194K impressions
-  '7467908285271142400': "I've seen accounts hit one breakout post and go quiet for weeks.\nis Zubia's system producing consistent reach, or was the 194K a one-off?",
+  '7467908285271142400': "I love seeing the Zubia 194K number.\nthat kind of outlier win in a community setting is exactly why the format works.",
 
-  // Alexander Plank -- founder mask, performance as protection, €25k cap
-  '7467515388348665856': "spent about a year being the exact bottleneck this describes.\nevery decision waited for me, every client thought I was the product.\nthe ceiling was real.",
+  // Chris Donnelly -- SEO vs AEO vs GEO, citation-worthy
+  '7467907343091994624': "been watching video content discovery follow the same shift.\nYouTube stopped being purely keyword-driven the moment the recommendation engine got smarter than search.",
 
-  // Anthony Carlton -- millionaire myths, collect assets vs debt
-  '7467916273876688896': "I've seen this up close with clients.\nthe ones with the most visible lifestyle were also the ones with the shakiest foundations.\nthe ones quietly building had nothing to prove.",
+  // Sherry Shinde -- hook review live rewrite series
+  '7467512916838244353': "had a mentor rewrite one of my scripts live once and it clicked things months of guides didn't.\nthe hook review format hits differently than a written breakdown.",
 
   // Nat Berman -- jealous friends watch but never engage
-  '7467530312890187777': "had people from home who knew every post, every milestone, every update.\nnever once reached out. not even when things were actually going well.",
+  '7467530312890187777': "I've noticed the silence from specific people at specific moments is more consistent than any argument.\nhard to explain as coincidence.",
+
+  // Anthony Carlton -- millionaire myths, collect assets vs debt
+  '7467916273876688896': "had a conversation last year with someone who had a BMW on lease and a full Amex but nothing saved.\nthe car was everything.",
+
+  // Justin Welsh -- Kajabi ad, one skill one offer one customer
+  '7468147114741628929': "spent a long time thinking five income streams meant stability.\nthe 'one skill, one offer, one customer' click is almost always late and expensive.",
+
+  // Alexander Plank -- founder mask, performance as protection
+  '7467515388348665856': "I understood the 'you are the bottleneck' thing theoretically for about a year before it actually made me change anything.",
 
   // Bogomil Stoev -- LinkedIn experiment, only 15% viewed profile
-  '7467540523768053760': "I ran something similar and got a similar number.\nthe photo and headline decision happens in under 2 seconds.\nnobody is reading the about section first.",
-
-  // Yurii Veremchuk -- becoming a dad changed him as entrepreneur
-  '7467916505914167297': "I don't chase being #1 either.\nnever understood the obsession with being the top person in the room.\njust want to do good work and be home.",
-
-  // Simi Arora -- True Power podcast, Kanwal Rekhi episode
-  '7467913971715510272': "had no idea Kanwal Rekhi was the godfather of Silicon Valley's Indian entrepreneurial movement.\ngenuinely curious what he said about the early years.",
-
-  // Matt Doan -- appetite for loss, investment in loss framing
-  '7467551160673914880': "I had zero appetite for loss when I started.\nthought I was building something, but I was really just hoping it would work without having to absorb the hard part.",
+  '7467540523768053760': "I rewrote my About section twice before touching my headline.\nwhich is exactly the order this data says not to do.",
 
   // Samrutha Mahesh -- faceless channel 3k subs, less than once a week
-  '7461384399159480320': "I've seen the opposite happen too.\nlow posting frequency with no clear niche just means the algorithm never figures out who to send the videos to.",
+  '7461384399159480320': "been saying this to clients for a while.\nthe packaging piece is actually harder: knowing which idea has momentum before you've edited it takes a while to develop.",
 
-  // Nehha -- algorithm builds your profile before you post
-  '7467455198723104769': "I tested this without meaning to.\n3 months engaging only with video editing content before posting.\nfirst posts landed in front of editors. the algorithm already had a read on me.",
+  // Simi Arora -- True Power podcast, Kanwal Rekhi episode
+  '7467913971715510272': "had no idea Kanwal Rekhi was the first Indian-American founder on NASDAQ.\nthat's a story that doesn't get told enough.",
 
-  // Ursula Botha -- InspireHER, invisible scripts, presence training
-  '7466828463514177536': "I've never heard it put that way before.\ninvisible scripts is the most accurate framing I've seen for why presence training alone doesn't stick.",
+  // Yurii Veremchuk -- becoming a dad changed him as entrepreneur
+  '7467916505914167297': "I started filtering decisions by actual time cost around year 3 of freelancing.\nthe filter changed most of what I was saying yes to.",
 
-  // Lanzi Weideman -- got client 1.8k followers in one day
-  '7467820909052170240': "I do something similar with video clients.\nbest angles almost always come out during the brief, not from me sitting alone trying to be creative.\njust takes the right questions.",
+  // Matt Doan -- corporate programs you, old code
+  '7467948375057940481': "spent years asking for approval on creative decisions that were mine to make.\nthat's not timidity. that's just what the environment trains you to do.",
+
+  // Christopher Angiolillo -- documenting real work as it happens
+  '7467941135357784064': "I've been trying to document mid-process instead of post-results for a few months.\nthe gap between them is bigger than expected.",
+
+  // James Bonadies -- stop watching agency YouTube, execution not info
+  '7468090157146157057': "I've watched enough tutorials to become an expert without doing anything for a full year.\nthe execution gap is real.",
 
   // MacCoy Merkley -- Introducing The Bagalloon!
   '7445218427171991553': "I need to know what this actually is.",
 
-  // James Bonadies -- AI agency in 2026, studying features not getting paid
-  '7467748664438890497': "I see this with video editors too.\nlearning every AI tool before landing one client.\nthe tool knowledge doesn't convert without a basic ability to close.",
+  // Ursula Botha -- InspireHER, invisible scripts, presence training
+  '7466828463514177536': "been thinking about invisible scripts for a while.\nthe ones about taking up space are the hardest to name because they feel like just the way things are.",
 
-  // Muhammad Abdullah -- blank page tax, system not time is the blocker
-  '7467833441896628224': "I paid this tax for months.\nopening the app, staring, forcing something out, hating it, posting anyway.\nthe deciding took longer than the writing.",
-
-  // Christopher Angiolillo -- watching others get the deal
-  '7467223074052993025': "I used to do this constantly with other editors.\nwatching someone land a big client and wondering what they were doing that I wasn't.\nnever knew what was happening behind the scenes.",
-
-  // Suchitra Sivasankaran -- inner work journal, postponing reflection
-  '7463130712590913537': "I've been postponing the 'for later' reflection for about 3 years now.\nthere's always something more urgent.",
+  // Nehha -- referrals not a pipeline, doing it alone is expensive
+  '7468181434965401601': "ran purely on referrals for about 8 months and when the intros dried up there was nothing behind them.\nthat's when I understood what 'not a pipeline' actually means.",
 
   // Urwa Ejaz -- freedom after quitting, 11 likes phase
-  '7467135305414995968': "I've sat with the 11 likes phase longer than I'd admit.\nthe posts that landed months later were the ones I nearly didn't publish.",
+  '7467135305414995968': "I remember posting to no engagement for months and the only thing keeping it going was enjoying the writing itself.\nthe 'it compounds later' advice is right but not immediately useful.",
+
+  // Lanzi Weideman -- got client 1.8k followers in one day
+  '7467820909052170240': "I can always tell when content is ghostwritten.\nnot because of quality, but because the opinions are never specific enough to be contested.",
+
+  // Suchitra Sivasankaran -- inner work journal, postponing reflection
+  '7463130712590913537': "been actively trying to sit without being productive for about six months.\nrest feeling lazy is the one that doesn't just go away when you understand it.",
+
+  // Muhammad Abdullah -- blank page tax, system not time is the blocker
+  '7467833441896628224': "had a content calendar for months and still hit the blank page problem.\nturned out the calendar had topics but no angles.\nthe deciding was still happening every time.",
 
   // Saransh Kushwaha -- SaaS video for Sequence, 2 revisions were typos
-  '7467869864452411393': "I love when revision rounds are like this.\nmeans the creative direction was already right and nobody's second-guessing the actual edit.",
-
-  // Maryam Bahrami -- AI agents context problem, context overload
-  '7467470244278829057': "I ran into this building my own system.\nkept making the prompt bigger thinking more context would fix inconsistency.\nit just made the outputs noisier.",
-
-  // Pooja Jain -- data engineering as invisible plumbing, nobody claps
-  '7467924503847903232': "I've seen this in video too.\ngood editing is invisible. nobody says 'wow the pacing was perfect.'\nthey just watch until the end.",
-
-  // Yash Bansal -- quietly preparing, less talking
-  '7467436089041993729': "I keep announcing things before they're done.\nthis is a good reminder.",
-
-  // Katyayini Karnani -- CGPA 9 to 7.9, trade-off
-  '7467080813138866176': "I had the same moment a few years back.\ndifferent thing, same trade-off. took a long time to stop feeling guilty about it.",
+  '7467869864452411393': "I've noticed the projects with the fewest revision rounds are the ones where the client knows their product inside out.\nbrief quality follows from that.",
 
   // Maksym Zaletskyi -- first 7 days to lose a great hire
-  '7450150946443206656': "I've asked this question myself on bad projects.\n'if this is week one, what does month three look like?'\nsometimes the answer is obvious from day one.",
+  '7450150946443206656': "I've been the confused new contractor version of this twice.\nboth times the 'just figure it out' environment told me more about the company than any interview prep did.",
 
-  // Fatima Khan -- priorities are direction not list, your real priority list
-  '7467896627547082752': "I've never found a prioritization framework that sticks.\nwhat you actually follow up on tells you more than any planning doc.",
+  // Katyayini Karnani -- first Apple product from LinkedIn earnings
+  '7468157266387677186': "I bought my first good monitor from editing money and the gap between owning it and having bought it yourself feels completely different.\ncongrats",
 
-  // Prerna Bhandari -- LinkedIn algorithm, dwell time signal
-  '7467784780768591872': "I focus a lot on hooks but rarely think about what happens after someone clicks.\nfrom what I've seen, stopping the scroll and actually reading are two different behaviors to optimize for.",
+  // Yash Bansal -- quietly preparing, less talking
+  '7467436089041993729': "had a period like this about 18 months ago.\nless posting, more building.\ncame back and everything felt more intentional.",
 
-  // Aastha Duggal -- ran out of perspective, performing vs participating
-  '7467539850942984192': "I made this switch when I stopped trying to sound like I had it figured out.\nthe posts I wrote while genuinely confused about something always did better.",
+  // Maryam Bahrami -- AI agents context problem, context overload
+  '7467470244278829057': "been watching context overload become the actual problem on more workflows than bad models.\nthe 'more context is always better' assumption takes a while to shake.",
 
-  // Chelsea Olsen -- NYC in-person networking, choose the plane
-  '7467544208162074625': "I've only regretted the flights I didn't take.\nthe zooms were fine. the rooms changed things.",
+  // Chelsea Olsen -- LinkedIn friendships, NYC event
+  '7467933940910194689': "I've made exactly two LinkedIn connections I'd call the 'answer the call' kind.\nboth happened through consistent engagement, not direct outreach.",
+
+  // Fatima Khan -- priorities are direction not list
+  '7467896627547082752': "I realized my actual priority list when I compared my calendar to the list I wrote at the start of the month.\ndifferent documents.",
+
+  // Pooja Jain -- DuckDB write lock, architecture ceiling
+  '7468174053179183104': "spent longer than I'd admit adding workarounds to a pipeline problem before realizing the architecture itself was wrong.\nthe retry loop instinct is strong but usually late.",
+
+  // Brigitta Ruha -- GTM rules by ARR stage, no SDR before founder closes
+  '7467908233396015105': "I've watched founders hire SDRs before closing deals themselves, and it almost never works.\nthe playbook doesn't exist yet. the SDR just exposes that earlier.",
 
   // Victoria Banaszczyk -- "Make it go viral!" meme
   '7467832849803694080': "been there too many times lol",
 
-  // Brigitta Ruha -- GTM rules by ARR stage, no SDR before founder closes
-  '7467908233396015105': "I think about this with creative clients a lot.\nfounders who've never sold their own services are the hardest to build a repeatable process for.\nthey skip the part where they understand what actually converts.",
-
-  // Utkarshini Anand -- "wait until you're ready" lie
-  '7467828693311070208': "I launched my editing services when I was nowhere near ready.\nfirst client found 3 things I'd never thought about.\nI couldn't have figured those out by preparing longer.",
-
-  // Nick Palasz -- 10M cold emails, market-message fit problem
-  '7467847746213969920': "I'd push back on 12 slightly.\nin my experience, it's often both: the message is weak AND the market is wrong.\nfixing one without the other doesn't stick.",
-
-  // Lavanya Aggarwal -- May recap, exams, AC at 19C, alignment
-  '7467594728197255168': "I dropped my AC to 18 degrees last summer and couldn't figure out why I had no energy for 3 weeks lol.\nthe alignment piece is real though.",
+  // Prerna Bhandari -- facts don't build authority, perspective does
+  '7468146148650860545': "I'd go further: perspective without proof just sounds like opinion.\nthe combination of how you think plus evidence you've tested it is the thing that actually converts.",
 
   // Rozana Petrovska -- I'm not the best but I try harder, keep testing
-  '7467923070360444928': "I've worked with people way more talented than me who stopped adjusting when things didn't work immediately.\nthe gap between them and people who just keep testing is larger than I expected.",
+  '7467923070360444928': "I spent months running the same outreach approach just hoping it would click.\nadjusting fast sounds obvious until you're in it.",
+
+  // Utkarshini Anand -- "wait until you're ready" lie
+  '7467828693311070208': "had my first client before I'd finished a single online course about editing.\nthe course didn't teach anything the client didn't.",
+
+  // Nick Palasz -- 10M cold emails, market-message fit problem
+  '7467847746213969920': "I changed copy for months before realizing the positioning itself wasn't working.\nthe market-message fit problem looks like a messaging problem from the inside.",
+
+  // Lavanya Aggarwal -- undercharging for content work
+  '7467990679084937216': "spent years charging for 'editing hours' before understanding I was actually charging for knowing how the creator thinks on camera.\ndifferent products, different prices.",
+
+  // Muneeba Mehmood -- outreach evolution, inbound vs intentional outreach
+  '7468179826961719296': "I spent a full year not doing outreach because inbound felt cleaner.\nthe first intentional DM I sent landed a client better than anything that came in organically.",
+
+  // Aastha Duggal -- creative block, stop creating
+  '7467932020963459073': "I've walked away from client edits overnight and come back with the fix I'd been staring past for three hours.\nthe distance is doing something the effort can't.",
 
   // Melissa Campbell Porter -- selling the bridge not the destination
-  '7467545808834392065': "I pitched editing by talking about editing for a full year.\nclients wanted views. I gave them cut techniques.\nsame mistake, different bridge.",
-
-  // Muneeba Mehmood -- delivering on time, trust lives in deadlines
-  '7467817489050198016': "I've lost clients for being slow to deliver more than for any quality issue.\nnever had anyone quit because the work wasn't perfect. had them quit because I missed the date.",
-
-  // Noor V. Barrage -- everything wrong with me, 7.5 hours sleep non-negotiable
-  '7467892900476092416': "I spent 2 years treating sleep deprivation as proof of effort.\nstopped when I realized my best editing sessions were always after 8 hours, not 4.",
+  '7467545808834392065': "been guilty of leading with 'I use DaVinci Resolve, multicam, color grade, sound mix' instead of 'your videos will stop losing viewers at the 30-second mark.'\nsame edit, different framing.",
 
   // Riin Reinola -- advice I found hard to follow, hiding behind expertise
-  '7467880639825047552': "I hid behind skills for a long time.\neasier to let the work speak than to show up as the person doing it.\neventually realized those were two different audiences.",
+  '7467880639825047552': "I spent a while trying to build a reputation around technique and craft.\nthe calls where I talked about a specific problem I was having always did better than any tutorial breakdown.",
 
   // Dmitry Pavlotsky -- first post in 3 years, first lead in 3 hours
-  '7467832312613797888': "I've seen that exact suspicion kill momentum.\nthey get one result, call it luck, and don't post again for a week.\nyou have to keep going before you know if it's real.",
+  '7467832312613797888': "I've watched people attribute the first few inbound leads to luck for months after starting.\nthe pattern takes longer to trust than to build.",
+
+  // Noor V. Barrage -- everything wrong with me, 7.5 hours sleep non-negotiable
+  '7467892900476092416': "I read exclusively business and productivity stuff for two years and it made my thinking narrower.\nthe fiction detour felt like a waste before it very obviously wasn't.",
 
 };
 

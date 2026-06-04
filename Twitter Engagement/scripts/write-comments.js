@@ -25,6 +25,65 @@ const TWEETS_FILE = 'data/tweets.json';
 // Claude Code fills this in fresh each day — do not edit manually
 const COMMENTS = {
 
+  // 2026-06-04 full batch
+  '2062401393693278554': 'Also record yourself talking for 5 min about anything, then play it back.\n\nYou hear the fillers, the weak spots, the habits you\'d never catch otherwise.\n\nThat feedback loop changed how I talk on calls.',
+
+  '2062400737074937982': 'Same energy as the guys who don\'t flex the watch but own the factory.\n\nReal ones never need to announce.',
+
+  '2062400248526606577': 'Works in video editing too.\n\nPeople say they stopped watching because of X. But the real reason is usually an emotion they didn\'t even notice.',
+
+  '2062399615291265302': 'Seen this so many times with creators.\n\nThe ones who win long-term are just obsessively helpful for months before they ever ask for anything.',
+
+  '2062394413163409852': 'And sometimes the same person is both in different rooms.\n\nThe skill is knowing which one the situation actually needs right now.',
+
+  '2062393103714009244': 'Damn, this one hits different.\n\nLike you don\'t even realize you\'ve been slowly disappearing until it\'s been like 2 years and you barely recognize yourself.',
+
+  '2062387837878636561': 'Wait I\'m genuinely curious now.\n\nWhat\'s your actual strategy for getting intentionally into the training set? Like are you publishing in specific places or is there more to it?',
+
+  '2062383192192036920': 'The quiet grinders are wild.\n\nRunning on 4 hours of sleep, dealing with stuff nobody sees, but still showing up every day like nothing happened.',
+
+  '2062381964804653242': 'Bro, nobody taught me any of this growing up.\n\nTook me till like 22 to even understand what investing actually meant. The gap in financial education is crazy.',
+
+  '2062326736268779734': 'Also the follow-up sequence timing matters a lot.\n\nMost people give up after 2 touchpoints when 80% of replies come after the 4th or 5th.',
+
+  '2062294824519114898': 'Idk man.\n\nI\'ve seen people be consistently mediocre for years and stay stuck. Intensity is what breaks you through the plateau, consistency is what keeps you there.',
+
+  '2062278228211831096': 'This is exactly where I\'m headed.\n\nRemote + own thing is the move. 10 years freelancing from anywhere honestly sounds like the dream setup.',
+
+  '2062262645151949296': 'The short acts as a trailer, long form is where the real retention game happens.\n\nAnyone not doing this is leaving so much on the table.',
+
+  '2062260770247746019': 'The thumbnail alone is doing so much work here.\n\n$400M/yr + Shenzhen is a completely different angle than most dropshipping content. Depth is what makes 557 subs irrelevant.',
+
+  '2062254394918465669': 'The $0 spend staring back at you on day 1 is a different kind of energy.\n\nWhat\'s the offer you\'re testing?',
+
+  '2062248015633519068': 'It\'s like upgrading from a $20/month client problem to a $2k/month client problem.\n\nStill a problem. Just a way better one.',
+
+  '2062247330007634199': 'The annotation cost alone kills most pilots before they even deploy.\n\nFoundation models fine-tuned per domain sounds more scalable. Are you seeing that approach work in practice?',
+
+  '2062243580089864418': 'Positioning is the whole game.\n\nPeople need to see themselves in the outcome before they care about what you built.',
+
+  '2062236191978934531': 'Video editor here, drop me in 🙏\n\nAlways down to connect with other creators in the space.',
+
+  '2062235153238294619': 'The research phase is where most people skip.\n\nI\'ve edited for channels that grew fast and slow. The ones that win always started with keyword and audience research, not vibes.',
+
+  '2062217497923756385': 'The best stuff I\'ve ever written was at 2am with no goal.\n\nJust brain dumping on paper. Never posted half of it but it made everything else sharper.',
+
+  '2062188066136264855': 'Same thing happens in video hooks.\n\nThe angle kills the video before you even get to the content. Best editing in the world, wrong angle and nobody watches.',
+
+  '2062176606769013118': 'The confidence in this post is crazy.\n\nNetwork paying off. NQ has been moving insane, keep running bro.',
+
+  '2062166714498810149': 'Bro, this hits close.\n\nI was the quietest kid in every room, nobody thought I\'d build anything either. The ones who felt invisible usually have the most to say once they find their thing.',
+
+  '2062139497702130121': 'The leader says \'wouldn\'t it be cool if...\'\n\nAnd 3 weeks later someone\'s built something nobody asked for.',
+
+  '2062119398261895596': 'Adding one: 1 client who actually refers you.\n\nA referral changes how you see your own work. You understand what you actually delivered, not just what you thought you did.',
+
+  '2062118605165097324': 'The people who figured out the money part fast often realize it just upgraded their anxiety.\n\nFreedom isn\'t a number. It\'s having control over your time.',
+
+  '2062082405066834432': 'Went from ₹3000/month to actually paying my parents\' bills.\n\nNo award, no stage, no followers knew. But that moment hit different than any milestone I\'ve chased since.',
+
+  '2062001642430767226': 'I landed my best clients with under 200 followers.\n\nJust had a case study, one testimonial, and showed up in the right conversations.',
+
   // 2026-06-03 full batch
   '2062045787870421089': 'Same framework applies to how you spend time online\n\nFollowing trends is a liability\n\nBuilding skills that compound is the asset',
 
