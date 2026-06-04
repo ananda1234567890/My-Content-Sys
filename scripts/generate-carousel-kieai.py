@@ -11,11 +11,14 @@ Usage:
 
 import json
 import os
+import sys
 import time
 import argparse
 import requests
 from io import BytesIO
 from PIL import Image
+
+sys.stdout.reconfigure(encoding='utf-8')
 
 WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

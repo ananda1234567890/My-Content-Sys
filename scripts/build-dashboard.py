@@ -25,7 +25,7 @@ def image_to_base64(path):
 
 
 def parse_post_md(path):
-    with open(path) as f:
+    with open(path, encoding='utf-8') as f:
         content = f.read()
     meta = {}
     lines = content.split("\n")
@@ -605,7 +605,7 @@ def build_html():
 </html>"""
 
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
-    with open(OUTPUT, "w") as f:
+    with open(OUTPUT, "w", encoding='utf-8') as f:
         f.write(html)
     print(f"Dashboard built: {OUTPUT}")
     print(f"Posts found: {len(cards)}")

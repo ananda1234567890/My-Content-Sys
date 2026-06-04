@@ -12,9 +12,12 @@ Usage:
 
 import json
 import os
+import sys
 import time
 import argparse
 import re
+
+sys.stdout.reconfigure(encoding='utf-8')
 import requests
 from io import BytesIO
 from PIL import Image
@@ -73,7 +76,7 @@ def submit_task(prompt, api_key):
     if resp.status_code != 200:
         raise ValueError(f"API error {resp.status_code}: {resp.text}")
     data = resp.json()
-    if "data" not in data or "taskId" not in data["data"]:
+    if not data or "data" not in data or not data["data"] or "taskId" not in data["data"]:
         raise ValueError(f"Unexpected response: {data}")
     return data["data"]["taskId"]
 

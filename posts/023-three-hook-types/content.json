@@ -1,0 +1,47 @@
+{
+  "title": "The 3-Type Hook Framework",
+  "slides": [
+    {
+      "number": 1,
+      "heading": "Your Hook Is Missing 2 Layers",
+      "subtitle": "Most editors build one hook. The reels that hold attention build three at once.",
+      "takeaway": "A complete hook runs verbal, visual, and text simultaneously in the first frame.",
+      "visual": "A smartphone screen showing a short-form video paused at the 0-second mark, with three labeled arrows pointing to different elements of the frame: one to the subject's mouth, one to the background motion, one to a bold text overlay at the top. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 2,
+      "heading": "Verbal Hook: Open a Loop",
+      "subtitle": "What comes out of your mouth in the first second must force a response or create a question the brain needs answered.",
+      "takeaway": "Use a bold claim, a contradiction, or a question that would feel painful to leave unanswered.",
+      "visual": "A close-up of a person's mouth mid-sentence, with speech sound waves radiating outward as a visible graphic overlay, energy and movement conveyed. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 3,
+      "heading": "Visual Hook: Move Before You Speak",
+      "subtitle": "The eye processes motion before the brain processes words. Your first frame needs something to track.",
+      "takeaway": "Fast B-roll, a physical gesture, or an unexpected object gives the eye an anchor before your hook even lands.",
+      "visual": "A film camera viewfinder showing a fast-moving shot of a hand in motion, the frame slightly blurred from kinetic energy, a sense of momentum in the image. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 4,
+      "heading": "Text Hook: Give Them a Reason",
+      "subtitle": "One overlay before the subject speaks tells the viewer exactly why staying is worth their time.",
+      "takeaway": "One line. High contrast. Positioned so it is the first thing read before anything else in the frame.",
+      "visual": "A smartphone screen close-up showing a single bold white text overlay centered on a dark video frame, the text sharp and high contrast, simulating a reel cover card before the video begins. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 5,
+      "heading": "Stack All Three at Once",
+      "subtitle": "The reels that never drop in the first 2 seconds are almost always running all three hooks simultaneously.",
+      "takeaway": "Verbal opener plus motion in frame plus one text line. One second. Three locks on the same door.",
+      "visual": "A video editing timeline interface showing three stacked tracks starting at the same zero point: one audio track with a waveform, one motion graphics track with a text layer, one B-roll video track, all firing simultaneously. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 6,
+      "heading": "Audit Your Next Hook",
+      "subtitle": "Before your next edit, check: verbal, visual, and text. If one is missing, that is your retention problem.",
+      "takeaway": "Follow Ananda Paramanick for more editing insights.",
+      "visual": "A notebook open to a clean page with three short lines written on it and a pen resting beside it, minimal and intentional, suggesting a framework being mapped out. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    }
+  ]
+}

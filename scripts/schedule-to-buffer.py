@@ -242,6 +242,7 @@ def main():
         sys.exit(1)
 
     add_to_queue = "--queue" in args
+    text_only = "--text-only" in args
     due_at = None
     if not add_to_queue:
         if "--time" in args:
@@ -253,7 +254,7 @@ def main():
     text = extract_post_text(post_folder)
     print(f"Post text: {len(text)} characters")
 
-    assets_field = build_assets_field(post_folder)
+    assets_field = "" if text_only else build_assets_field(post_folder)
 
     channel_id = get_channel_id()
     print(f"LinkedIn channel: {channel_id}")
@@ -264,7 +265,7 @@ def main():
 
     if "post" in post_data:
         post = post_data["post"]
-        print(f"\n✓ Scheduled successfully")
+        print(f"\nScheduled successfully")
         print(f"  Post ID : {post['id']}")
         print(f"  Status  : {post['status']}")
         if post.get("dueAt"):
