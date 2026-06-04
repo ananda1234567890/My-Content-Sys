@@ -26,10 +26,7 @@ dashboard/index.html
 # Scraped data (re-fetchable)
 context/data/
 
-# Large image bases in posts (re-generatable)
-posts/*/image.png
-posts/*/carousel.pdf
-posts/*/carousel-slides/
+# Post originals
 posts/*/original-image.*
 
 # Temp
