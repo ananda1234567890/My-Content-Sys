@@ -163,6 +163,37 @@ Fetches today's tweets from all accounts in `Twitter Engagement/accounts.json`, 
 
 Natural language triggers: "engage on Twitter", "do Twitter engagement", "Twitter comments", "fetch tweets"
 
+### /setup-buffer
+
+**Purpose:** First-time setup of Buffer + Cloudinary integration on a new machine.
+
+Asks for Buffer API token, Cloudinary API Key, and Cloudinary API Secret. Writes them to root `.env`, auto-fetches the LinkedIn channel ID, and confirms everything works with a test post.
+
+Run this once after cloning. After it's done, the `/schedule-post` command works.
+
+Natural language triggers: "setup buffer", "connect buffer", "configure buffer"
+
+### /schedule-post [post-folder] [time]
+
+**Purpose:** Schedule a LinkedIn post to Buffer so it publishes automatically.
+
+Reads the post text from `posts/NNN-slug/post.md` and schedules it to LinkedIn via the Buffer API.
+
+**When told to schedule a post:**
+1. Identify the post folder from the post number or name (e.g., "post 017" → `posts/017-ai-transition-bridging`)
+2. Parse the requested time and convert to IST (Asia/Kolkata, UTC+5:30)
+3. Run: `python3 scripts/schedule-to-buffer.py posts/NNN-slug --time "YYYY-MM-DDTHH:MM:SS+05:30"`
+4. Confirm the post ID and scheduled time back to the user
+
+**Modes:**
+- `--time "2026-06-09T09:00:00+05:30"` — schedule at a specific date and time (IST)
+- `--queue` — add to Buffer queue (next available slot in posting schedule)
+- No flag — defaults to 9am IST tomorrow
+
+**Requires:** `BUFFER_TOKEN` and `BUFFER_LINKEDIN_CHANNEL_ID` in root `.env`
+
+Natural language triggers: "schedule post", "queue this post", "post on June 9th", "add to Buffer"
+
 ---
 
 ## Engagement Systems
@@ -328,6 +359,7 @@ After adding/updating posts, run `python3 scripts/build-dashboard.py` to regener
 | **Apify** | Instagram reel scraping. Actor: `xMc5Ga1oCONPmWJIa`. Input: `{username: [...], resultsLimit: 20}` | `APIFY_API_KEY` in `.env` |
 | **OpenRouter** | LLM routing for video analysis. Model: `google/gemini-3.1-flash-lite`. Passes video as base64 `video_url`. API: `openrouter.ai/api/v1/chat/completions` | `OPENROUTER_API_KEY` in `.env` |
 | **Kie.ai** | Image generation. Model: `gpt-image-2-image-to-image`. Uses `input_urls` with Cloudinary reference URLs. API: POST `api.kie.ai/api/v1/jobs/createTask`, poll `api.kie.ai/api/v1/jobs/recordInfo?taskId=`. Infographics: 1080x1350. Carousels: 1080x1080. Resolution: 1K. | `KIE_AI_API_KEY` in `.env` |
+| **Buffer** | LinkedIn post scheduling. GraphQL API at `https://api.buffer.com`. Script: `scripts/schedule-to-buffer.py`. Full setup in `Buffer Setup Guide.md`. | `BUFFER_TOKEN` + `BUFFER_LINKEDIN_CHANNEL_ID` in root `.env` |
 
 ### Key Scripts
 
