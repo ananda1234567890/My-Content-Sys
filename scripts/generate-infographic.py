@@ -21,7 +21,7 @@ from PIL import Image
 
 WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-INFOGRAPHIC_REF_URL = "https://res.cloudinary.com/duoq5xmdp/image/upload/v1779533849/Infographic_Guide_g2ins5.png"
+INFOGRAPHIC_REF_URL = "https://res.cloudinary.com/duoq5xmdp/image/upload/v1780567511/Infographic_Guide_og6lbi.png"
 
 STYLE_PREFIX = (
     "STRICT 4:5 PORTRAIT FORMAT — 1080x1350 pixels. "

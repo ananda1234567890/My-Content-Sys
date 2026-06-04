@@ -20,8 +20,8 @@ from PIL import Image
 WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Brand guide hosted on Cloudinary — passed as input_urls so Kie.ai can actually see the style
-CAROUSEL_REF_URL = "https://res.cloudinary.com/duoq5xmdp/image/upload/v1779533851/Brand_Carousel_Guide_dz6mz3.png"
-INFOGRAPHIC_REF_URL = "https://res.cloudinary.com/duoq5xmdp/image/upload/v1779533849/Infographic_Guide_g2ins5.png"
+CAROUSEL_REF_URL = "https://res.cloudinary.com/duoq5xmdp/image/upload/v1780567511/Brand_Carousel_Guide_btgnqz.png"
+INFOGRAPHIC_REF_URL = "https://res.cloudinary.com/duoq5xmdp/image/upload/v1780567511/Infographic_Guide_og6lbi.png"
 
 
 def get_api_key():

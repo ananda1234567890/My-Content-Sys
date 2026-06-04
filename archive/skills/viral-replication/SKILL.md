@@ -97,7 +97,7 @@ resp = requests.post("https://api.kie.ai/api/v1/jobs/createTask",
         "prompt": "<STYLE PREFIX> + <LAYOUT DESCRIPTION> + <CONTENT>",
         "width": 1080, "height": 1350, "image_num": 1,
         "resolution": "1K",
-        "input_urls": ["https://res.cloudinary.com/duoq5xmdp/image/upload/v1779533849/Infographic_Guide_g2ins5.png"]
+        "input_urls": ["https://res.cloudinary.com/duoq5xmdp/image/upload/v1780567511/Infographic_Guide_og6lbi.png"]
     }})
 task_id = resp.json()["data"]["taskId"]
 

@@ -281,8 +281,8 @@ The full process is documented in `.claude/commands/create-10-posts.md`. In summ
 
 **Always use Kie.ai API (model: `gpt-image-2-image-to-image`) with `input_urls` parameter.**
 - Pass the Cloudinary URL as `input_urls: [url]` — Kie.ai fetches it directly, no base64 needed
-- **Infographics:** `https://res.cloudinary.com/duoq5xmdp/image/upload/v1779533849/Infographic_Guide_g2ins5.png`
-- **Carousels:** `https://res.cloudinary.com/duoq5xmdp/image/upload/v1779533851/Brand_Carousel_Guide_dz6mz3.png`
+- **Infographics:** `https://res.cloudinary.com/duoq5xmdp/image/upload/v1780567511/Infographic_Guide_og6lbi.png`
+- **Carousels:** `https://res.cloudinary.com/duoq5xmdp/image/upload/v1780567511/Brand_Carousel_Guide_btgnqz.png`
 - Carousels are always **1:1 (1080x1080)**. Infographics are **4:5 (1080x1350)**.
 - Never generate with Pillow alone — results are flat and template-like
 - Never use light backgrounds, cream palettes, or off-brand colors
