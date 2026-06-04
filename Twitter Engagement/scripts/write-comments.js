@@ -25,31 +25,179 @@ const TWEETS_FILE = 'data/tweets.json';
 // Claude Code fills this in fresh each day — do not edit manually
 const COMMENTS = {
 
-  // 2026-06-02 batch — limit 5 run
-  '2061518662880694534': 'Same thing happens with over-edited videos\n\nMassive timelines, 40 effects, layers on layers\n\nViewer feels the bloat before they can name it\n\nLess almost always wins',
+  // 2026-06-03 full batch
+  '2062045787870421089': 'Same framework applies to how you spend time online\n\nFollowing trends is a liability\n\nBuilding skills that compound is the asset',
 
-  // 2026-06-02 batch
-  '2061661178498302015': 'Trade time for money when you have nothing\n\nThen buy it back once you can\n\nMost people never make it to step 2 tbh',
+  '2062044773738041373': 'Every decision is just practice for the next one\n\nThat\'s the part nobody talks about',
 
-  '2061606741607903630': 'Faith as an anchor hits different when the whole world around you is loud',
+  '2062040315813597184': 'The flex culture is the most expensive thing most people ever buy\n\nAnd they never notice the price',
+
+  '2062039076937556366': 'This one gets misused constantly\n\nSmarter only works if you\'re already doing enough\n\nMost people use it as permission to do less',
+
+  '2062036984521187723': 'The lighting transition from garden to jewelry editorial is the part that sells it\n\nGPT Image 2 + Seedance is a wild combo now',
+
+  '2062036844640931929': 'Went from ₹1000/month to $4000+ with zero certificates\n\nNobody ever asked\n\nThey just wanted to know if my clients got results',
+
+  '2062035609414209683': 'The self-talk part is real\n\nWhat you say to yourself during the slow periods determines what comes next',
+
+  '2062033871701499941': 'This is the most intentional breakfast plate I\'ve ever seen\n\nEating like a Roman emperor in Warsaw',
+
+  '2062029252325740593': 'The plan you execute always beats the plan you perfect\n\nMovement creates clarity that thinking never does',
+
+  '2062023972443877555': 'Had 11 drafts sitting for 2 weeks once\n\nThe one I published in 8 minutes got 3x the engagement\n\nShipped beats perfect every time',
+
+  '2062006402676359245': 'In video editing this is the whole shift\n\nAnyone can fix audio and clean up cuts\n\nThe ones charging premium are changing how an audience sees their client',
+
+  '2062002319617618256': 'Own business no question\n\nThe anxiety is real but at least it\'s mine\n\nSalaried anxiety is worse because someone else controls the outcome',
+
+  '2062001642430767226': 'Landed my first $1000+ client with under 200 followers\n\nProfile looked like I knew exactly what I was doing\n\nThat was enough',
+
+  '2061984713573814578': 'Dropping it free after that much interest is bold\n\nWhat made you go that route instead of charging?',
+
+  '2061957191394013594': 'First 6 months of freelancing felt exactly like rebellion\n\nEvery person around me had a plan that made sense to everyone except me\n\nStill the right call',
+
+  '2061924187770409421': 'The hero video being the central piece is exactly right\n\nEverything else is engineering the journey to that one video\n\nThis is where retention editing actually matters',
+
+  '2061923625054146621': 'Your confidence is expensive for the people who built on your doubt\n\nTheir reaction is the proof you needed',
+
+  '2061915820620390577': 'The moat shifts from experience to judgment\n\nKnowing which output is actually good versus which just looks good\n\nThat\'s what 16 years actually builds',
+
+  '2061915551094432023': 'First morning I woke up naturally after going full freelance\n\nDidn\'t realize how much that feeling was worth until I actually had it',
+
+  '2061915307719946555': 'Pattern fatigue is real\n\nThe format that worked 6 months ago is now invisible because the algorithm trained everyone to copy it',
+
+  '2061910386966729182': 'Transparency about the tactic doesn\'t kill it\n\nIt still demonstrates the exact same thing — that you actually care if it fits',
+
+  '2061897943787970840': 'Same happened to me\n\nClient I almost turned down because the budget was low referred someone who paid 4x more\n\nDo great work regardless',
+
+  '2061893133806264531': 'The pitch is selling a solution before proving they understand the problem\n\nLocal business owners think in outcomes not tech stacks\n\nSell the outcome',
+
+  '2061889980880880016': 'This was me exactly\n\nPerfect folder structure, color-coded tags, graph view looking beautiful\n\nCouldn\'t find a single thing when I actually needed it',
+
+  '2061889033865978326': 'The infrastructure layer is the sleeper opportunity here\n\nEveryone is building agents but almost nobody is building the rails they run on',
+
+  '2061885657199370624': 'The excuses one bites hardest\n\nDoubt at least feels philosophical\n\nExcuses just feel embarrassing once you say them out loud',
+
+  '2061884093625991222': '2064 rows in that database is not a small thing\n\nAnd you shipped every day for a year to get there\n\nHuge, keep freaking going',
+
+  '2061883398516609130': 'Less than a year old and already top 100 out of 200k European companies\n\nThat\'s legitimately crazy, congrats',
+
+  '2061871258740945271': 'Been saying this to clients for 2 years\n\nShorts build passive views not trust\n\nOne 10-minute video that actually solves something beats a month of Shorts',
+
+  '2061865948630392892': 'The best sales calls I\'ve had were mostly the client talking\n\nI just knew which questions to ask',
+
+  '2061861348498342392': '3am sessions questioning everything used to feel like proof it wasn\'t working\n\nNow I understand that\'s just what caring about something deeply actually feels like\n\nKeep going',
+
+  '2061845481249202671': 'The $30 payout for 100k+ impressions is the reality check most people need\n\nImpression count means nothing if your audience can\'t monetize',
+
+  '2061842821103948030': 'Every niche is crowded at the top and wide open in the middle\n\nPeople saying it\'s too crowded are only looking at who\'s winning',
+
+  '2061840265933967637': '$1,393 into $VOO while everyone is having opinions about Bitcoin\n\nThe most predictable flex and also the right one',
+
+  '2061831455014322400': 'The landing page and offer clarity doing more damage than any ad setting\n\nSeen campaigns fixed by rewriting the headline without touching a single ad',
+
+  '2061817612703576551': 'The silent weeks are the test\n\nMost people change everything right before the thing they built would have worked',
+
+  '2061810399587295708': 'The part that gets me is he wrote it with no intention of anyone ever reading it\n\nJust a man holding himself accountable to his own standards',
+
+  '2061810066932597164': 'Video editing is exactly this shift\n\nThe ones charging the most aren\'t selling edits\n\nThey\'re selling what an audience feels while watching',
+
+  '2061803984285790555': 'The dental hardware angle is genuinely surprising\n\nNever connected orthodontic metal to gut inflammation before\n\nWhat\'s the actual mechanism?',
+
+  '2061800458851934291': 'The one that changes things is almost never the one you expected\n\nPost anyway',
+
+  '2061781646316052721': 'The ones you put extra into don\'t always pop but when they do it hits different\n\nWhat\'s the video about?',
+
+  '2061772764529185039': '0 to 100 took 106 days and now 500 to 600 took 10\n\nThat\'s compounding doing its thing\n\nDon\'t stop now',
+
+  '2061764968244977961': 'Every delay is just giving the other side more leverage\n\nThe terms don\'t get better while you wait\n\nThey just get more urgent',
+
+  '2061764931733909557': 'The only way through is saying less but making each word do more work\n\nSpecificity is the only thing that actually cuts through the noise now',
+
+  '2061762953045574024': 'That\'s the capitalist cut of the movie\n\nExtended version has some genuinely good parts in between',
+
+  '2061760589140271551': 'Took a long time to actually believe this one\n\nUsed to outsource my confidence to whoever was in my corner that week',
+
+  '2061759733011271759': 'Same thing in video editing\n\nThe best editors don\'t show off technique\n\nThey make the viewer feel exactly what the story intended',
+
+  '2061758277629943921': 'That Nike Air Force 1 shot list is doing what most human directors take days to brief out\n\nThe creative direction isn\'t gone, it\'s just faster now',
+
+  '2061756750110363663': 'The isolation phase looks selfish from the outside\n\nFrom the inside it\'s the only thing keeping you moving\n\nPeople who get it get it',
+
+  '2061735110693490794': 'This is somehow universal\n\nMine hits at 4am when I\'ve fully convinced myself the whole thing is falling apart\n\nThen 9am comes and it\'s fine',
+
+  '2061725653230051593': 'The hobby is what you do when there\'s no pressure\n\nThe moment there\'s a deadline and a client it becomes a craft\n\nNot the same thing',
+
+  '2061707030231130303': 'The 90% invisible to yourself is the brutal part\n\nYou\'re improving constantly but only see it in retrospect\n\nTrust the reps',
+
+  // 2026-06-02 full batch
+  '2061677786910372108': 'Income is just the gate fee\n\nDiscipline is what actually builds anything inside',
+
+  '2061674313879531584': 'The boring days are doing more work than the exciting ones\n\nJust harder to see in real time',
+
+  '2061674207038087657': "Watched this happen with clients too\n\nThe ones who used to underpay suddenly had 'concerns' the moment I raised my rates",
+
+  '2061671493877284914': 'The lighting and the audio ASMR combo is what does the work here\n\nCreatify is getting genuinely good at this',
+
+  '2061665446517252250': 'Same realization happened for me\n\nEvery template trick faded\n\nThe only thing that held was just showing what I actually know about retention editing',
+
+  '2061662088138010776': 'Video editors fall into this all the time\n\nTons of views on a tutorial, zero clients\n\nWrong audience or wrong content, rarely both',
+
+  '2061648166651605378': 'Freelancer tax in India specifically is a whole different level of confusing\n\nCA saved me from multiple panic attacks last year',
+
+  '2061644002605355373': 'Learned this the hard way\n\n3am deadlines every week for 6 months straight\n\nHit a wall that no amount of coffee fixed',
+
+  '2061640015457734850': "Depends entirely on what you're selling\n\nSeen people make nothing for 2 years then land a $5k client from one reply\n\nSo yeah, but it's not fast",
+
+  '2061636523762590131': "React with Video is a massive unlock for this\n\nFace on camera finally has a real distribution edge that anons literally can't match",
 
   '2061605452170117430': 'In video editing, this is literally the entire job\n\nArchitect the first 30 seconds right or lose them forever',
 
   '2061599415450632359': 'Mine was knowing exactly how to keep someone watching a video longer than they planned to\n\nTook 2 years to realize that was actually worth paying for',
 
-  '2061514378604687545': 'Storytelling accounts always punch way above their follower count\n\nThat 4k follower account getting 52k impressions on one tweet says everything',
+  '2061579892819427380': 'Warsaw is a serious choice for a business meeting\n\nHope the strategy was as good as the location',
 
-  '2061484999153488082': 'The one I remember most: "AI will replace video editors"\n\nNow editors who use AI well are charging 3x more than before\n\nNobody corrected themselves',
+  '2061566776282931599': "Retrieval-first is the whole game\n\nI have folders of saved tweets and ideas I'll never use because I saved them with no system to find them again",
+
+  '2061553910725136676': 'Japan without hesitation\n\nBeen studying their editing culture for years, want to see how they consume video in person\n\nWbu?',
+
+  '2061553435590160542': 'Went quiet for 3 months once\n\nNo one noticed\n\nThat silence was the thing that actually made me start building something real',
+
+  '2061553429508444508': "16 years in and still feeling it says everything about how fast this is moving\n\nHonestly nobody has it figured out, they're just building anyway",
+
+  '2061535257245995340': 'And everyone around you is loudest during exactly that phase\n\nTelling you it\'s not working while you\'re still in it',
+
+  '2061523270789206496': "The hardest part is recognizing when a season is ending\n\nFeels like quitting from the inside even when it's actually growing",
+
+  '2061515847391203759': "The 'post consistently' and 'add value' stuff genuinely helps nobody\n\nNiche-specific advice from someone who's actually done it is the only kind worth following",
+
+  '2061508620848710077': 'Same thing with editors who work behind those channels\n\nThe one who figures out retention first takes all the clients\n\nNo middle ground',
+
+  '2061494184427598114': 'Chased speed for the first 2 years\n\nMore clients, faster turnarounds, more projects\n\nBurned through it all\n\nSlowing down and doing fewer things well changed everything',
+
+  '2061489703686168699': 'The body doing what it was built to do when you get out of its way\n\nFascinating how much diet intervention actually changes outcomes',
+
+  '2061488410666397770': 'This is literally every video editor I know\n\nAlways the first to share someone\'s thumbnail or congratulate a milestone\n\nRarely on the receiving end\n\nYou\'re seen',
+
+  '2061480432944693257': 'Content without a clear offer behind it is just content\n\nSeen this exact thing: great posts, growing audience, zero clients because the CTA was always soft',
 
   '2061455226281079167': 'Went through this exactly\n\nChanged niche 3 times chasing what worked for someone else\n\nNothing held until I built around what I actually cared about',
 
+  '2061448742050419185': '1 year sounds about right honestly\n\nMy first full year of freelancing I was still figuring out basic pricing\n\nYear 2 is where things actually clicked',
+
+  '2061447675044823247': 'Applies to YouTube channels too\n\nAlgorithm shifts overnight but the subscriber list is yours\n\nEmail list first, views second',
+
+  '2061447277886185851': 'Curious what the follower-to-engagement ratio looks like\n\n33k in 19 months is solid but I\'ve seen people with half that who convert 10x better',
+
   '2061436336083775727': "Crazy thing is you can't predict which one becomes your biggest asset\n\nI've had posts written in 10 mins outperform ones I spent 2 hours on",
 
-  '2061357625992683824': 'Same in video editing\n\nRushed cuts, lazy pacing, no story structure\n\nViewers feel the disrespect before they can even name it',
+  '2061429080013062421': 'Momentum works both ways\n\nFirst loss is just data\n\nThird loss starts feeling like proof\n\nThat\'s the dangerous one',
 
-  '2061356323854528712': 'Spent 4 years studying video editing while everyone around me got degrees\n\nWas earning more than most of them by year 2\n\nStill the best decision I ever made',
+  '2061424654657425735': "The 'Most people' hook pattern works because it creates instant sides\n\nViewer either agrees and stays or disagrees and has to reply\n\nEither outcome wins",
 
-  '2061353530380963979': 'The moment you stop tolerating it, the energy comes back instantly\n\nSeen this happen too many times to call it coincidence\n\nKeep freaking going Nikita',
+  '2061410104117690496': 'Best analogy for this I\'ve heard\n\nAnd a closed shop 3 days in a row trains people to stop checking\n\nConsistency isn\'t about the algorithm, it\'s about expectation',
+
+  '2061320576417816604': 'Took me way too long to learn this\n\nWas posting every day for months, got followers, got zero clients\n\nOne case study post did more than 3 months of daily content',
 
 };
 

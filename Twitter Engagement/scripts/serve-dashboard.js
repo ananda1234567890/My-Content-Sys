@@ -75,5 +75,5 @@ server.on('error', e => {
 server.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;
   console.log(`Dashboard running at ${url}`);
-  exec(`open ${url}`);
+  exec(`start msedge ${url}`);
 });
