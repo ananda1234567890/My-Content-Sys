@@ -163,6 +163,16 @@ Fetches today's tweets from all accounts in `Twitter Engagement/accounts.json`, 
 
 Natural language triggers: "engage on Twitter", "do Twitter engagement", "Twitter comments", "fetch tweets"
 
+### /humanize [post]
+
+**Purpose:** Remove AI writing patterns from a post while keeping Ananda's formatting intact.
+
+Rewrites the post to sound more natural and human — removes hedging phrases, AI vocabulary, em dashes, promotional language, and the other 30 patterns from Wikipedia's "Signs of AI writing" guide. Preserves all line breaks, spacing, arrows, step labels, and visual structure exactly.
+
+Run this after writing a post, before scheduling it.
+
+Natural language triggers: "humanize this", "make it sound less AI", "clean up the writing"
+
 ### /setup-buffer
 
 **Purpose:** First-time setup of Buffer + Cloudinary integration on a new machine.
