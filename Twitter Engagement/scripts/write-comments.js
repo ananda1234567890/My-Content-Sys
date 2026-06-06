@@ -25,14 +25,146 @@ const TWEETS_FILE = 'data/tweets.json';
 // Claude Code fills this in fresh each day — do not edit manually
 const COMMENTS = {
 
+  // 2026-06-06 full batch
+  '2063110632761889138': 'The floor just got destroyed. AI made decent content free, so showing up isn\'t even table stakes anymore.',
+
+  '2063105697395462210': 'Thinking about this every time I\'m up at 2am grinding. This is literally the whole reason.',
+
+  '2063096770146799842': 'The problem is platitudes get engagement short term, so people mistake that for brand building.',
+
+  '2063088781218193553': 'Can\'t decide if this is profound or terrifying because I want everything rn lol',
+
+  '2063063389178359927': 'The amount of copywriters who never touch their ICP and keep blaming the subject line is actually crazy.',
+
+  '2063033128835522887': 'The energy you bring before you say a word matters more than anything in the pitch. I\'ve known within 30 seconds on a call whether it was going somewhere.',
+
+  '2063033127933767990': 'Tbh I spent 8 months being productive without direction\n\nBusy as hell but nothing was compounding. Just moving, not going anywhere.',
+
+  '2063003212907508137': 'Bro I honestly haven\'t traveled much, been in full grind mode\n\nBut Japan is on the list for real. Their precision and discipline is something I want to see in person. Wbu?',
+
+  '2062972805763703239': 'The hated part is where most people stop\n\nBeing misunderstood is manageable. Someone actively hating what you\'re building is where the real test starts.',
+
+  '2062962432885006823': 'The blueprint framing is actually useful\n\nThe things you avoid hardest are usually the ones that would move you most. Fear points directly at the work.',
+
+  '2062961465972166787': 'The isolation piece makes sense when you think about it\n\nYou\'re responsible for everyone but you can\'t talk to anyone in the org about the actual pressure you\'re carrying.',
+
+  '2062959174485520888': 'Most teams keep optimizing production while the strategy is the problem\n\nSolid editing on a badly researched video is just a prettier dead end.',
+
+  '2062943675399716888': 'The composite work in that screenshot is clean\n\nThe cutout into a Monaco harbor background from a café is legitimately the thumbnail specialist life.',
+
+  '2062941790865424755': 'Calling it gatekept is doing half the marketing work in the title alone lol. What did I just click on',
+
+  '2062940724144808361': 'The recovery same session is the actual skill. Most people close the platform after the first loss and spiral. You didn\'t.',
+
+  '2062927493108015590': 'The guilt is just conditioning from the job market. The market actually rewards outcomes, most people just never test it.',
+
+  '2062920380038484126': 'Bruh the cliffhanger lol. ROAS better or worse than before?',
+
+  '2062909083615653932': 'The sneaky part is drifting doesn\'t feel like drifting. It feels like being relaxed and flexible. Until you zoom out and realize you went nowhere.',
+
+  '2062905508164669804': 'Still out here explaining to people that AI is "just for writing"\n\nHandwriting recognition in real time from a lecture video is genuinely another level.',
+
+  '2062887167249252510': 'The experiences are the one part it can\'t replicate\n\nAI can give you the framework. It can\'t give you the moment that actually changed how you think.',
+
+  '2062884677942161765': 'Explaining something clearly is actually the flex\n\nNot the information itself, but making someone go from confused to \'oh\' in 30 seconds. That\'s the real skill.',
+
+  '2062882379531014533': 'The contrarian belief part is what most people skip\n\nThey pick the niche but never say anything that makes half the room uncomfortable. That\'s why nobody remembers them.',
+
+  '2062882221040472392': 'When you\'re the prosecutor the verdict is always guilty\n\nAnd all your energy goes into building the case instead of just building.',
+
+  '2062881628989554776': 'Not feeling like it and doing it anyway is literally the whole skill. Everything else is downstream of that.',
+
+  '2062876290311696684': 'YouTube ignored you for months then dropped everything at once lol\n\nThat\'s just how it works man. You\'re at 800 now, don\'t stop.',
+
+  '2062863118443720818': 'The "fuck the rubix cube" is doing all the work here lol\n\nBut for real, if you don\'t give your hands something they will find Instagram every single time.',
+
+  '2062845892189929890': 'The awkward over comfort one is where I failed the longest\n\nThere\'s always one more thing to learn before you\'re "ready." That phase never ends unless you force it to.',
+
+  '2062842909242593521': 'Asked a client this once. He said I reminded him of someone from his hometown\n\nNever expected that. But looking back, the work got me in the door. The person kept them.',
+
+  '2062807175009874277': 'One comment from the right person can do more than 6 months of posting alone\n\nThe irony is you only get that by consistently showing up anyway.',
+
+  '2062807177446686728': 'The push through instinct is strong but you end up solving the same problem 4 times in different shapes until you actually sit with it.',
+
+  // 2026-06-05 full batch
+  '2062758830828618234': 'been on here long enough to watch people tick every other box then fail on that last one 💀',
+
+  '2062754404445687828': 'had GSD installed for about a week now. the context window management is genuinely the part I was missing.',
+
+  '2062749000248295450': 'had a client reach out last month from a referral of someone I worked with 2 years ago. brand had nothing to do with it.',
+
+  '2062746239926734883': 'I think this works until repetition becomes comfort and stops being signal. some creators repeat so much they forget to check if it still lands.',
+
+  '2062743787227791866': 'had basically nothing growing up. the "money doesn\'t define you" part is true. also, not having it defined everything else.',
+
+  '2062742426624962997': 'I think the "nobody watching" part is where it separates. anyone can do it with accountability.',
+
+  '2062734855855866019': 'been at the two side hustles stage. the anxiety doesn\'t go away when the money comes in either, it just changes shape.',
+
+  '2062732058804490672': 'I\'d push back on "growing on X is simple." it was simpler before everyone read the same playbook. personal takes is table stakes now, not a differentiator.',
+
+  '2062698919977509096': 'had a month like that and almost changed everything. the 12-month view is the only one I needed to look at.',
+
+  '2062687707772432783': 'left this open in my phone for a few minutes. needed it.',
+
+  '2062639069662687578': 'had a client from Japan once who kept describing Kyoto. never been but it\'s been on the list ever since that call.',
+
+  '2062630449424617598': 'I\'ve been wanting to do exactly this for months. the home office with kids around is a completely different thing.',
+
+  '2062610604355973138': 'I\'d push back slightly. you can nail the positioning in those first 30 seconds but if the pacing and energy are off, they still leave. both are happening at once.',
+
+  '2062610417663238312': 'I think the "willing to fail" one is actually the hardest. meeting people and learning skills feel productive. choosing to fail feels like sabotage until it doesn\'t.',
+
+  '2062600050799202325': 'had someone ask me what I "do" when I said I work for myself. I said video editing. they said "but like, for a company?" lol',
+
+  '2062594783202132364': 'I think "forever" is optimistic but the evergreen window on a well-made video is way longer than people expect. I have clients with videos from 18 months ago still pulling leads.',
+
+  '2062592053540688066': 'I feel this energy, what\'s happening??',
+
+  '2062580143923614019': 'I used to spend 5-6 hours a week on outreach. now it\'s closer to 1-2. inbounds from content and referrals changed that.',
+
+  '2062573721777238081': 'I need to know which flavour',
+
+  '2062566215520854236': 'spent 6 months trying to do 4 things at once and got mediocre at all of them. came back to one thing and it clicked.',
+
+  '2062565849798701112': 'I\'m in, add me',
+
+  '2062565115514306717': 'had a client end a 6-month retainer in one message. that was the thing that pushed me to actually build something that didn\'t depend on one person\'s mood.',
+
+  '2062562984661041266': 'I build mine in Premiere, motion graphics templates. took time upfront but now I just drag and update the text.',
+
+  '2062553156060381261': 'been following your stuff. what\'s this?',
+
+  '2062528835250278674': 'I\'m curious what your angle is. the Hormozi framework works for a certain type of business and breaks completely for others.',
+
+  '2062525478309912894': 'I don\'t know if "cured" is the right word for me. building something to wake up for daily was the thing. not therapy. just having something that needed doing.',
+
+  '2062520957072212388': 'I\'ve been on the receiving end of this on calls. started saying "I\'ll send you a detailed breakdown" instead of explaining in real time. changed the whole dynamic.',
+
+  '2062506961317552367': 'I\'ve been thinking about this for real estate video clients. the workflow from floor plan to rendered walkthrough used to take a production company days.',
+
+  '2062502185234227697': 'I\'d frame this post around the discovery calls, not the subscriber count. 3 inbounds at 700 is a number most channels never hit at 10k.',
+
+  '2062489862713024828': 'I\'ve seen this with YouTube channels. the ones who try to reposition an audience that already expects something always struggle. the ones who go deeper into what people already believe win.',
+
+  '2062489493865697443': 'I used to have 4 browser tabs open with 4 different client projects. thought I was being efficient. took me embarrassingly long to realise I wasn\'t finishing any of them properly.',
+
+  '2062482464941969637': 'had a client confirm a project three times before it actually started. stopped planning around verbal yeses after that.',
+
+  '2062455871272263968': 'I\'d add one more. video. being able to produce something people can watch and share gets you in front of people at scale without needing to be in the room.',
+
+  '2062451292916564054': 'I\'ve been the best option on a call and lost to someone they\'d seen on YouTube for months. couldn\'t argue with it.',
+
+  '2062444789069382138': 'I\'m going entrepreneurship. the others assume capital, connections, or luck already. this one just needs a skill someone is willing to pay for.',
+
+  '2062399615291265302': 'had clients who got consistent views but zero sales for months. every post was basically a pitch dressed as advice. the moment they shifted to just being useful, the inbounds started.',
+
   // 2026-06-04 full batch
   '2062401393693278554': 'Also record yourself talking for 5 min about anything, then play it back.\n\nYou hear the fillers, the weak spots, the habits you\'d never catch otherwise.\n\nThat feedback loop changed how I talk on calls.',
 
   '2062400737074937982': 'Same energy as the guys who don\'t flex the watch but own the factory.\n\nReal ones never need to announce.',
 
   '2062400248526606577': 'Works in video editing too.\n\nPeople say they stopped watching because of X. But the real reason is usually an emotion they didn\'t even notice.',
-
-  '2062399615291265302': 'Seen this so many times with creators.\n\nThe ones who win long-term are just obsessively helpful for months before they ever ask for anything.',
 
   '2062394413163409852': 'And sometimes the same person is both in different rooms.\n\nThe skill is knowing which one the situation actually needs right now.',
 
