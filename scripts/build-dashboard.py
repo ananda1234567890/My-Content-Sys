@@ -136,6 +136,16 @@ def build_card(post_dir, all_post_data):
             </button>
             <textarea class="hidden-text" style="display:none">{post_text}</textarea>
         </div>
+        <div class="platform-row">
+            <button class="platform-btn btn-linkedin" data-num="{post_num}" data-platform="linkedin" onclick="togglePlatform(this)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+            </button>
+            <button class="platform-btn btn-x" data-num="{post_num}" data-platform="x" onclick="togglePlatform(this)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                X
+            </button>
+        </div>
         <div class="card-visual">
             {visual_html}
         </div>
@@ -144,6 +154,16 @@ def build_card(post_dir, all_post_data):
         </div>
     </div>
     """
+
+
+def read_status():
+    import json
+    status_path = os.path.join(WORKSPACE, "outputs", "post-status.json")
+    try:
+        with open(status_path, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
 
 
 def build_html():
@@ -160,6 +180,7 @@ def build_html():
             cards.append(card)
 
     post_data_js = json.dumps(all_post_data)
+    platform_status_js = json.dumps(read_status())
 
     # Build rows of 2
     rows_html = ""
@@ -396,6 +417,47 @@ def build_html():
         .footer-copy:hover {{ background: #6d28d9; }}
         .footer-copy.copied {{ background: #16a34a; }}
 
+        .platform-row {{
+            display: flex;
+            gap: 6px;
+            padding: 7px 14px;
+            border-bottom: 1px solid #f4f4f5;
+        }}
+
+        .platform-btn {{
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 500;
+            font-family: inherit;
+            border-radius: 5px;
+            border: 1px solid #e4e4e7;
+            background: #fff;
+            color: #a1a1aa;
+            cursor: pointer;
+            transition: all 0.15s;
+            flex-shrink: 0;
+        }}
+
+        .btn-linkedin.posted {{
+            background: #0077b5;
+            border-color: #0077b5;
+            color: #fff;
+        }}
+
+        .btn-x.posted {{
+            background: #000;
+            border-color: #000;
+            color: #fff;
+        }}
+
+        .platform-btn:not(.posted):hover {{
+            border-color: #a1a1aa;
+            color: #52525b;
+        }}
+
         .no-visual {{
             color: #d4d4d8;
             padding: 24px;
@@ -512,6 +574,42 @@ def build_html():
     <script>
         var POST_DATA = {post_data_js};
         var selected = {{}};
+
+        // ── Platform posted tracking (server-persisted) ───────────
+        var PLATFORM_STATUS = {platform_status_js};
+
+        function togglePlatform(btn) {{
+            var num = btn.dataset.num;
+            var platform = btn.dataset.platform;
+            if (!PLATFORM_STATUS[num]) PLATFORM_STATUS[num] = {{}};
+            PLATFORM_STATUS[num][platform] = !PLATFORM_STATUS[num][platform];
+            applyPlatformStates();
+            fetch('/api/status', {{
+                method: 'POST',
+                headers: {{ 'Content-Type': 'application/json' }},
+                body: JSON.stringify({{ num: num, platform: platform, value: PLATFORM_STATUS[num][platform] }})
+            }}).catch(function() {{
+                console.warn('Content server not running — status visible but not saved to disk. Tell Claude to open the content dashboard.');
+            }});
+        }}
+
+        function applyPlatformStates() {{
+            document.querySelectorAll('.platform-btn').forEach(function(btn) {{
+                var num = btn.dataset.num;
+                var platform = btn.dataset.platform;
+                var isPosted = PLATFORM_STATUS[num] && PLATFORM_STATUS[num][platform];
+                if (isPosted) {{
+                    btn.classList.add('posted');
+                    btn.lastChild.textContent = ' ' + (platform === 'linkedin' ? 'LinkedIn ✓' : 'X ✓');
+                }} else {{
+                    btn.classList.remove('posted');
+                    btn.lastChild.textContent = ' ' + (platform === 'linkedin' ? 'LinkedIn' : 'X');
+                }}
+            }});
+        }}
+
+        applyPlatformStates();
+        // ─────────────────────────────────────────────────────────
 
         // Document-level click — same pattern as ideas dashboard
         document.addEventListener('click', function(e) {{

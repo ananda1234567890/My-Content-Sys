@@ -225,6 +225,29 @@ def schedule_post(channel_id: str, text: str, assets_field: str, due_at: str | N
     return graphql(mutation)
 
 
+STATUS_FILE = Path(__file__).parent.parent / "outputs" / "post-status.json"
+
+
+def read_status() -> dict:
+    try:
+        return json.loads(STATUS_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def write_status(data: dict):
+    STATUS_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
+
+
+def mark_linkedin_posted(post_num: str):
+    data = read_status()
+    if post_num not in data:
+        data[post_num] = {}
+    data[post_num]["linkedin"] = True
+    write_status(data)
+    print(f"  Dashboard: marked post {post_num} as LinkedIn posted ✓")
+
+
 def main():
     if not BUFFER_TOKEN:
         print("Error: BUFFER_TOKEN not set in .env")
@@ -240,6 +263,19 @@ def main():
     if not post_folder.exists():
         print(f"Error: {post_folder} does not exist.")
         sys.exit(1)
+
+    # Extract post number from folder name (e.g. "023" from "023-three-hook-types")
+    slug = post_folder.name
+    post_num = slug.split("-")[0] if slug[0].isdigit() else slug
+
+    # ── Check if already scheduled/posted ───────────────────────
+    status = read_status()
+    if status.get(post_num, {}).get("linkedin"):
+        print(f"\n⚠️  ALREADY SCHEDULED/POSTED")
+        print(f"   Post {post_num} is already marked as LinkedIn posted in the dashboard.")
+        print(f"   Stopping. If you want to schedule again anyway, remove the LinkedIn mark from the dashboard first.")
+        sys.exit(1)
+    # ────────────────────────────────────────────────────────────
 
     add_to_queue = "--queue" in args
     text_only = "--text-only" in args
@@ -270,6 +306,9 @@ def main():
         print(f"  Status  : {post['status']}")
         if post.get("dueAt"):
             print(f"  Due at  : {post['dueAt']}")
+        # ── Auto-mark as LinkedIn posted in dashboard ────────────
+        mark_linkedin_posted(post_num)
+        # ────────────────────────────────────────────────────────
     elif "message" in post_data:
         print(f"\nError from Buffer: {post_data['message']}")
         sys.exit(1)
