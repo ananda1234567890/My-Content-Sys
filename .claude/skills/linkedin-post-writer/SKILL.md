@@ -14,6 +14,8 @@
 
 **NO STACKED 2-3 WORD FRAGMENTS. Never write a sequence of short fragments like "No connections. No mentors. No roadmap." Instead, connect ideas into one flowing sentence: "I had like 0 connections and no mentors, did I mention? no roadmap as well." The rule: if three or more related ideas would each be under 5 words as standalone lines, combine them. Use commas, "and", natural connectors, asides like "did I mention?", "as well", "on top of that". Single-word lines for emphasis ("Yup." / "Wait." / "That's it.") are still fine — the ban is on stacked fragments that create a drum-beat list effect.**
 
+**NO PERIOD AT THE END OF EVERY LINE. A period after every single line is the clearest signal that AI wrote this. The line break itself is the pause — a period is redundant and makes it feel like a formal essay. Only use a period when a sentence genuinely closes a complete thought or section. Short punchy lines in a flowing sequence get no period. Arrow list items get no period. Opening two-liners that read as one thought get no period on either line. Periods belong at the end of a full standalone idea, not at the end of every line just because the line ended.**
+
 ---
 
 ## Purpose
@@ -322,6 +324,7 @@ Keep the credibility. Remove the specific numbers that belong to the original cr
 - Short lines. Max 15 words per line.
 - No bullet points with `-` or `•`
 - No em dashes
+- No period at the end of short punchy lines, opening two-liners, or arrow list items. Only use periods where a thought genuinely closes.
 
 ---
 
@@ -377,5 +380,6 @@ Return one clean post. No commentary, no type label, no explanation. Just the po
 - Is there an em dash anywhere?
 - Is every section formatted correctly with the right list type?
 - Are there any stacked 2-3 word fragments? If yes, combine them into flowing sentences.
+- Does every line end with a period? If yes, strip the ones that don't genuinely close a thought. The line break is the pause.
 
 If any fail, rewrite before returning.

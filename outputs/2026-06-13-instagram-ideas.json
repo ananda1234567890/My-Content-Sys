@@ -1,0 +1,985 @@
+[
+  {
+    "language": "English",
+    "core_idea": "Improve voice clarity in your videos by using AI stem separation and Premiere Pro's 'Mastering' effect to carve out the vocal frequency range.",
+    "category": "technique",
+    "tool_name": "Adobe Premiere Pro",
+    "process_steps": [
+      "Use an AI stem separation tool (Pop-Pop AI mentioned) to remove lyrics from your background music track.",
+      "Import the instrumental track into Adobe Premiere Pro.",
+      "Apply the built-in 'Mastering' audio effect to your clip.",
+      "Select the 'Make Room for Vocals' preset from the Mastering effect dropdown menu."
+    ],
+    "key_insight": "Audio mixing isn't just about gain staging (lowering volume); it's about spectral balancing\u2014removing conflicting frequencies so the voice naturally sits 'on top' of the music.",
+    "pain_point": "Tired of your background music fighting with your voice, and even after lowering the volume, the video still sounds muddy or difficult to hear?",
+    "visual_elements": [
+      "Screen capture of an AI audio separation website",
+      "Adobe Premiere Pro 'Effects' panel showing 'Mastering' selection",
+      "Adobe Premiere Pro 'Effect Controls' panel showing parameter adjustments",
+      "Timeline view showing audio waveform before and after processing"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [],
+    "post_angle": "Most editors try to fix 'muddy' audio just by playing with gain sliders. This creates a technical bottleneck where the music sounds weak while the voice still feels swallowed. Here is how to use frequency masking to create more professional, broadcast-ready audio mixes in Adobe Premiere.",
+    "post_title": "Stop just lowering your music volume. Do this instead.",
+    "account": "artzenmedia",
+    "reel_id": "3902642018710321891",
+    "reel_url": "https://www.instagram.com/reel/DYo-D0qvfrj/",
+    "video_url": "https://scontent-atl3-3.cdninstagram.com/o1/v/t16/f2/m86/AQP591KPbK_We831T_OxSsUMiVy7uX60ACMY3wn_Jjnc6G5c5BZXv1T08FoWbwxDrOUTOgIEJsGSw9I7ecsTPPhrYOTbPV74-k8kKok.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=111&vs=1709183117168899_3991743041&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9BQzQxNTBFQUQzODg0NTQ1Njk2OTI3RUNGNUQxODc5QV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzMyNEJEQzIyNDcyMzgwNUY1N0NEMjQxQzI4RkFBNzgwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm4ozKh5HK1AQVAigCQzMsF0A6O6XjU%2FfPGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=cdc44eff01&ccb=9-4&oh=00_Af-88_1HaynEItzJjSFECHtxiGlUqhbpTMWWACDfdYVfWQ&oe=6A2F00FE&_nc_sid=10d13b",
+    "size_mb": 2.1
+  },
+  {
+    "language": "English",
+    "core_idea": "Use the Project Manager tool to consolidate and transcode projects, keeping only the clips you actually used.",
+    "category": "workflow",
+    "tool_name": "Adobe Premiere Pro",
+    "process_steps": [
+      "Go to File > Project Manager",
+      "Select the sequences you want to save",
+      "Choose 'Consolidate and Transcode'",
+      "Check 'Exclude Unused Clips' and 'Include Handles'",
+      "Select QuickTime as your format and Apple ProRes 422 LT as your codec",
+      "Select a destination and click 'OK'"
+    ],
+    "key_insight": "You can drastically reduce project file sizes and clean up local drive storage without permanently deleting media using Premiere's native Project Manager.",
+    "pain_point": "Stressing out because your hard drive is constantly full, but you're too scared to delete any raw footage because you might need it later?",
+    "visual_elements": [
+      "Premiere Pro Project Manager dialog box",
+      "Checkbox options menu",
+      "Calculated space savings display"
+    ],
+    "stats_mentioned": [
+      "30 frames",
+      "3.28GB saved"
+    ],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I put mine on 30 frames"
+    ],
+    "post_angle": "This is a life-saver for freelance editors who have massive project archives or limited local drive space. It allows you to create lean, archive-ready project folders without manual file surgery.",
+    "post_title": "Stop buying more hard drives. Learn how to clean your projects properly.",
+    "account": "artzenmedia",
+    "reel_id": "3911339378135164207",
+    "reel_url": "https://www.instagram.com/reel/DZH3nD1vmUv/",
+    "video_url": "https://scontent-lga3-1.cdninstagram.com/o1/v/t16/f2/m86/AQMCmeb1aSF8gXVWuEZh9x99Xor7IHEQ4KkBu3S4gY2gkgJa7PtzMcUsn-l7f1udbEuCYT2vY-QXt6A4hMFARNW8yq9tKeHLwBspuLo.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=111&vs=1706484540600868_1376394085&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8yNDQwM0I2RDc0MjgzRjUzMUVFRTE3MkM5NDM2RTg5N192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0Q1NDcyRjMyRjc1QUU3NkE2RjhGNTlENjY4RjBENkFEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm7IHKmeiu2AQVAigCQzMsF0BNQAAAAAAAGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=f8f23031f4&ccb=9-4&oh=00_Af93VrrgzrHZ1E6pXDd1AQy60d0dhoEFltofY_hLvW6w4w&oe=6A2F04B3&_nc_sid=10d13b",
+    "size_mb": 4.9
+  },
+  {
+    "language": "English",
+    "core_idea": "Use AI to easily replace objects or backgrounds in existing video footage without needing a green screen or complex traditional compositing.",
+    "category": "ai-feature",
+    "tool_name": "OpenArt VFX",
+    "process_steps": [
+      "Upload the video clip to OpenArt VFX",
+      "Select the 'VFX' or 'Replace Background' mode",
+      "Paint a mask over the area you want to change (or invert the mask to keep the subject)",
+      "Add a text prompt describing the desired replacement or choose a background preset",
+      "Generate the final video"
+    ],
+    "key_insight": "AI-powered frame-by-frame processing allows for professional-level object and background replacement on stock footage without the time-consuming workflow of manual rotoscoping.",
+    "pain_point": "Frustrated with how long it takes to learn advanced VFX software just to swap out a simple object or background?",
+    "visual_elements": [
+      "Screen capture of the OpenArt VFX user interface",
+      "AI-powered mask painting tool in action",
+      "Text prompt input menu",
+      "Before/After video demonstrations"
+    ],
+    "stats_mentioned": [
+      "Up to 240 frames"
+    ],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "A link to try OpenArt VFX for free.",
+    "personal_claims": [
+      "I went with this room",
+      "I am not even in this room"
+    ],
+    "post_angle": "How AI tools like OpenArt VFX are democratizing high-end visual effects and speed-running traditional post-production workflows.",
+    "post_title": "Stop spending days rotoscoping: Use this AI tool for instant object replacement.",
+    "account": "artzenmedia",
+    "reel_id": "3912064149831498491",
+    "reel_url": "https://www.instagram.com/reel/DZKcZ4FPzr7/",
+    "video_url": "https://scontent-lga3-3.cdninstagram.com/o1/v/t16/f2/m86/AQNDu5ny3UuK5KklnEa17DUTEk4RoiNyOHGeyHakVBNPKA3p0km3uJv8KenTBBYpLiSyIBSYZW72fBxx-kOz-H0g1oZxruYp9L2cyU4.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=106&vs=1459049839595405_2431422902&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9BRDREOTUxM0ZBMjFFQUE5NjQ2OTlENTVERUVFNUY5OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0YyNDE4ODJEQkU3RDk0QkFGNUZCMjk3ODk2Qjk2M0FEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmrqGT0v2SyAMVAigCQzMsF0BNZmZmZmZmGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=5c2df8f88a&ccb=9-4&oh=00_Af8-deiDkhkQNJYLpqHuBEqlJrcLLjDxwHRCM07In6ttbw&oe=6A2EF18D&_nc_sid=10d13b",
+    "size_mb": 7.4
+  },
+  {
+    "language": "English",
+    "core_idea": "Use Instagram's 'Link' feature to turn individual Reels into an interactive portfolio, content archive, or 'choose-your-own-adventure' navigation menu.",
+    "category": "technique",
+    "tool_name": "Instagram",
+    "process_steps": [
+      "Identify a reel that serves as your central 'hub' or directory.",
+      "Open the specific Reel you want to link to (the 'child' reel).",
+      "Select the three-dot menu and choose the 'Link' option.",
+      "Select the URL of the video, user, or playlist you want to attach to your Reel.",
+      "The target Reel appears as a clickable button overlay on your original video."
+    ],
+    "key_insight": "Interactive elements increase viewer dwell time and authority by allowing users to explore your work without navigating away from your profile or feed.",
+    "pain_point": "Frustrated that people just scroll past my feed without ever seeing the back catalog of my best work?",
+    "visual_elements": [
+      "On-screen mockups of the Instagram UI revealing the 'Link' feature",
+      "Examples of linking reels as a 'hub' for behind-the-scenes content",
+      "Examples of linking reels as deep-links to previous episodes in a series",
+      "Examples of linking user profiles for seamless collaborations",
+      "Examples of interactive 'choose-your-own-path' navigation menus"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [],
+    "post_angle": "How to treat your Instagram Feed like a website to drive higher engagement and showcase your editing portfolio.",
+    "post_title": "Stop burying your best work: Use Instagram's Link feature to build an interactive hub.",
+    "account": "artzenmedia",
+    "reel_id": "3896192967609483451",
+    "reel_url": "https://www.instagram.com/reel/DYSDtxyvQC7/",
+    "video_url": "https://scontent-dfw5-2.cdninstagram.com/o1/v/t16/f2/m86/AQNuy5EN-ckS36s0I5_BtpCnWuKjHrR9Sl6E2Qj8soUlcARA8eAVKTXCs264REfY8m7yQrWtp_GBSGvrhH-66g1_0--9vadTeZz0Xa8.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=108&vs=1369723208305536_2144971334&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC84RDQ1QzMxN0ZCM0ZBRjI2MzkyMEYwQzAyRDY4RDA4OF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0JFNEUyNTMwMzREMjlCMUQxQTUzNkIyNjE2RkMzODk3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmkpCY8t%2FDgQMVAigCQzMsF0BN1T987ZFoGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2WWqQEA&_nc_rid=99ab88b6de&ccb=9-4&oh=00_Af8M9_cZhK3MbrF1xR1Do5d247GzdQ40jy_bz5FcbMOPJA&oe=6A2F148C&_nc_sid=10d13b",
+    "size_mb": 7.9
+  },
+  {
+    "language": "English",
+    "core_idea": "Use an AI-powered editing tool to automate captioning, B-roll placement, and transitions to significantly reduce post-production time.",
+    "category": "ai-feature",
+    "tool_name": "Submagic",
+    "process_steps": [
+      "Sign up and choose a template",
+      "Upload raw footage",
+      "Allow the AI to auto-generate captions, B-roll, zooms, and transitions",
+      "Customize timing, styles, and elements, then save as a preset"
+    ],
+    "key_insight": "Automating repetitive technical tasks like captioning and B-roll alignment allows you to focus on volume and consistency without sacrificing production quality.",
+    "pain_point": "Tired of spending your entire day cutting, captioning, and sourcing B-roll just for one video?",
+    "visual_elements": [
+      "Software UI with 'Quick Start' project list",
+      "Speech-to-text language selection and template choice menu",
+      "Video preview window with auto-captions active",
+      "Editing panel showing timeline list of text/animations/emojis with timestamp synchronization",
+      "Settings sidebar to adjust font size, position, and duration",
+      "Dashboard interface with 'AI Boost' and 'AI Tools' toggle switches (B-roll, auto-zooms, clean audio, etc.)"
+    ],
+    "stats_mentioned": [
+      "100 views",
+      "3 free videos"
+    ],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "Comment 'MAGIC' to get a link to try the tool for free",
+    "personal_claims": [
+      "I was actually super surprised with the quality"
+    ],
+    "post_angle": "Discuss the trade-off between manual editing mastery and AI-assisted workflows in a high-volume content strategy.",
+    "post_title": "Is faster editing the secret to content consistency?",
+    "account": "artzenmedia",
+    "reel_id": "3896119315824305471",
+    "reel_url": "https://www.instagram.com/reel/DYRy-AOPuU_/",
+    "video_url": "https://scontent-ord5-3.cdninstagram.com/o1/v/t16/f2/m86/AQNkN8ezaxDnMJpVdEVMSV0rhHAbzKjWN819xsjI6HHqk4fWXxeYj3aCKtwA4gMiVPG8CHwnmZkirzOhav7oXSGYZXz4hBASPmZ8CPw.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=107&vs=965625369424601_1352406706&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85MTQ3Rjk5NEY2RUQ0QTRFNUM4QjQ4ODMwM0NGNkY4NF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0JFNEEwNkNFNUNBOUIxREZFNkQxQTlCNEY2RUZDRTg1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmsITr7ZuprAkVAigCQzMsF0BN1T987ZFoGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=286b315d5d&ccb=9-4&oh=00_Af9s_YgSyFG2qgCTtkT7zdlz7PYSA56y0erg_6Y9BG1iQQ&oe=6A2EEB8C&_nc_sid=10d13b",
+    "size_mb": 7.2
+  },
+  {
+    "language": "English",
+    "core_idea": "Follow a structured, immersive 30-day accelerated learning path to master viral video editing.",
+    "category": "workflow",
+    "tool_name": null,
+    "process_steps": [
+      "Invest in structured courses to learn core skills faster than trial-and-error with scattered tutorials.",
+      "Commit to 30 days of high-intensity, full-time study (monk mode) focusing exclusively on editing techniques.",
+      "Practice by downloading and editing raw footage to apply lessons immediately."
+    ],
+    "key_insight": "Speed up the foundational learning curve by replacing fragmented YouTube tutorials with a dedicated, intensive 30-day curriculum supported by active practice.",
+    "pain_point": "I\u2019m spending forever watching tutorials but not actually getting better at editing or creating content.",
+    "visual_elements": [
+      "Animated 'Video Editor Level' progress bar UI",
+      "UI panels for After Effects, Cinematic Short-Film, and Minimal Animations courses",
+      "On-screen text overlays highlighting steps 1-3",
+      "Before/after style edit demonstration"
+    ],
+    "stats_mentioned": [
+      "30-day",
+      "100 different tutorials",
+      "2-3 hours of work",
+      "8 hour consistent days",
+      "90 days"
+    ],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "A roadmap on 'how to become a viral video editor in the next 90 days' delivered to those who comment 'Ultimate Editors'.",
+    "personal_claims": [
+      "I would buy a course",
+      "I would dedicate the first 30 days of my editing journey to just learn",
+      "I'm talking 8 hour consistent days",
+      "I would download some raw videos and start cracking out viral edits"
+    ],
+    "post_angle": "Discuss the 'monk mode' approach to skill acquisition. Does intense, short-term immersion beat long-term, slow learning for aspiring editors?",
+    "post_title": "Is 30 days of 'Monk Mode' the fastest way to become a top-tier video editor?",
+    "account": "josephswork",
+    "reel_id": "3881826223559482055",
+    "reel_url": "https://www.instagram.com/reel/DXfBGIvDxrH/",
+    "video_url": "https://scontent-lga3-1.cdninstagram.com/o1/v/t16/f2/m86/AQOQnYpuswkITRPCq5liw7IBiy7STKhAGeMSsHzSn3YkIw6C8eFeWvPMRbtew4G4BWIli8yKJlf1jaiWVluPhlhFCRJGZfsOe67EjYs.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=109&vs=1637349317587521_1484877276&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9COTRDMEY0RDZFRUQwQjU2MjFFMEJFQTVGNzM5NjE4OF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzk1NDJDNUI4OUQ5NjU3RDM3Rjk1MzgyQTcyRjYyREE5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9Ojm6uS31j8VAigCQzMsF0BG7tkWhysCGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=5bc0059b01&ccb=9-4&oh=00_Af-8ZvIrv6-_jBCEOk7l90IcffdTVSoz0Y-NPzujKFZxHg&oe=6A2EFEF4&_nc_sid=10d13b",
+    "size_mb": 4.0
+  },
+  {
+    "language": "English",
+    "core_idea": "The creator is using a relatable, humorous premise\u2014that their mother is watching their Reels\u2014to build a personal connection and authenticity with their audience.",
+    "category": "other",
+    "tool_name": null,
+    "process_steps": [
+      "Identify a relatable, everyday situation that breaks the 'professional' wall",
+      "Film yourself in your editing workspace looking natural while reacting to the news",
+      "Overlay the text hook on the screen to invite the audience to participate in the joke"
+    ],
+    "key_insight": "Using humor and personal 'behind-the-scenes' moments helps humanize you and encourages deeper community engagement compared to purely educational content.",
+    "pain_point": "Feeling like your content is too stiff, corporate, or disconnected from the people actually watching it?",
+    "visual_elements": [
+      "Talking head of the creator at their desk",
+      "PC monitor screen visible in the background",
+      "Text overlay on top of the footage"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "Mom just told me she watches my reels"
+    ],
+    "post_angle": "How to humanize your video editing brand on social media to build better trust with potential clients and viewers.",
+    "post_title": "Stop being a faceless editor: Why vulnerability wins.",
+    "account": "josephswork",
+    "reel_id": "3872228431169640714",
+    "reel_url": "https://www.instagram.com/reel/DW86z4BCNkK/",
+    "video_url": "https://scontent-iad6-1.cdninstagram.com/o1/v/t16/f2/m86/AQP5dM_NGr_zTqqJic1A4gdOQdCBt0EEN4kyUC1afVhj6Ihgxg3E22L9v6iFliCmcvYR1JxfoUAeGRiTCkK0vDf1d7FNiOWg0wiEgQE.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=109&vs=2056983608214884_1895842654&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8yNTQwOUVCMEQxMTg5QzVDOUM1ODg5MDlBQjhCNTlBM192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0NENEQ4RTY2N0E5MEQ1NTIxRUFFOTEzQjhDMDMzRUEwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9I7Lnfu91T8VAigCQzMsF0AlmZmZmZmaGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=df9355891d&ccb=9-4&oh=00_Af_pGcBmmJg2WXHn5dbnvggJcJ_JCe3FBVCHDuvxziNrkA&oe=6A2F16F3&_nc_sid=10d13b",
+    "size_mb": 2.2
+  },
+  {
+    "language": "English",
+    "core_idea": "Breakdown of the 6 core visual elements that define a high-engagement, modern social media video editing style.",
+    "category": "technique",
+    "tool_name": "Figma, Adobe Premiere Pro (implied)",
+    "process_steps": [
+      "Select a combination of a modern sans-serif font for subtitles and a script font for emphasis.",
+      "Build a custom 5-star shape animation using the vector shape tool and add a glow effect.",
+      "Place numbers and text inside rounded squares with thick white strokes, animated with a pop effect.",
+      "Reuse previous shape styles for chapter headers and add sub-headers for organization.",
+      "Utilize a 3D camera layer to animate movement through a UI interface design.",
+      "Implement table-style animations to showcase comparison lists and secondary effects."
+    ],
+    "key_insight": "A cohesive editing 'style' isn't just one effect, but a systematic combination of recurring UI, typographic, and motion elements that create a branded visual experience.",
+    "pain_point": "My videos feel amateur and lack a cohesive 'brand' look that makes me recognizable.",
+    "visual_elements": [
+      "On-screen graphic overlay with numbered pillar points (1-6)",
+      "Comparison of 'Coolvetica' sans-serif vs 'Edwardian Script' font usage",
+      "UI Design showing 5-star shape vector path",
+      "On-screen pop-up of 'Listicle' UI design",
+      "UI layer animation mimicking a 3D interface zoom",
+      "Mockup overlay of YouTube video thumbnail"
+    ],
+    "stats_mentioned": [
+      "5-stars",
+      "three points",
+      "15k views",
+      "5 days ago"
+    ],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "A full YouTube tutorial breaking down the editing style.",
+    "personal_claims": [
+      "This editing style took me more than two years to build"
+    ],
+    "post_angle": "How to escape low-quality video habits by standardizing your editing style \u2014 use this '6 Pillar' framework to build high-production value fast.",
+    "post_title": "Stop editing ad-hoc: Build your signature video style using these 6 pillars.",
+    "account": "josephswork",
+    "reel_id": "3876542913320856342",
+    "reel_url": "https://www.instagram.com/reel/DXMPz2pDCsW/",
+    "video_url": "https://scontent-ord5-2.cdninstagram.com/o1/v/t16/f2/m86/AQN7AXRrgOlCZ9tkNPx-cUpRgak5HfCmDgyfSsUVs5nqKiJTvbYYJoNr7spNDADwB0iV4u51zqBgVK0XH45ky_k2OtbVT9JJvD_7QBI.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=105&vs=2054015585330100_3507211698&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85RTQzRTlCMEMwMTM0NkI5MjkzRjM2MkIxMDEzMzc5NF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0NGNEM4MzgyOTUxMUVFRDlEMTlFMDJDQjVBOTZFMUE4X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9NXe4eHx1T8VAigCQzMsF0BKrtkWhysCGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=6299b70329&ccb=9-4&oh=00_Af_XU5HrIqDg5QxbAUxqtzOwDsmG_rMbckMsm7Ubrp80hg&oe=6A2EE448&_nc_sid=10d13b",
+    "size_mb": 5.2
+  },
+  {
+    "language": "English",
+    "core_idea": "The creator argues that video editors should view AI as a powerful supplementary skill rather than a replacement, emphasizing adaptation and learning.",
+    "category": "ai-feature",
+    "tool_name": "Claude",
+    "process_steps": [
+      "Acknowledge the fear of AI replacing video editors",
+      "Identify core editing skills: design and mastery of software",
+      "Recognize that content demand is driven by the unique human element",
+      "Commit to learning AI tools to stay relevant"
+    ],
+    "key_insight": "AI is becoming a standard tool for tasks like 3D trailer creation and motion graphics, making it essential to integrate AI into your workflow to remain competitive.",
+    "pain_point": "Is my job actually going to disappear because an algorithm can do it faster than me?",
+    "visual_elements": [
+      "Logos of ChatGPT, Chatsonic, Gemini, and DeepSeek",
+      "Icons for Photoshop, After Effects, and Premiere Pro",
+      "An overlay of a YouTube video titled: 'How to Make Motion Graphics With AI'",
+      "The App Store UI card for 'Claude by Anthropic'"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "The creator is gauging interest for a potential, future 'How to edit with AI' course based on comments.",
+    "personal_claims": [
+      "I'm going to be taking some time this month to actually learn how to edit videos using Claude"
+    ],
+    "post_angle": "Discuss the 'AI as a Co-pilot' vs. 'AI as a Competitor' mindset shift required for professional video editors to survive the next 5 years.",
+    "post_title": "Will AI Replace You? Here is why it won't\u2014but you will get replaced by someone who uses it better.",
+    "account": "josephswork",
+    "reel_id": "3871721504324978622",
+    "reel_url": "https://www.instagram.com/reel/DW7HjHmiAe-/",
+    "video_url": "https://instagram.fagc1-2.fna.fbcdn.net/o1/v/t16/f2/m86/AQOO1evDVQYTv5VBH6lPstfwgmR4u36kySLNpw3oD8sTM0eXiuwNUEUgvsrwQaJyRnfco-lVnl9tWLdzyDRcIYE78L9xR9lcq51DwDY.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=104&vs=2073362986927082_2437963944&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC84RDQ1NjdGMUM0NkU4N0IzOTIxNTlGODUwRkVENUZCOV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzI4NDRENjg0MkIyQzY4N0I2QjJENEJDODBFQjJBNzgzX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9Nzq5cK41T8VAigCQzMsF0BOu6XjU%2FfPGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=3fdb16ba69&ccb=9-4&oh=00_Af-hGiMEEvTZxS8S0E7Hwy0DLMs_mWrsloVce0J22yV2fw&oe=6A2F0434&_nc_sid=10d13b",
+    "size_mb": 5.5
+  },
+  {
+    "language": "English",
+    "core_idea": "Use the 'Trigger Identity' scripting technique to make your content feel more relatable by mirroring your audience's lifestyle, situations, and preferences.",
+    "category": "technique",
+    "tool_name": null,
+    "process_steps": [
+      "Identify your target audience's specific way of living and current life situations.",
+      "Draft your script to highlight these specific preferences and struggles.",
+      "Weave these elements directly into your narrative so the viewer creates an immediate 'This is so us' connection."
+    ],
+    "key_insight": "Virality often comes from 'Trigger Identity'\u2014the ability to make your audience feel individually understood by mirroring their specific reality in your content.",
+    "pain_point": "Tired of creating content that feels generic and fails to spark engagement from your audience?",
+    "visual_elements": [
+      "Talking head",
+      "On-screen text overlays",
+      "Screen recordings of various YouTube creators (Raj Shamani, Ankur Warikoo, Finosh with Sharan, BeerBiceps, MrBeast)",
+      "Animated icon transitions (rotating lightbulbs inside a glass, glass hourglass)"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I will make your content go viral"
+    ],
+    "post_angle": "How to use 'Trigger Identity' to turn cold viewers into a loyal community. This post helps YouTubers go beyond surface-level content and create an emotional bond with their audience.",
+    "post_title": "Stop making generic content. Use 'Trigger Identity' instead.",
+    "account": "hey.deshna",
+    "reel_id": "3721478001260661196",
+    "reel_url": "https://www.instagram.com/reel/DOlWIZgkonM/",
+    "video_url": "https://scontent-lax3-2.cdninstagram.com/o1/v/t16/f2/m86/AQNX5lDRDXaVu_vhPcAjJNKY2ALHM5iJV6NWza_qmE7aJqX-BVR12cEwBE8zXOvLOrDkuxs4O2rpaXbWXuUrj4QhZJ-_x5q5MnWwpnY.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=103&vs=1663351291717999_2440333793&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC83QzQyRERDNzEwOTRCOUY3M0ZBMDY4RURGNEUwOTU5NV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYR2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xMzIzNzEwOTE5NDEyNjE3XzQwNDI2MzIxMzY0MDU0NjU3MDUubXA0FQICyAESACgAGAAbABUAACby57ewiu2bQBUCKAJDMywXQEHIcrAgxJwYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA%3D&_nc_rid=4eb39c3527&ccb=9-4&oh=00_Af8QN_SuXRExo3AyDtOHP_gGR_cje0gL7KZBfU3H0PdOug&oe=6A2F088C&_nc_sid=10d13b",
+    "size_mb": 5.2
+  },
+  {
+    "language": "English",
+    "core_idea": "The key to viral retention is to change the visual element or shot framing every 3 seconds.",
+    "category": "technique",
+    "tool_name": null,
+    "process_steps": [
+      "Identify the main topic of the video",
+      "Change the visual or composition of the frame every 3 seconds to re-engage the viewer"
+    ],
+    "key_insight": "Human attention spans require visual variation; keeping a static shot for too long is the fastest way to lose a viewer.",
+    "pain_point": "Struggling to keep your audience from clicking away even when your content or story is actually good?",
+    "visual_elements": [
+      "Overlay of a reel showing 400k views",
+      "Screen recording showing the creator's Instagram feed",
+      "On-screen text neon-style graphics",
+      "Visual countdown timer graphic"
+    ],
+    "stats_mentioned": [
+      "400,000 views",
+      "6 words",
+      "3 seconds"
+    ],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I hit over 400,000 views on my reel",
+      "I did not pay for the reach",
+      "I change something every 3 seconds"
+    ],
+    "post_angle": "Focus on the psychology of retention rather than just editing speed. Frame it as a low-cost, high-leverage way to boost watch time for creators who don't have big budgets.",
+    "post_title": "Stop boring your audience: The 3-Second Retention Rule",
+    "account": "socialcontentking",
+    "reel_id": "3917768992231935687",
+    "reel_url": "https://www.instagram.com/reel/DZetiQmBk7H/",
+    "video_url": "https://scontent-dfw5-1.cdninstagram.com/o1/v/t16/f2/m86/AQPxVzRfxrTQceRRKpbXaJOgIZ25Pn4A4DDbeGW4gEFVZDaSjFBmavA2GG0ithMVzrOpJ4CInL2jtxJReSEscp4JGJCIbr_13sj9sTs.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=110&vs=972260252480752_526582653&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9CODQ0OENBNzBGRUUzMUFERjM3MDcwN0FDMEFDMEZCRV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0NDNEVCNDlDMUUzMjUyOEEzOUVGREE4OTYxNkJBN0JDX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm9M3xiYLmwgMVAigCQzMsF0A0kOVgQYk3GBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=e3b325d7f8&ccb=9-4&oh=00_Af_95X7alKP0VMiz7biYnbfaUm-rf_MIb1_Phw-PBEql1Q&oe=6A2EF5E4&_nc_sid=10d13b",
+    "size_mb": 3.2
+  },
+  {
+    "language": "English",
+    "core_idea": "The creator suggests using the CapCut app to upload Instagram Reels instead of uploading directly to Instagram for better video quality.",
+    "category": "workflow",
+    "tool_name": "CapCut",
+    "process_steps": [
+      "Export your video from your desktop editor in 4K resolution.",
+      "Transfer the 4K video file to your phone (via Google Drive or similar).",
+      "Open the video in the CapCut mobile app.",
+      "Adjust Export settings within CapCut to 4K resolution and 24fps.",
+      "Upload the video directly to Instagram from the CapCut export interface."
+    ],
+    "key_insight": "Social media platforms' internal rendering engines may compromise video quality if you upload raw files or use their built-in tools; offloading the final render to a platform-optimized tool like CapCut can lead to sharper results.",
+    "pain_point": "Why does my video look so blurry and compressed after I upload it to Instagram?",
+    "visual_elements": [
+      "Adobe Premiere Pro 'Export' settings panel",
+      "Google Drive mobile interface",
+      "CapCut mobile export settings menu",
+      "Icons for CapCut and Instagram"
+    ],
+    "stats_mentioned": [
+      "4K",
+      "24",
+      "30",
+      "60"
+    ],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I upload my content to get the crispiest quality",
+      "I don't have time for that [fiddling with bitrates]",
+      "There's something about posting directly on CapCut that Instagram just loves"
+    ],
+    "post_angle": "This addresses a common technical hurdle for video creators who struggle with Instagram's aggressive compression. It provides a simple, actionable workflow shift that doesn't require advanced technical knowledge, making it a great 'quick tip' for content creators and editors.",
+    "post_title": "Is Instagram crushing your video quality? Try this simple export workflow.",
+    "account": "socialcontentking",
+    "reel_id": "3910476950493501215",
+    "reel_url": "https://www.instagram.com/reel/DZEzhFghJcf/",
+    "video_url": "https://scontent-atl3-2.cdninstagram.com/o1/v/t16/f2/m86/AQMQjArpCHHbz0qMXs_jiWU5ppPs81QycOno85DrB9uYPCOYqPKDT5kUrawu7LXV9j-daKEmxGCyJl71n9MSHQIXgi6pps4FJKgzHsQ.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=104&vs=744707078703711_823683458&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC83MjQyNTVERTU0NDY2NDU0RjhDRkE0NTkzRDVFOENBNl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzE4NEEyQkQ0NjE1RUU1MEY2OTI1NDQ0QTVEOUU3NTg3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmuIeny9u15AUVAigCQzMsF0BAO6XjU%2FfPGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=ccb0b3c80c&ccb=9-4&oh=00_Af_lh0YX6eGup24tVYujkAqLFJA-Ax4QXqAhFxZMLzikxA&oe=6A2EE7C1&_nc_sid=10d13b",
+    "size_mb": 4.0
+  },
+  {
+    "language": "English",
+    "core_idea": "Use the 'Relatable Authority before Action' framework to rewrite boring sales scripts into engaging, audience-focused narratives.",
+    "category": "technique",
+    "tool_name": null,
+    "process_steps": [
+      "Identify stale marketing hooks that sound 'salesy' and lack empathy.",
+      "Replace generic hooks with a challenge to the audience's long-held beliefs to create a 'pattern interrupt'.",
+      "Inject credibility using hard data or specific statistics to make the audience feel understood and validated.",
+      "Explain the product's solution in a practical, ingredient-focused way rather than just selling benefits."
+    ],
+    "key_insight": "Marketing scripts shouldn't start with the solution; they should start by validating the customer's struggle and challenging their pre-existing misconceptions.",
+    "pain_point": "I\u2019m tired of my brand's scripts sounding like generic advertisements that people just scroll past.",
+    "visual_elements": [
+      "Talking head",
+      "Side-by-side 'Original Script' vs. 'Rewrite Script' document overlays",
+      "Highlighted text blocks within the document drafts",
+      "Over-the-shoulder view of the creator typing on a laptop"
+    ],
+    "stats_mentioned": [
+      "85% of people aged 18-24 deal with acne",
+      "60% of people get dark spots after breakouts",
+      "over 80% of women report uneven skin tone"
+    ],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "The creator offers to review, rewrite, and break down the viewer's script.",
+    "personal_claims": [
+      "I have discovered that script content is not the same for every industry.",
+      "I have reviewed a script from a skincare brand."
+    ],
+    "post_angle": "Most video editors focus on the visuals, but script structure is where engagement actually happens. Learn how to audit your clients' scripts to make your edits perform better.",
+    "post_title": "Why your best edits are failing: It's not the pacing, it's the script.",
+    "account": "hey.deshna",
+    "reel_id": "3797706576560451916",
+    "reel_url": "https://www.instagram.com/reel/DS0KgKhDPFM/",
+    "video_url": "https://instagram.fmem1-2.fna.fbcdn.net/o1/v/t16/f2/m86/AQPYXhQ4zuugkalDdgu4sQAMZ5pfYvJDIGKE_lDGZuvGXNUjTuQneVO2Yc7nVI3ARZhb4ATeu99K7sB9RW1EsjfpAgoEaDiEm2JWEy8.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=110&vs=2824937554361671_1871964208&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC81MTQ0NURCNUQwNUNFRTE3MEIxQkIyOTAxMEM1Rjc4MV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYRmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xOTE4MzEzNDcyMDkyNDY3XzQ2MzAwOTQwMzAyOTY2NDYwNy5tcDQVAgLIARIAKAAYABsAFQAAJozjgLWa6KlAFQIoAkMzLBdAT5KwIMSbphgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2Fgdl5p0BAA%3D%3D&_nc_rid=2d4abeeda2&ccb=9-4&oh=00_Af-zBshWMDrBobh6PHAsMII-1FK8rOa8ctORNaNu26tdkw&oe=6A2F0C0D&_nc_sid=10d13b",
+    "size_mb": 7.3
+  },
+  {
+    "language": "English",
+    "core_idea": "Lighting is significantly more impactful to video quality than the camera hardware being used.",
+    "category": "technique",
+    "tool_name": null,
+    "process_steps": [
+      "Turn off environmental 'natural' light",
+      "Turn on fill light",
+      "Turn on key light",
+      "Turn on side/accent light"
+    ],
+    "key_insight": "Mastering light positioning and intensity will improve video output more than upgrading to a more expensive camera body.",
+    "pain_point": "Frustrated that your footage looks cheap or grainy even though you're using a decent camera?",
+    "visual_elements": [
+      "Talking head",
+      "Side-by-side split screen comparison of lighting on vs. lighting off",
+      "Wide shot showing lighting setup in the room"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I showed my setup",
+      "I turned on my key light"
+    ],
+    "post_angle": "Stop chasing new camera gear and start learning how to light your scenes; here is a simple lighting setup that instantly elevates production quality.",
+    "post_title": "Before you upgrade your camera, learn how to light.",
+    "account": "socialcontentking",
+    "reel_id": "3914123029659488090",
+    "reel_url": "https://www.instagram.com/reel/DZRwihWB49a/",
+    "video_url": "https://instagram.flas1-2.fna.fbcdn.net/o1/v/t16/f2/m86/AQNjvkvDhA6Wo5ha4v7ckSpUuARIwe-19dyd4rlJZgNe2-YmNvtlnWsrY_KXKT5pbboWoQht6t7pvhmvVrvT3av9CvqV0Z1wyhkmT5g.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=103&vs=1692492291753014_4246197079&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC83MTQ1OEYwNEIwMEM2QjY1RThFOUQyMEU0OTg0OEY5Q192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzlCNDQ1ODQ2RjA1QkNDMTQ3MEQzOUUzRjBGRjMwNkEyX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm%2FtqVtPaxvQMVAigCQzMsF0BDXdLxqfvnGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=38804690fb&ccb=9-4&oh=00_Af8hF1JdcmLgRzoPgAmDhRabzETVbZywmkFGCkDJIAJqdg&oe=6A2EEC83&_nc_sid=10d13b",
+    "size_mb": 5.2
+  },
+  {
+    "language": "English",
+    "core_idea": "The creator demonstrates an app that uses voice-to-text AI to transform messy, rambling, stream-of-consciousness audio into perfectly structured, clean text, removing fillers, tangents, and stammers.",
+    "category": "tool",
+    "tool_name": "Typeless",
+    "process_steps": [
+      "Open the Typeless app on your mobile device",
+      "Record a messy, unedited voice 'brain dump' of all tasks, ideas, or reminders",
+      "Let the AI process the audio into structured, clean, actionable text"
+    ],
+    "key_insight": "AI-powered voice-to-text can convert 'unhinged' rambling into professional, organized written communication without manual editing or cleanup.",
+    "pain_point": "Tired of wasting time meticulously typing out messy, rambling thoughts or voice notes into organized to-do lists and emails?",
+    "visual_elements": [
+      "Talking head",
+      "Mobile app interface for 'Typeless'",
+      "Recording screen showing an audio waveform",
+      "Before/After visual comparison (messy speech vs. structured text)"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I'm going to throw the most unhinged brain dump [at this app]",
+      "I have several video ideas and will give you a full download of those later"
+    ],
+    "post_angle": "How editors can use voice-to-text tools to streamline production notes, client communications, and content planning.",
+    "post_title": "Stop typing your brain dumps: Use AI to turn audio into clean, actionable notes.",
+    "account": "socialcontentking",
+    "reel_id": "3914711555525964707",
+    "reel_url": "https://www.instagram.com/reel/DZT2WsxPfOj/",
+    "video_url": "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f2/m86/AQMW3VlFkiIFLfMiIaG_soQeRlYhAN5d0uDqjXkvwHG8FOWMPv_RHGtsVDaIbS-ogazmH7cMGwZFerGQebweaVb2ls81uE0PSzSGfIg.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=111&vs=955376330826379_3661150612&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85MjQzNUVFRDdEMzQwMTQwMTA2REY4Q0U3RjA4MDNCRV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzlDNDMxREM1NDIzMjZBODczQ0UwMkMyNDAzNTc2OUIwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmjsvwsKrAzgMVAigCQzMsF0BMgAAAAAAAGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=3dbfdd3c44&ccb=9-4&oh=00_Af_RPOSuDDEyp1SjCBxTaxUw-FWiXjqNU9Q0oxYGlIoloQ&oe=6A2F0D97&_nc_sid=10d13b",
+    "size_mb": 6.7
+  },
+  {
+    "language": "English",
+    "core_idea": "Use Figma to recreate real-world mobile notifications and import them into After Effects using the Overlord plugin for high-quality, authentic-looking social proof graphics.",
+    "category": "technique",
+    "tool_name": "Figma, After Effects, Overlord",
+    "process_steps": [
+      "Search Google for a screenshot of the desired notification (e.g., iPhone Shopify sale).",
+      "Import the screenshot into Figma.",
+      "Recreate the notification UI design from scratch in Figma.",
+      "Use the Overlord plugin to import the Figma graphic directly into After Effects.",
+      "Animate the imported assets in After Effects."
+    ],
+    "key_insight": "To make social proof and notification graphics look 'real' and high-quality, don't rely on low-resolution screenshots; recreate the UI design manually to maintain clean, scalable vector assets.",
+    "pain_point": "Tired of your social proof overlays looking like blurry, low-quality screenshots that ruin the aesthetic of your edit?",
+    "visual_elements": [
+      "Talking head",
+      "On-screen graphic overlay of a fake Instagram DM from a prominent creator",
+      "On-screen visual of multiple notification styles",
+      "Google image search UI",
+      "Figma interface showing design reconstruction",
+      "Overlord plugin UI within After Effects",
+      "After Effects timeline with vector layers"
+    ],
+    "stats_mentioned": [
+      "$19.99"
+    ],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "A template with dozens of notification examples (Instagram, TikTok, Reddit, etc.) if the user comments 'NOTIFICATION'.",
+    "personal_claims": [
+      "The best thing to level up the graphics in your edit is this."
+    ],
+    "post_angle": "Focuses on the importance of high-fidelity 'social proof' assets in modern video editing for creators and businesses to increase credibility.",
+    "post_title": "Stop using blurry screenshots in your videos.",
+    "account": "davidmnsilla",
+    "reel_id": "3899053890648272093",
+    "reel_url": "https://www.instagram.com/reel/DYcONsAMezd/",
+    "video_url": "https://scontent-ord5-3.cdninstagram.com/o1/v/t16/f2/m86/AQPBQ4EtBUcDMtcebJI2ZQyTB1UbfRfclgCUTfGVbnWbcyklTjUkQCEmDiKmzqP0cttPg6URSC89zwtyrRnNT-K9fwYq05bbOSvZep8.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=110&vs=4339500856262468_2192557181&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9COTREMjY1RjhGODYwNjdBMThFMjdFRDQ4OEU4MkI5NV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzM4NDg5MjJBMzNGNTRGMjhFNzFERkVGM0YwRDMzMkIxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm0Kv%2FnMvGlwUVAigCQzMsF0BK1T987ZFoGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=dd01f15514&ccb=9-4&oh=00_Af-R42GDxAGKlaCLS5V5wnqP4nDABVNlQkD08LQc6qdHhQ&oe=6A2EF6F6&_nc_sid=10d13b",
+    "size_mb": 4.7
+  },
+  {
+    "language": "English",
+    "core_idea": "Three free plugins for Adobe After Effects that significantly speed up the workflow.",
+    "category": "tool",
+    "tool_name": "FX Console, Copy Pasta, Motion Tools 2",
+    "process_steps": [
+      "Install the three plugins: FX Console, Copy Pasta, and Motion Tools 2.",
+      "Use FX Console to quickly search and apply effects without manual menu navigation.",
+      "Use Copy Pasta to copy frames from After Effects or paste images from the internet directly into your composition without downloading files.",
+      "Use Motion Tools 2 to automate repetitive animation tasks with single-click buttons."
+    ],
+    "key_insight": "Mastering specific third-party plugins is the fastest way to reduce 'busy work' and tedious repetitive tasks in After Effects.",
+    "pain_point": "Tired of wasting hours on tedious, repetitive clicks and manual file management in After Effects?",
+    "visual_elements": [
+      "Talking head",
+      "On-screen UI overlays showing plugin logos",
+      "Screen capture of FX Console search menu",
+      "Screen capture of Copy Pasta plugin UI",
+      "Screen capture of web browser copying an image directly to After Effects",
+      "Screen capture of Motion Tools 2 panel with animation presets/buttons"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "The creator is offering a list of the 3 plugins (and potentially download links) if the user comments the word 'Cheese'.",
+    "personal_claims": [],
+    "post_angle": "Stop wasting time searching through After Effects menus. These plugins act as accelerators for your daily editing workflow, letting you focus on the creative rather than the technical overhead.",
+    "post_title": "3 free After Effects plugins that save me hours of repetitive work weekly",
+    "account": "davidmnsilla",
+    "reel_id": "3809916040046707388",
+    "reel_url": "https://www.instagram.com/reel/DTfinPfDAK8/",
+    "video_url": "https://scontent-dfw6-1.cdninstagram.com/o1/v/t16/f2/m367/AQPH68k6tZnmsWzxIUD3FnTvXhwIarTyRxUxDCBGVLdxmXri7_cKvpwOIZsaUzZ0OIOTHMShE7rwgQDm9IKdEQzjYPLGMnpLiWktO6c.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=101&vs=1469211184256374_1363291823&_nc_vs=HBksFQIYQGlnX2VwaGVtZXJhbC9DNzQ3RDU1NkE3NzYwRjVENzM2QkU0MEM2RUVGQkM5RF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYR2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8zMTQyNDcxOTY1OTQwODk4XzcxMjI2MTc0MTA2OTgyODYwNDgubXA0FQICyAESACgAGAAbABUAACas5eKq0%2FnbPxUCKAJDMywXQECd0vGp%2B%2BcYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HZeadAQA%3D&_nc_rid=1c50c9efdb&ccb=9-4&oh=00_Af8dUe7bWFrmGlxv0XlqDMkFrsc9_4GQN0tG0nzDHFhVow&oe=6A2EF939&_nc_sid=10d13b",
+    "size_mb": 4.4
+  },
+  {
+    "language": "English",
+    "core_idea": "Use an adjustment layer with Transform, Lens Distortion, and Gaussian Blur effects to create a custom zoom-out transition.",
+    "category": "technique",
+    "tool_name": "Adobe Premiere Pro",
+    "process_steps": [
+      "Create an adjustment layer on the timeline.",
+      "Add 'Transform', 'Lens Distortion', and 'Gaussian Blur' (legacy) effects to the adjustment layer.",
+      "Set two keyframes for the Transform effect's scale (start at 160, end at 100).",
+      "Ease out keyframes and add a custom speed curve.",
+      "Set the shutter angle to 180.",
+      "Animate the Lens Distortion Curvature from -50 to 0.",
+      "Animate the Gaussian Blur Blurriness from 25 to 0."
+    ],
+    "key_insight": "Mastering the combination of motion blur (shutter angle), lens distortion, and blur within an adjustment layer creates a high-end, dynamic \u2018camera-style\u2019 movement.",
+    "pain_point": "Does all your B-roll or talking head footage feel static and boring because your transitions are too simple?",
+    "visual_elements": [
+      "Premiere Pro Effects panel",
+      "Effect Controls panel showing keyframe settings",
+      "Timeline showing the adjustment layer",
+      "Speed graph editor for keyframes",
+      "Before/After visual comparison of the effect"
+    ],
+    "stats_mentioned": [
+      "160 (scale value)",
+      "100 (scale value)",
+      "180 (shutter angle)",
+      "-50 (lens curvature)",
+      "25 (blurriness)"
+    ],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I want to show you how to create my signature zoom-out effect"
+    ],
+    "post_angle": "Most editors default to standard cross-fades or simple cuts. This technique shows how to inject 'camera life' into any edit using standard effects, elevating the production value without needing third-party plugins.",
+    "post_title": "Stop using basic cuts: Create this pro-level 'zoom-out' effect in Premiere Pro.",
+    "account": "ant.lon",
+    "reel_id": "3866561385014859378",
+    "reel_url": "https://www.instagram.com/reel/DWoyRgADZZy/",
+    "video_url": "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f2/m86/AQNjW7fFqeYLbkaHDf3QtSmN5-n64JYBJJXU2nXe1We61Djpt85SU1fX6F8O_qvhJEZefzmYP2DZCUASXGesGDyKnawThGe_IGZagoI.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=101&vs=1662028261469885_2474710232&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8zRDRFM0ZGNjREMjY3N0MyMTI5MjgyNjdGRjNGQUY5Ql92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzA1NEY2NzhDNDNEQ0JDOTkyNjI1NDlCNkI0NDVCRkIyX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm%2BrbWtOf74T8VAigCQzMsF0BIIAAAAAAAGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2WWqQEA&_nc_rid=60f9b5b9c0&ccb=9-4&oh=00_Af9u8YptG48JpE2ffG59qU9HMMOx52j3L0gAxLGyRuYd8A&oe=6A2EE142&_nc_sid=10d13b",
+    "size_mb": 3.9
+  },
+  {
+    "language": "English",
+    "core_idea": "Use a low-pass filter and a cross-fade transition to create a smooth, cinematic tail-out effect for audio tracks.",
+    "category": "technique",
+    "tool_name": "Adobe Premiere Pro",
+    "process_steps": [
+      "Cut the audio track a few seconds before the end",
+      "Apply the 'Lowpass' audio effect to the second part of the clip",
+      "Set the 'Cutoff' value in the effect settings to 1000 Hz",
+      "Apply the 'Constant Power' cross-fade transition to the splice point",
+      "Add audio keyframes to create a dramatic volume drop at the very end"
+    ],
+    "key_insight": "Layering audio processing effects (EQ filtering) combined with standard transitions adds a layer of 'polish' that separates amateur abrupt-stops from professional-style track tails.",
+    "pain_point": "Tired of your music tracks sounding like they were simply chopped off at the end of every video?",
+    "visual_elements": [
+      "Adobe Premiere Pro timeline view (audio waveforms)",
+      "Effects panel (searching for 'Lowpass')",
+      "Effect Controls panel (adjusting 'Cutoff' Hz)",
+      "Audio transitions folder",
+      "Before vs. After side-by-side comparison"
+    ],
+    "stats_mentioned": [
+      "1000 Hz"
+    ],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [],
+    "post_angle": "Focus on the 'pro' mindset\u2014this is a classic example of how minor attention to sound design makes work look significantly more expensive than it is. Great for showing attention to detail.",
+    "post_title": "Stop chopping your music. Use this audio trick for cleaner outros.",
+    "account": "davidmnsilla",
+    "reel_id": "3816463736278618447",
+    "reel_url": "https://www.instagram.com/reel/DT2zYwzDBFP/",
+    "video_url": "https://scontent-lga3-3.cdninstagram.com/o1/v/t16/f2/m69/AQM0bHCYZHKDiIzt546Z-g-PdeB113bf9CXyP1bsRuaglfhQ9BK9mWjILH4uKAJvmpzoAEnFKEAoeM9GU4eX3xOK.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=104&vs=1138255321558754_404852541&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HSE5YMXlRdGx5MUdUM3NGQUV6YnlWdWZuc3NIYnNwVEFRQUYVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzAxNENCQjIzRjQ1QUQwODI0MjFCQjk0ODdDNTQ1MTk0X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmrMKgu%2FPP3D8VAigCQzMsF0A8zMzMzMzNGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=4d60f0897c&ccb=9-4&oh=00_Af8K0oFYtZAy5s0crdafccUv1rGNnGORRAyBhItO6PmRIw&oe=6A2F0F16&_nc_sid=10d13b",
+    "size_mb": 2.6
+  },
+  {
+    "language": "English",
+    "core_idea": "Use keyframed nested sequences to animate text elements smoothly across the screen, creating a more dynamic, flowing visual experience.",
+    "category": "technique",
+    "tool_name": "Adobe Premiere Pro",
+    "process_steps": [
+      "Create a nested sequence for each text element.",
+      "Place keyframes for the first text layer to move it from the center of the screen to the left side.",
+      "Place keyframes for the second text layer to move it from the right side of the screen back to the center."
+    ],
+    "key_insight": "Static, popping graphics make edits feel low-budget; adding programmed movement to every on-screen element makes the video flow and feel more premium.",
+    "pain_point": "Are my videos feeling static and boring because these sudden jumpy text cuts look amateur?",
+    "visual_elements": [
+      "Premiere Pro timeline view displaying nested sequences",
+      "Effect Controls panel showing keyframe placement",
+      "Graph editor/keyframes visual representation",
+      "Before/After comparison of static text vs. animated text"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "A guide/link to his full editing process for short-form videos.",
+    "personal_claims": [
+      "This is the single best advice I could give to any video editor trying to level up their edits."
+    ],
+    "post_angle": "Focus on the 'detail-oriented' nature of high-end edits. Even simple text animations can make a video feel more professional if there's deliberate movement between scenes.",
+    "post_title": "Stop letting your text just 'pop' onto the screen.",
+    "account": "ant.lon",
+    "reel_id": "3885389032176019049",
+    "reel_url": "https://www.instagram.com/reel/DXrrL01DOZp/",
+    "video_url": "https://scontent-lax7-1.cdninstagram.com/o1/v/t16/f2/m86/AQOyPZM7JKkUqNd_wHfB7MEi6e22LBhc3mtpcr34ThYCWYayRpHEvxsBmviH1-6u_BY5BrMcKe_z-gKrOhlnPtp6UOUiylHnm7VC7_c.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=105&vs=26870481562639168_1767120778&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9CMDRCQzc3RDQzNkNEOTU3MUExNzc0MDM3NUE2NTdCNV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0RENERDOEYwNDJFRTFGQUU1NDY0RjY0N0ZDRTY0RkFBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm%2Bs3jpf7U4z8VAigCQzMsF0BD64UeuFHsGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=5a152c82ba&ccb=9-4&oh=00_Af8bnlWXRXM9rJDoqiOi1woAzX7yQ-xnNNk9CtdlxotGYA&oe=6A2EF409&_nc_sid=10d13b",
+    "size_mb": 3.4
+  },
+  {
+    "language": "English",
+    "core_idea": "Use the Dagger plugin to instantly search and apply effects in Premiere Pro using a keyboard shortcut, eliminating the need to browse panels.",
+    "category": "tool",
+    "tool_name": "Dagger",
+    "process_steps": [
+      "Install the Dagger plugin",
+      "Navigate to Window > Extensions > Dagger to launch the interface",
+      "Use the assigned keyboard shortcut (Command + K) to open the spotlight-style search bar",
+      "Type the name of the desired effect",
+      "Press Enter to apply it directly to the selected clip"
+    ],
+    "key_insight": "You can optimize your editing speed by creating a 'command-center' search interface for effects, keeping your hands on the keyboard instead of mousing through menus.",
+    "pain_point": "Tired of wasting seconds manually scrolling, searching, and dragging effects into your timeline?",
+    "visual_elements": [
+      "Talking head",
+      "Premiere Pro 'Window' menu dropdown",
+      "Dagger plugin interface window showing effects list",
+      "Keyboard shortcut settings menu within Dagger",
+      "Split-screen of Premiere Pro timeline being edited"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I just genuinely thought that some of you would enjoy using this tool",
+      "which works just fine for me"
+    ],
+    "post_angle": "How to reduce mouse fatigue and shave hours off your annual editing time by using command-based searching in Adobe Premiere Pro.",
+    "post_title": "Stop menu-diving: How to trigger Premiere Pro effects with a single shortcut.",
+    "account": "ant.lon",
+    "reel_id": "3910055604851418453",
+    "reel_url": "https://www.instagram.com/reel/DZDTtszMaVV/",
+    "video_url": "https://scontent-ord5-1.cdninstagram.com/o1/v/t16/f2/m86/AQNOn90_namIJfNqpE92ZmfbYTYt_HcWsVfRmtZs9c8zvUjFhLU9kdOzibdvjd_J8UcjIfBS5Y4Kz9z6mrlxN3wc6tHbpsJGuvKQ68Q.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=111&vs=1316901019866115_4097000575&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8zRDQzMjE2OTgyN0Y1QTE1MjVDRTQzMUZCRTU0NjM4OF92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0Q5NDZBQUI5OEExNzgwMjEzNzYyOTFGNjI4QTg0NUE2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmpMim0cOwsAMVAigCQzMsF0BCNT987ZFoGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2WWqQEA&_nc_rid=591f9f8d43&ccb=9-4&oh=00_Af9uGsLR5xFyZagoY38VVLf5eeNGZ5h3snXYtgkcvhabog&oe=6A2F0011&_nc_sid=10d13b",
+    "size_mb": 2.4
+  },
+  {
+    "language": "English",
+    "core_idea": "The creator is promoting a 'Signature Pack' of editing assets (sound effects, overlays, etc.) to enhance the production value of videos.",
+    "category": "tool",
+    "tool_name": "Adobe Premiere Pro",
+    "process_steps": [
+      "Identify a need for better editing assets to elevate video quality.",
+      "Acquire or download the 'FINE CUT - Signature Pack'.",
+      "Integrate the assets into your Premiere Pro timeline."
+    ],
+    "key_insight": "Using high-quality, pre-made assets like sound design and visual overlays is the fastest way to make amateur-looking footage look like premium professional content.",
+    "pain_point": "My videos look 'amateur' even though my editing skills are decent\u2014I just can't seem to get that premium, polished look no matter what I do.",
+    "visual_elements": [
+      "Premiere Pro timeline with complex layer stacks",
+      "On-screen text overlays",
+      "Fast-paced b-roll of a creator sitting in a studio",
+      "Graphic showing 'FINE CUT - Signature Pack' file",
+      "Animated arrows pointing to creative roles (Editor, Storyteller, etc.)"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I found the best editing assets."
+    ],
+    "post_angle": "How to bridge the gap between 'decent' edits and 'professional' grade videos using strategic asset libraries.",
+    "post_title": "Stop over-editing. Start asset-stacking.",
+    "account": "ant.lon",
+    "reel_id": "3906525320378044816",
+    "reel_url": "https://www.instagram.com/reel/DY2xBTLM9GQ/",
+    "video_url": "https://scontent-lga3-1.cdninstagram.com/o1/v/t16/f2/m86/AQOBUySqgzyiPDdl7treTCRilKlNdE_e78U82BVIS6LNO39_ghLNP_WavLsgXRzAMeFsmTBcf-NEzEDmdu1r4MzplCXvJnUcbJ13GRE.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuZXhwZXJpbWVudGFsLjcyMC5iYXNlbGluZSJ9&_nc_cat=103&vs=2370197210166822_2455331519&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9BMjREOTJBOUE1MjM2MzQ2OTVGREFFQTMzNUI0MzE4QV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzJENDIyMThEQkVEOEI3OEQ1MTFGNTRBRkFGN0M5NUI4X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmupK8%2BoCr%2BQcVAigCQzMsF0AgPO2RaHKwGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=7d2bcf4f72&ccb=9-4&oh=00_Af-92OCGS3Oa93xJbjaubiA_uD050Pc7xT09BgzJpawzyQ&oe=6A2EEBAD&_nc_sid=10d13b",
+    "size_mb": 1.3
+  },
+  {
+    "language": "English",
+    "core_idea": "The difference between high-quality YouTube content and amateur work is often rooted in the creator's fundamental understanding of design principles, specifically alignment and balanced composition.",
+    "category": "technique",
+    "tool_name": null,
+    "process_steps": [
+      "Analyze the visual design of established creators like Ali Abdaal or Iman Gadzhi.",
+      "Identify errors in alignment and spacing, such as inconsistent text start/end points.",
+      "Observe how intentional design decisions impact the overall aesthetic and professionalism of the video."
+    ],
+    "key_insight": "Great editing isn't just about flashy animations; it's about adhering to the subtle design principles of alignment and spatial balance that subconsciously signal quality to the viewer.",
+    "pain_point": "I\u2019m spending hours on motion graphics, so why does my edit still look like a messy, amateur project?",
+    "visual_elements": [
+      "Side-by-side comparison of Ali Abdaal and Iman Gadzhi videos",
+      "Screen capture showing a grid overlay for UI alignment analysis",
+      "On-screen annotations highlighting uneven text alignment points",
+      "Close-up of a design element from a video with an arrow pointer"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "Iman Gadzhi\u2019s videos have animation and design mistakes",
+      "Ali Abdaal knows how to tell his editor to design in a specific way because he is a former web designer"
+    ],
+    "post_angle": "Most editors focus on software tutorials and technical skills, but they ignore visual design theory. This post would explain why understanding design fundamentals (like grids and alignment) is the missing link for editors who want to achieve that 'premium' YouTube look.",
+    "post_title": "Stop adding more effects and start studying design.",
+    "account": "editingexplained",
+    "reel_id": "3859987882673214268",
+    "reel_url": "https://www.instagram.com/reel/DWRboc4DJM8/",
+    "video_url": "https://scontent-dfw5-2.cdninstagram.com/o1/v/t16/f2/m86/AQNDnXd1XanixOReLMBN2cnvl4oVvDA-XNYHISvIsFZDcoSQRfPmHGJg8ER_JarKLfqFgelWYK0oCD_ykvDu2gK8FX8KUxSMUSUbvyU.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=100&vs=2020101301873208_830869800&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85MTRDMEU2MERCQUQyQkY5Rjg5NTNDQURGOEI4RjBCMl92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzE2NEYzOEM5ODZFRUNEN0YzRTg4RDBBMjIyMTJGNDlCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmquuE1tDe0z8VAigCQzMsF0A8CHKwIMScGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=cf0652a2e3&ccb=9-4&oh=00_Af-uQkYL4VFZuw6yJYmmp9d-FhzzluF8XvgkfhQHF70N5Q&oe=6A2EF2AA&_nc_sid=10d13b",
+    "size_mb": 2.2
+  },
+  {
+    "language": "English",
+    "core_idea": "The Higgsfield AI plugin allows video editors to generate B-roll, reframe content, and edit video directly within the Adobe Premiere Pro timeline without needing to switch windows or apps.",
+    "category": "ai-feature",
+    "tool_name": "Higgsfield AI",
+    "process_steps": [
+      "Install the Higgsfield AI plugin for Adobe Premiere Pro",
+      "Open the plugin panel directly within the Premiere Pro interface",
+      "Enter your desired edits or generation prompts without exiting the timeline"
+    ],
+    "key_insight": "AI-powered editing tools can now function as integrated workflow extensions rather than external apps, removing the context-switching friction that breaks an editor's creative flow.",
+    "pain_point": "Tired of constantly having to switch between your editing timeline and external AI tools just to generate assets?",
+    "visual_elements": [
+      "Talking head",
+      "On-screen user interface showcasing the Higgsfield AI plugin panel inside Adobe Premiere Pro",
+      "Before/after comparison of video framing (4:3 to 1:1)",
+      "Short clips of B-roll generation inside the project timeline",
+      "Adobe Premiere Pro timeline view"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "comment_for_guide",
+    "cta_detail": "The creator will send the viewer a link to the plugin with more information if they comment 'plugin'.",
+    "personal_claims": [
+      "I literally mean anything."
+    ],
+    "post_angle": "How AI is evolving beyond standalone generative apps to become an integrated part of our native editing software ecosystems.",
+    "post_title": "The end of context-switching in Premiere Pro? An AI plugin that lives in your timeline.",
+    "account": "ant.lon",
+    "reel_id": "3913032838289797405",
+    "reel_url": "https://www.instagram.com/reel/DZN4qJgs7Ed/",
+    "video_url": "https://instagram.frnd1-1.fna.fbcdn.net/o1/v/t16/f2/m86/AQPvugtTD78MVV7iNcS6tXM_DtraCzeDxOhGjYOiwpVfOei4KniocEW41yFiCc9NjXz1P8BdwHInIZ9vS4ae3SQAqTWmrmmy_Se2iqg.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=101&vs=1338572021498928_104791474&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC84NzRCQTBCMDUwNEU0RDJBNjk4NTY4RDM1RjBENEFCQ192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0RFNERBMTYyNTdFRjZEMjA0QjI0RjQ1NjAwMUJGRDlCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAm3oPJuO%2BL7QgVAigCQzMsF0BCo9cKPXCkGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=4f88a9b9f6&ccb=9-4&oh=00_Af9LiJGoxGeYJ6sWyAG5sWhIWR1YfjPn6Cr8XDyHuj1jvQ&oe=6A2EEBDE&_nc_sid=10d13b",
+    "size_mb": 3.3
+  },
+  {
+    "language": "English",
+    "core_idea": "The final 15 seconds of a video are critical for viewer retention and should be used to transition the audience through an 'ending bridge' using psychology triggers like status, perceived value, or authority.",
+    "category": "technique",
+    "tool_name": null,
+    "process_steps": [
+      "Identify the goal of your video ending (Status, Perceived Value, or Authority)",
+      "Craft a concise statement that aligns with your chosen trigger",
+      "Integrate this statement into the final 15 seconds of your edit to create an 'ending bridge' that keeps the audience engaged"
+    ],
+    "key_insight": "An 'ending bridge' ensures the viewer doesn't just click off, but feels a shift in perspective on the topic as the video concludes.",
+    "pain_point": "Frustrated that your viewers leave the second the video feels like it's over, killing your watch time?",
+    "visual_elements": [
+      "Talking head video",
+      "On-screen text call-outs for 'First 15 seconds' vs 'Last 15 seconds'",
+      "Film clips used as visual examples of transitions",
+      "Graphic showing 'Ending Bridge' framework with sub-points (Status, Perceived Value, Authority)"
+    ],
+    "stats_mentioned": [
+      "15 seconds"
+    ],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [],
+    "post_angle": "Most editors obsess over the hook, but let's talk about the 'exit.' Here is the framework for an Ending Bridge that fixes your retention drop-off.",
+    "post_title": "Stop losing viewers in the last 15 seconds: The 'Ending Bridge' framework.",
+    "account": "editingexplained",
+    "reel_id": "3869404168595443499",
+    "reel_url": "https://www.instagram.com/reel/DWy4pchjA8r/",
+    "video_url": "https://scontent-dfw5-2.cdninstagram.com/o1/v/t16/f2/m86/AQMTrlbZ53tZ5R8Md_EiRh7BGGer7MEQO2UhPg1VATAbzP-FiLW_bx3d9vFhltd5ldwcC9P6VOPD88xVdyo43p_2WYX6W_jbLWrNVfw.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=108&vs=26272575579081555_260155162&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9EQjQ3NjE4RkUyNUUxNDc5NzNGRjgxMDQ3NDg3RjE4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzVENEQ0QTUwMDA1ODQzOERCQzc4NUFCOTA5NkI1MkI5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmqobk5YDZ1D8VAigCQzMsF0A%2B90vGp%2B%2BeGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=97a4e4ba5f&ccb=9-4&oh=00_Af_o-dPyIufsXPKFBRwBVBdtzT6Umz9Aep-co3UlIZhN9g&oe=6A2EED5D&_nc_sid=10d13b",
+    "size_mb": 3.3
+  },
+  {
+    "language": "English",
+    "core_idea": "Use unconventional cinematic framing techniques like reveal shots, immersive reveals, top-down angles, and layered compositions to increase viewer retention.",
+    "category": "technique",
+    "tool_name": null,
+    "process_steps": [
+      "Cover the camera lens with your hand to create a natural transition, then pull it away to reveal the subject.",
+      "Place the camera behind an object (like a laptop or drawer) and move the object away to create an 'immersive reveal'.",
+      "Mount the camera above you looking down to capture an unconventional perspective.",
+      "Use foreground and background elements to create layered, immersive frames."
+    ],
+    "key_insight": "A viewer's attention is driven by visual novelty; changing the framing of your shot every few seconds is more effective than any single static angle.",
+    "pain_point": "Frustrated that my videos look flat and boring, and people keep scrolling past my content because the framing feels static and unengaging.",
+    "visual_elements": [
+      "Over-the-shoulder perspective during lens-blur reveal",
+      "Close-up of laptop lid lowering to obstruct the camera",
+      "POV shot from a cabinet opening",
+      "Handheld high-angle shot showing the ceiling and surroundings",
+      "On-screen graphic overlays for '3 seconds' stopwatch and text labels for techniques"
+    ],
+    "stats_mentioned": [
+      "3 seconds"
+    ],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I like to do the reveal shot",
+      "Another shot I love doing is an immersive reveal",
+      "My favourite's the top down reveal"
+    ],
+    "post_angle": "Focus on the psychology of retention: Explain how visual variety is as important as the script in the first 3 seconds of a video.",
+    "post_title": "Stop filming your talking head shots from the same angle.",
+    "account": "socialcontentking",
+    "reel_id": "3913353696578439333",
+    "reel_url": "https://www.instagram.com/reel/DZPBnQFBQil/",
+    "video_url": "https://scontent-atl3-2.cdninstagram.com/o1/v/t16/f2/m86/AQOgXXpjJMJLFMBfZXjaaVIoBxqd2Bhr0fBbud8cNfDeErJZB43QTPVAidBe9yh0ZtlmPosKiIHYD0v4ic4OmYwACv_1xxEppuDqha8.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuZXhwZXJpbWVudGFsLjcyMC5iYXNlbGluZSJ9&_nc_cat=101&vs=1337411391667912_2918034647&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8wOTQ1NjkyRjk0MTNDNzY0MjY5MzUyQkVCMkFCQjlBOV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyL0Y5NDhCOTY1NkEyMjI3ODg5MjhDNDM4NDAwQkY1NTkyX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmpu%2BAk%2FbykAYVAigCQzMsF0BFgAAAAAAAGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=466cbea4b7&ccb=9-4&oh=00_Af8IN7-pys5dTpY_EjvIBz5xzEQo9HPPX_h9d7k7MYlCdw&oe=6A2EE6C6&_nc_sid=10d13b",
+    "size_mb": 6.0
+  },
+  {
+    "language": "English",
+    "core_idea": "Effective storytelling requires a rhythmic structure of alternating peaks of interest and valleys of lower intensity.",
+    "category": "technique",
+    "tool_name": "Kalakar",
+    "process_steps": [
+      "Identify narrative peaks and periods of downfall in your story",
+      "Structure your edit to oscillate between these high and low intensity moments to create a natural rhythm",
+      "Study master storytellers to understand their pacing and emulate their techniques"
+    ],
+    "key_insight": "A story doesn't maintain constant intensity; you must engineer 'downfalls' to make the 'peaks' land with emotional impact.",
+    "pain_point": "Tired of your videos feeling flat or monotonous, like the viewer is disengaging mid-story?",
+    "visual_elements": [
+      "Animated line graph illustrating undulating 'peak' and 'downfall' stages",
+      "B-roll shots of a sketchbook",
+      "Clips of Martin Scorsese and Christopher Nolan",
+      "Watermark UI element for Kalakar"
+    ],
+    "stats_mentioned": [],
+    "is_business_content": false,
+    "cta_flag": "none",
+    "cta_detail": null,
+    "personal_claims": [
+      "I show rhythm in my own stories"
+    ],
+    "post_angle": "Focuses on the 'rhythm' of editing. Many editors focus solely on cuts and transitions, but this shifts the perspective to holding viewer attention through narrative pacing.",
+    "post_title": "Why your story feels flat (and how a visual wave pattern can fix it)",
+    "account": "editingexplained",
+    "reel_id": "3862883059570067934",
+    "reel_url": "https://www.instagram.com/reel/DWbt60ejEne/",
+    "video_url": "https://instagram.fbtr1-1.fna.fbcdn.net/o1/v/t16/f2/m86/AQP_sud3StYrcCf1aCXtLCqWv0euDpIapiCLbDgC401G7q-z22-2rCy1I3D7ltCYds-WStproP0XjSXOb_qpSTXiMN3fo3TNAy_NLJ8.mp4?stp=dst-mp4&efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_cat=103&vs=1239924818121542_4112913525&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80QjQ3MTJDRUUxN0ZFQTUxNkM5RTg2QjU4NzIxMTc4M192aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYUWlnX3hwdl9wbGFjZW1lbnRfcGVybWFuZW50X3YyLzIzNDM5MDAxMjMxQkFGOEI2MkU1NDc3NzBCOTkzNUI1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwAVAAAmquqfj5uG1D8VAigCQzMsF0Ax5mZmZmZmGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX%2BB2XmnQEA&_nc_rid=9ffe019390&ccb=9-4&oh=00_Af-cUlKja6OFlBAcO0LkksMR0ehInRTN9UCrlpGq7XLF3Q&oe=6A2EED17&_nc_sid=10d13b",
+    "size_mb": 1.4
+  }
+]

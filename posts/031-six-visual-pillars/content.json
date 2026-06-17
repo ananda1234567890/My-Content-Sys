@@ -1,0 +1,61 @@
+{
+  "title": "6 Visual Pillars Behind Every Recognizable Editing Style",
+  "slides": [
+    {
+      "number": 1,
+      "heading": "6 Pillars Behind Every Recognizable Editing Style",
+      "subtitle": "Most editors copy effects. The ones with a real visual brand use these 6 elements consistently across every project.",
+      "takeaway": "A recognizable style isn't built from effects. It's built from consistency.",
+      "visual": "Six glowing design elements arranged in a grid on a dark monitor screen, each representing a distinct visual pillar of a cohesive editing style. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 2,
+      "heading": "Typography Pairing",
+      "subtitle": "One clean sans-serif like Coolvetica for subtitles. One script font for emphasis. Two fonts, two jobs, always consistent.",
+      "takeaway": "Viewers read the visual hierarchy before they consciously process the words.",
+      "visual": "Two font specimens displayed side by side on a dark screen, one bold clean sans-serif and one elegant script font, showing how they pair together in a video subtitle context. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 3,
+      "heading": "Animated Rating Elements",
+      "subtitle": "5-star or progress-style visuals built with the vector shape tool and a glow effect. Credibility signals before the viewer knows what the content is about.",
+      "takeaway": "They clock the credibility before they consciously register it.",
+      "visual": "A glowing 5-star rating animation floating on a dark video frame, built with vector shapes and a soft purple glow, the stars appearing one by one in sequence. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 4,
+      "heading": "Listicle UI",
+      "subtitle": "Numbers inside rounded squares with thick white strokes, animated with a quick pop. Signals structure. Viewers relax into the content because they know what's coming.",
+      "takeaway": "They stop scanning and start following.",
+      "visual": "A series of numbered squares with thick white borders and rounded corners appearing on a dark video frame in sequence, each popping into view with a clean animation, showing numbers 01 through 05. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 5,
+      "heading": "Chapter Markers",
+      "subtitle": "Reuse the listicle square style with a subheader text layer underneath. Makes longer edits feel organized and scannable. Viewers always know where they are.",
+      "takeaway": "Knowing where they are keeps them watching.",
+      "visual": "A chapter marker graphic on a dark video frame showing a numbered square with a bold chapter title below it and a subtle progress bar, consistent with the listicle UI style. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 6,
+      "heading": "3D Camera Movement",
+      "subtitle": "Animate a camera layer to zoom through a UI screen or interface element. Adds cinematic depth without any third-party plugins.",
+      "takeaway": "No plugins needed. Just a camera layer and some keyframing.",
+      "visual": "A cinematic camera push animation moving through a software interface screen, creating a 3D depth effect as the camera pushes into the UI, motion blur on the edges. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 7,
+      "heading": "Table Comparisons",
+      "subtitle": "Two-column table animations for comparison lists or data breakdowns. Scannable and they add weight to points that would otherwise just feel like opinions.",
+      "takeaway": "Pick two of these six. Build them into every project until automatic. Then add the next one.",
+      "visual": "A two-column comparison table animation on a dark video frame, one column highlighted in green and one in red, data populating row by row with a smooth reveal animation. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 8,
+      "heading": "Save This for Your Next Project",
+      "subtitle": "A recognizable editing style forms one consistent element at a time. That's how it actually works.",
+      "takeaway": "Follow Ananda Paramanick for more editing technique breakdowns.",
+      "visual": "A completed video project on a dark monitor with all six visual elements visible in a collage layout, showing how they work together as a cohesive visual brand system. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    }
+  ]
+}

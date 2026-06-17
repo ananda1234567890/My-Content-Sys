@@ -1,0 +1,54 @@
+{
+  "title": "5 Fonts That Tell Your Viewer How to Feel",
+  "slides": [
+    {
+      "number": 1,
+      "heading": "Your Font Speaks Before Your Script Does",
+      "subtitle": "Most editors pick fonts based on what looks cool. The better call is picking based on what the content needs to feel like.",
+      "takeaway": "Every font choice is a signal your viewer processes before they decide whether to keep watching.",
+      "visual": "A dark video frame showing five different font styles stacked vertically each radiating a completely different mood and energy, from clean and trustworthy to loud and cinematic. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 2,
+      "heading": "Montserrat",
+      "subtitle": "The clean, modern workhorse. Signals trustworthiness without feeling corporate. Built for educational content, tutorials, and explainers.",
+      "takeaway": "Viewers read it as credible before they consciously register the font choice.",
+      "visual": "The word MONTSERRAT displayed in its own clean sans-serif typeface in large bold letters on a dark screen, with a tutorial subtitle example below showing its professional, approachable presence. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 3,
+      "heading": "Oswald",
+      "subtitle": "Bold, condensed, no-nonsense. Use when the content needs to hit hard. Business breakdowns, direct-response, authority-first content.",
+      "takeaway": "Feels like someone who means business, tbh.",
+      "visual": "The word OSWALD displayed in its own heavy condensed typeface on a dark screen, bold and imposing, with a business-style headline example below showing its authoritative, no-nonsense presence. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 4,
+      "heading": "Playfair Display",
+      "subtitle": "Elegant, high-contrast, premium. If your content is luxury-adjacent, design-led, or targets a high-income audience, this is the one.",
+      "takeaway": "Signals quality before the viewer reads a single word.",
+      "visual": "The words Playfair Display shown in its own elegant high-contrast serif typeface on a dark screen, the letterforms refined and editorial, with a luxury content example below. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 5,
+      "heading": "Bebas Neue",
+      "subtitle": "Loud, cinematic, built for impact. Sports, action, gaming, hype-style editing. The text itself needs to feel like part of the energy.",
+      "takeaway": "Use it when you need the words to hit as hard as the visuals.",
+      "visual": "The words BEBAS NEUE displayed in its own massive all-caps impact typeface filling most of the dark frame, the letters tight and punchy like a sports broadcast graphic, pure visual aggression. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 6,
+      "heading": "DM Sans",
+      "subtitle": "Minimal, tech-forward, editorial. For productivity content, creator economy posts, anything that needs to feel modern but not aggressive.",
+      "takeaway": "Readers trust DM Sans the same way they trust a clean, well-designed app. Save this for your next project.",
+      "visual": "The words DM Sans displayed in its own clean minimal typeface on a dark screen, light and editorial, with a tech-forward content example below showing its modern approachable presence. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 7,
+      "heading": "Typography Is Not Decoration",
+      "subtitle": "Every font choice is a signal your viewer processes before they decide whether to keep watching.",
+      "takeaway": "Follow Ananda Paramanick for more visual editing and design breakdowns.",
+      "visual": "All five font names displayed together on a dark screen each rendered in its own typeface, arranged in a clean vertical list showing the full range from Montserrat to Bebas Neue, the word SIGNAL highlighted in purple. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    }
+  ]
+}

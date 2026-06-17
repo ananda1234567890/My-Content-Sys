@@ -57,7 +57,7 @@ def submit_task(prompt, ref_url, api_key):
     if resp.status_code != 200:
         raise ValueError(f"API error {resp.status_code}: {resp.text}")
     data = resp.json()
-    if "data" not in data or "taskId" not in data["data"]:
+    if not data or "data" not in data or not data["data"] or "taskId" not in data["data"]:
         raise ValueError(f"Unexpected response: {data}")
     return data["data"]["taskId"]
 
@@ -172,13 +172,14 @@ def generate_carousel(content, output_path):
         content.get("cta_subtitle", "")
     )))
 
-    # Submit all tasks at once
+    # Submit all tasks with a small delay between each to avoid rate limiting
     print(f"\nSubmitting {len(specs)} slides to Kie.ai (1:1, 1K resolution)...")
     tasks = []
     for name, prompt in specs:
         task_id = submit_task(prompt, CAROUSEL_REF_URL, api_key)
         tasks.append((name, task_id))
         print(f"  ✓ {name} → task {task_id[:12]}...")
+        time.sleep(2)
 
     # Poll all tasks
     print(f"\nPolling for results...")

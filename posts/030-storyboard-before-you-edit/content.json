@@ -1,0 +1,40 @@
+{
+  "title": "Plan Before You Touch Premiere",
+  "slides": [
+    {
+      "number": 1,
+      "heading": "Plan Before You Touch Premiere",
+      "subtitle": "Editors who storyboard first finish embarrassingly faster than editors who just start cutting.",
+      "takeaway": "The secret isn't editing faster. It's making fewer decisions on the timeline.",
+      "visual": "A clean desk with a hand-drawn storyboard spread open next to a dark laptop running Premiere Pro, the timeline empty and waiting to be filled. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 2,
+      "heading": "Step 1: Storyboard Before You Edit",
+      "subtitle": "Open Figma or a plain text doc before you load any footage. Map the sequence, note where cuts happen, decide pacing.",
+      "takeaway": "Spend 1 to 2 hours here. Sounds like more work. It saves 3.",
+      "visual": "A Figma canvas open on a monitor showing a rough video storyboard with labeled scene boxes connected by arrows, each box containing a rough sketch of a shot. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 3,
+      "heading": "Step 2: Technical Edit in One Pass",
+      "subtitle": "Storyboard locked. Now open Premiere and execute. Cut clips, level audio, rough color pass. One pass, no jumping around.",
+      "takeaway": "This goes fast because every decision was already made. You're assembling, not figuring it out mid-timeline.",
+      "visual": "A Premiere Pro timeline with organized clip sequences neatly arranged, audio tracks clearly layered, the edit moving efficiently from left to right with clear structure. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 4,
+      "heading": "Step 3: Polish Layer Goes Last",
+      "subtitle": "Subtitles, text animations, sound design, motion graphics. All added after the technical edit is locked.",
+      "takeaway": "Three phases, each completely separate. Structure the process and the edit basically runs itself.",
+      "visual": "A detailed Premiere Pro timeline showing motion graphics layers, subtitle tracks, and sound effects stacked above a locked video sequence, the polish being added on top of a solid foundation. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    },
+    {
+      "number": 5,
+      "heading": "Try It Once",
+      "subtitle": "Most editors do all three phases at once. That's why edits take twice as long as they should.",
+      "takeaway": "Follow Ananda Paramanick for more workflow breakdowns that cut your editing time without cutting quality.",
+      "visual": "A completed project folder on a dark desktop, a clean finished timeline visible on screen, the workspace organized and calm, the edit done and ready to export. Deep dark purple background, cinematic mood, purple accent light, high contrast, match the brand guide style."
+    }
+  ]
+}
