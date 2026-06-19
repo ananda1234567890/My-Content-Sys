@@ -16,6 +16,10 @@
 
 **NO PERIOD AT THE END OF EVERY LINE. A period after every single line is the clearest signal that AI wrote this. The line break itself is the pause — a period is redundant and makes it feel like a formal essay. Only use a period when a sentence genuinely closes a complete thought or section. Short punchy lines in a flowing sequence get no period. Arrow list items get no period. Opening two-liners that read as one thought get no period on either line. Periods belong at the end of a full standalone idea, not at the end of every line just because the line ended.**
 
+**ONE SENTENCE PER LINE. Every single sentence gets its own line. Never place two sentences on the same line. After every sentence, hit enter. No exceptions.**
+
+**BLANK LINE AFTER EVERY 1-2 LINES. Never run more than 2 lines of text before a blank line. If you have 3 consecutive lines with no gap, you are wrong — add a blank line. The post must be skimmable: someone scrolling at speed should be able to read it in chunks without their eye getting stuck on a wall of text.**
+
 ---
 
 ## Purpose
@@ -69,6 +73,7 @@ OR for action-heavy steps:
 - After a particularly good step, drop a casual one-liner that lands the idea. Not a new step, just a reaction. ("Now you've got their identical twins.")
 - If there's a real example (a quote, a message, a script), embed it in quotes inside the step that needs it.
 - No step body longer than 4 lines.
+- No prose paragraphs inside steps. If you have 2+ sentences explaining a step, break the second sentence onto its own line with a blank line above it, or convert it to an arrow sub-point. Never run sentences together in the same block.
 
 **Closing format:**
 ```
@@ -133,6 +138,8 @@ Each section uses a plain text title on its own line, followed by a numbered lis
 ```
 
 Note on section variety: not every section has to be a numbered list. Mix lists and sentence paragraphs. Capitalized short statements ("Spacing Matters." "Keep It Tight." "Less Is More.") can act as mini-headers within a sentence-based section.
+
+Critical: even in sentence-based sections, each sentence is its own line. A section body is never a paragraph — it's a stack of single-sentence lines with blank lines between them. Max 2 consecutive lines before a gap.
 
 **Casual aside:**
 Insert at least one parenthetical human moment somewhere in the post. "(including me hehehe)" / "(took me way too long to figure this out)" / "(you'll thank me later)"
@@ -217,8 +224,9 @@ P.S. [One extra tease or bonus thought] :)
 Read the post out loud before returning it. It should sound like someone talking, not someone writing.
 
 **Sentence rhythm:**
-- Mix short (5 to 10 words) with medium (10 to 18 words) — never drop below 4 words for a standalone line unless it's a single-word punch ("Yup." / "Wait." / "That's it.")
-- Never more than 2 sentences on the same line before a break
+- Every sentence is on its own line. One sentence, one line, every time.
+- Blank line after every 1-2 lines. Never 3 consecutive lines without a gap.
+- Mix short (5 to 10 words) with medium (10 to 15 words) — never drop below 4 words for a standalone line unless it's a single-word punch ("Yup." / "Wait." / "That's it.")
 - Standalone lines for emphasis
 - Ellipsis (...) at the end of a setup line when what follows is the payoff
 - When listing related ideas, connect them into one flowing sentence instead of stacking them as fragments. "I had like 0 connections and no mentors, did I mention? no roadmap as well." beats "No connections. No mentors. No roadmap." every time.
@@ -320,8 +328,9 @@ Keep the credibility. Remove the specific numbers that belong to the original cr
 - Numbered `1. 2. 3.` for ranked lists under emoji headers in Type 2
 - Numbered `1. 2. 3.` for bonus/checklist items in Type 2, not ✅
 - No emojis anywhere, including section dividers
-- One blank line between every 2 to 3 sentences throughout
-- Short lines. Max 15 words per line.
+- One sentence per line. Always.
+- Blank line after every 1-2 lines. Never 3 consecutive lines without a gap.
+- Max 15 words per line — aim for shorter.
 - No bullet points with `-` or `•`
 - No em dashes
 - No period at the end of short punchy lines, opening two-liners, or arrow list items. Only use periods where a thought genuinely closes.
@@ -380,6 +389,12 @@ Return one clean post. No commentary, no type label, no explanation. Just the po
 - Is there an em dash anywhere?
 - Is every section formatted correctly with the right list type?
 - Are there any stacked 2-3 word fragments? If yes, combine them into flowing sentences.
+<<<<<<< HEAD
 - Does every line end with a period? If yes, strip the ones that don't genuinely close a thought. The line break is the pause.
+=======
+- Is every sentence on its own line? Scan the entire post — if any line has two sentences, split them.
+- Is there a blank line after every 1-2 lines? Find any 3 consecutive lines with no gap and add the break.
+- Can someone skim this post and absorb the structure in 5 seconds? If not, add more white space.
+>>>>>>> 515ef15 (Enforce skimmable formatting in LinkedIn post writer skill)
 
 If any fail, rewrite before returning.
