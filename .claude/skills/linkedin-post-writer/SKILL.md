@@ -389,12 +389,9 @@ Return one clean post. No commentary, no type label, no explanation. Just the po
 - Is there an em dash anywhere?
 - Is every section formatted correctly with the right list type?
 - Are there any stacked 2-3 word fragments? If yes, combine them into flowing sentences.
-<<<<<<< HEAD
 - Does every line end with a period? If yes, strip the ones that don't genuinely close a thought. The line break is the pause.
-=======
 - Is every sentence on its own line? Scan the entire post — if any line has two sentences, split them.
 - Is there a blank line after every 1-2 lines? Find any 3 consecutive lines with no gap and add the break.
 - Can someone skim this post and absorb the structure in 5 seconds? If not, add more white space.
->>>>>>> 515ef15 (Enforce skimmable formatting in LinkedIn post writer skill)
 
 If any fail, rewrite before returning.
